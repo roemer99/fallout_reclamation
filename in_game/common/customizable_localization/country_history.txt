@@ -1,0 +1,21 @@
+﻿country_history = {
+	type = country
+
+	# Tag specific. Please keep alphabetical order
+	text = { localization_key = country_history_VAA trigger = { tag = VAA } } # Vault 0
+	text = { localization_key = country_history_VAP trigger = { tag = VAP } } # Vault 15
+	text = { localization_key = country_history_VEH trigger = { tag = VEH } } # Vault 111
+
+	# Generic Continental
+	# America
+	text = { localization_key = country_history_america trigger = { capital.continent = continent:america } }
+	# Europe
+	text = { localization_key = country_history_europe trigger = { capital.continent = continent:europe } }
+	# Africa
+	text = { localization_key = country_history_africa trigger = { capital.continent = continent:africa } }
+	# Asia
+	text = { localization_key = country_history_asia trigger = { capital.continent = continent:asia } }
+
+	# Fallback
+	text = { localization_key = country_history_fallback fallback = yes }
+}

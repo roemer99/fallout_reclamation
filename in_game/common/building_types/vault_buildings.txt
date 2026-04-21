@@ -1,0 +1,448 @@
+﻿# Crown
+vault_command_center = {
+	is_special = yes
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	
+	category = government_category
+	forbidden_for_estates = yes
+	
+	employment_size = 0.015
+	
+	town = yes
+	city = yes
+	rural_settlement = yes
+	
+	expensive = yes
+	build_time = large_capital_build_time
+	
+	location_potential = {
+		is_capital = yes
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	
+	remove_if = {
+			is_no_longer_capital = yes
+	}
+	
+	capital_country_modifier = {
+		country_cabinet_efficiency = 0.02
+		global_crown_estate_power = 0.10
+		monthly_towards_absolutism = societal_value_tiny_monthly_move
+	}
+	
+	unique_production_methods = {
+		royal_court_maintenance = {
+			furniture = 0.15
+			tools = 0.05
+			glass = 0.1
+			fine_cloth = 0.2
+			books = 0.1
+			goods_gold = 0.1
+			marble = 0.1
+				
+			category = building_maintenance
+		}
+	}
+
+	graphical_tags = { palace }
+
+	construction_demand = early_capital_building_construction
+}
+
+# Burghers
+vault_medical_bay = {
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	employment_size = 0.01
+
+	category = infrastructure_category
+
+	town = yes
+	city = yes
+	rural_settlement = yes
+
+	location_potential = {
+		is_capital = yes
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+
+	expensive = yes
+
+	build_time = generic_town_build_time
+
+
+	possible_production_methods = {
+		hospital_maintenance
+	}
+	graphical_tags = { medium_religious }
+
+
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_disease_resistance = 0.1
+		local_life_expectancy = 5
+	}
+}
+vault_power_plant = {
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	employment_size = 0.035
+
+	category = infrastructure_category
+
+	town = yes
+	city = yes
+	rural_settlement = yes
+
+	location_potential = {
+		is_capital = yes
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+
+	expensive = yes
+
+	build_time = generic_town_build_time
+
+	unique_production_methods = {
+		fusion_core_requirements = {
+			fusion_core = 0.0001
+			tools = 0.15
+			
+			produced = energy
+			output = 1
+			
+			category = guild_input
+		}
+		coal_requirements = {
+			coal = 0.15
+			tools = 0.15
+			
+			produced = energy
+			output = 1
+			
+			category = guild_input
+		}
+	}
+
+	construction_demand = town_building_construction
+
+	modifier = {
+	}
+}
+
+# Laborers
+vault_storage = {
+	is_special = yes
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	
+	category = trade_category
+	forbidden_for_estates = yes
+	
+	employment_size = 0.4
+	
+	town = yes
+	city = yes
+	rural_settlement = yes
+	
+	expensive = yes
+	build_time = market_build_time
+	
+	location_potential = {
+		is_capital = yes
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	
+	remove_if = {
+			is_no_longer_capital = yes
+	}
+	
+	modifier = {
+		local_merchant_capacity = 0.1
+		local_merchant_power = 0.1
+		local_trades_per_burgher = 0.1
+	}
+	
+	market_center_modifier = {
+		maximum_stockpile_capacity = 200
+	}
+	
+	possible_production_methods = {
+		warehouse_maintenance
+	}
+
+	construction_demand = warehouse_construction
+}
+
+vault_water_plant = {
+	is_special = yes
+	is_foreign = no
+	max_levels = 1
+	pop_type = laborers
+	category = infrastructure_category
+	forbidden_for_estates = yes
+	employment_size = 0.025
+	rural_settlement = yes
+	town = yes
+	city = yes
+	build_time = small_fort_building
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	location_potential = {
+		is_capital = yes
+	}
+	possible_production_methods = {
+		oma_falaj_maintenance
+	}
+	construction_demand = granary_construction
+	modifier = {
+		local_food_capacity = 250
+		local_population_growth = 0.0005
+	}
+}
+
+vault_hydro_agriculture_farm = {
+	is_special = yes
+	is_foreign = no
+	max_levels = 6
+	pop_type = laborers
+	category = infrastructure_category
+	forbidden_for_estates = yes
+	employment_size = 0.05
+	rural_settlement = yes
+	town = yes
+	city = yes
+	build_time = small_fort_building
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	location_potential = {
+		is_capital = yes
+	}
+	unique_production_methods = {
+		hydro_agriculture_farm_maintenance = {
+			energy = 0.1
+			category = building_maintenance
+		}
+	}
+	construction_demand = granary_construction
+	modifier = {
+		local_monthly_food = 1.0
+	}
+}
+
+# Peasants
+vault_common_area = {
+	is_special = yes
+	is_foreign = no
+	max_levels = 1
+	pop_type = peasants
+	category = consumer_goods_category
+	forbidden_for_estates = yes
+	employment_size = 0.01
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+
+	build_time = small_fort_building
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	location_potential = {
+		is_capital = yes
+	}
+	possible_production_methods = {
+		estate_building_input
+	}
+	construction_demand = granary_construction
+	modifier = {
+		local_peasant_enfranchisment = 0.015
+	}
+}
+vault_living_quarters = {
+	is_special = yes
+	is_foreign = no
+	max_levels = 1
+	pop_type = peasants
+	category = consumer_goods_category
+	forbidden_for_estates = yes
+	employment_size = 0.01
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+
+	build_time = small_fort_building
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	location_potential = {
+		is_capital = yes
+	}
+	possible_production_methods = {
+		estate_building_input
+	}
+	construction_demand = granary_construction
+	modifier = {
+		local_peasant_enfranchisment = 0.015
+	}
+}
+vault_classroom = {
+	is_special = yes
+	is_foreign = no
+	max_levels = 1
+	pop_type = peasants
+	
+	category = cultural_category
+	forbidden_for_estates = yes
+	employment_size = 0.01
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	
+	build_time = estate_build_time
+
+	possible_production_methods = {
+		confucian_school_maintenance
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	location_potential = {
+		is_capital = yes
+	}
+
+	construction_demand = estate_construct_building
+	
+	modifier = {
+		local_peasants_estate_power = 0.1
+		local_peasants_max_literacy = 1
+	}
+
+}
+
+# Soldiers
+vault_blast_door = {
+	is_special = yes
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = 1
+	
+	category = defense_category
+	forbidden_for_estates = yes
+	
+	employment_size = 0.015
+	
+	town = yes
+	city = yes
+	
+	expensive = yes
+	build_time = large_capital_build_time
+	
+	location_potential = {
+		is_capital = yes
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	
+	remove_if = {
+		is_no_longer_capital = yes
+	}
+	
+	modifier = {
+		local_garrison_size = 0.01
+		local_unrest = -0.025
+		local_nobles_estate_power = 0.5
+	}
+	
+	unique_production_methods = {
+		royal_court_maintenance = {
+			furniture = 0.15
+			tools = 0.05
+			glass = 0.1
+			fine_cloth = 0.2
+			books = 0.1
+			goods_gold = 0.1
+			marble = 0.1
+				
+			category = building_maintenance
+		}
+	}
+
+	graphical_tags = { palace }
+
+	construction_demand = early_capital_building_construction
+}
+
+vault_armory = {
+	is_special = yes
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = manpower_max_level
+	
+	category = military_category
+	forbidden_for_estates = yes
+
+	employment_size = 0.025
+	
+	town = yes
+	city = yes
+
+	build_time = soldier_building
+	
+	location_potential = {
+		is_capital = yes
+	}
+
+	country_potential = {
+		culture = culture:vaultian_culture
+	}
+	remove_if = {
+		is_no_longer_capital = yes
+	}
+	
+	modifier = {
+		local_manpower = 0.002
+		can_recruit_regiment_in_this_location = yes
+	}
+	
+		
+	unique_production_methods = {
+		armory_maintenance = {
+			firearms = 0.5
+			leather = 0.5
+			cloth = 0.10
+			paper = 0.20
+			weaponry = 0.5
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = early_soldier_building_construction
+}

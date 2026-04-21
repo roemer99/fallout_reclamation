@@ -1,0 +1,9 @@
+﻿l_english:
+ vault_isolation_law: "Isolation Policy"
+ vault_isolation_law_desc: "Determines the Vault's stance on interaction with the post-nuclear wasteland. From strict containment to full reintegration, this policy dictates the level of exposure our dwellers have to the outside world."
+ isolation_isolationism: "Isolationism"
+ isolation_isolationism_desc: "Strict quarantine protocols are enforced. The Vault door remains sealed to prevent any external contamination or threats from entering, ensuring total security at the cost of external resources."
+ isolation_limited_contacts: "Limited Contacts"
+ isolation_limited_contacts_desc: "Controlled exchange is permitted. Trade and travel are heavily regulated, allowing for necessary resource gathering and diplomatic missions while minimizing exposure to the wasteland."
+ isolation_unrestricted: "Open Door"
+ isolation_unrestricted_desc: "Free movement is authorized. The Vault fully integrates with the surface, allowing unrestricted migration and commerce with local settlements to maximize growth and influence."

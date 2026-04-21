@@ -1,0 +1,37 @@
+﻿{
+	"name":	"Fallout Reclamation",
+	"id":	"",
+	"version":	"0.1",
+	"supported_game_version":	"1.1.10",
+	"short_description":	"Test",
+	"tags":	["Alternative history", "Gameplay", "Overhaul", "Trade and Economics"],
+	"relationships":	[],
+	"game_custom_data":	{
+		"replace_paths" : [
+			"common/advances",
+			"common/age",
+			"common/holy_sites",
+			"common/scripted_diplomatic_objectives",
+			"common/building_types",
+			"common/situations",
+			"setup/countries",
+			"events",
+			"events/character",
+			"events/colonization",
+			"events/culture",
+			"events/debug",
+			"events/DHE",
+			"events/diplomacy",
+			"events/disaster",
+			"events/economy",
+			"events/estates",
+			"events/exploration",
+			"events/government",
+			"events/missionevents",
+			"events/religion",
+			"events/situations",
+			#"common/country_interactions",
+			#"common/generic_actions"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+﻿l_english:
+ #
+ rank_duchy_vaultian: "Facility"
+ rank_duchy_vaultian_ruler_male: "Overseer" 
+ rank_duchy_vaultian_abbreviation: "Vault"
+ rank_duchy_vaultian_ruler_female: "Overseer"
+
+ country_flavor_parliament_council: "Council"

@@ -1,0 +1,12 @@
+﻿
+colors = {
+
+ ### NORTH AMERICA
+  ## VAULTS
+	map_VAA = rgb { 68 122 185 }
+
+  ## CULTURES
+  map_american = rgb { 164 155 151 }
+
+}
+

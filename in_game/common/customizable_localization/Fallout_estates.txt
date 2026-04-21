@@ -1,0 +1,61 @@
+﻿crown_estate = {
+	type = country
+
+	text = {
+		localization_key = crown_estate_management
+		trigger = {
+			culture = culture:vaultian_culture
+		}
+	}
+
+}
+
+nobles_estate = {
+	type = country
+
+	text = {
+		localization_key = nobles_estate_management
+		trigger = {
+			culture = culture:vaultian_culture
+		}
+	}
+}
+
+burghers_estate = {
+	type = country
+
+	text = {
+		localization_key = burghers_estate_vaults
+		trigger = {
+			culture = culture:vaultian_culture
+		}
+	}
+}
+
+clergy_estate = {
+	type = country
+
+	text = {
+		localization_key = clergy_estate_vaults
+		trigger = {
+			culture = culture:vaultian_culture
+		}
+	}
+}
+
+peasants_estate = {
+	type = country
+
+	text = {
+		localization_key = peasants_estate_vaults
+		trigger = {
+			culture = culture:vaultian_culture
+		}
+	}
+}
+
+tribes_estate = {
+	type = country
+
+	
+}

@@ -1,0 +1,10 @@
+﻿country_flavor_parliament = {
+	type = country
+
+	text = {
+		localization_key = country_flavor_parliament_council
+		trigger = {
+			culture = culture:vaultian_culture
+		}
+	}
+}

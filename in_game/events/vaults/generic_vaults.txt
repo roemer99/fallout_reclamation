@@ -1,0 +1,36 @@
+﻿namespace = flavor_vaults
+flavor_vaults.1 = { #Anniversary
+	type = country_event
+	title = flavor_vaults.1.title
+	desc = flavor_vaults.1.desc
+	hide_portraits = yes
+	fire_only_once = no
+	
+	trigger = {
+		has_culture_group = vaultian
+		from = 2078.1.1
+		to = 2078.3.1
+		monthly_chance = 100
+		has_primary_or_accepted_culture = culture:vaultian_culture
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = exterior
+	}
+	
+	#immediate = {
+	#	event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	#}
+	trigger = {
+	}
+
+	option = {
+		name = flavor_vaults.1.a
+		historical_option = no
+	}
+	option = {
+		name = flavor_vaults.1.b
+		historical_option = no
+	}
+}

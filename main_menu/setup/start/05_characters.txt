@@ -1,0 +1,35 @@
+# #Remember to write sons and daughters ALWAYS after their parents to avoid crashes
+
+character_db={
+
+	vaa_calculator = {
+		first_name = { name = name_calculator }
+		nickname = { name = the_old }
+		culture = vaultian_culture
+		religion = lutheran
+		estate = nobles_estate
+		adm = 100 dip = 100 mil = 100
+		female = no
+		birth_date = 2077.10.27
+		birth = mutssooni_yohe
+		dynasty = calculator_dynasty
+		fertility = 0
+		tag = VAA
+		ruler_trait = supercomputer
+	}
+	vcy_barbeau = {
+		first_name = { name = name_barbeau }
+		#nickname = { name = the_old }
+		culture = vaultian_culture
+		religion = lutheran
+		estate = nobles_estate
+		adm = 92 dip = 45 mil = 28
+		female = yes
+		birth_date = 2042.5.12
+		birth = monongahela
+		dynasty = barbeau_dynasty
+		fertility = 10
+		tag = VCY
+		#ruler_trait = supercomputer
+	}
+}

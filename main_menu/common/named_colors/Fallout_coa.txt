@@ -1,0 +1,11 @@
+colors = {
+
+	## VAULT-TEC
+	vault_tec_dark_blue = rgb { 50 88 134 }
+	vault_tec_blue = rgb { 68 122 185 }
+	vault_tec_bright_blue = rgb { 130 167 214 }
+	vault_tec_bright_blue_alt = rgb { 126 163 207 }
+	vault_tec_gold = rgb { 255 194 0 }
+	vault_tec_bright_gold = rgb { 239 221 111 }
+	
+} 

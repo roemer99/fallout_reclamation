@@ -1,0 +1,27 @@
+﻿vault_town = {
+	vault_blast_door = 1
+	vault_command_center = 1
+	vault_storage = 1
+	vault_water_plant = 1
+	vault_living_quarters = 1
+	vault_common_area = 1
+	vault_armory = 1
+	vault_medical_bay = 1
+	vault_classroom = 1
+	vault_hydro_agriculture_farm = 3
+	vault_power_plant = 1
+}
+
+vault_city = {
+	vault_blast_door = 1
+	vault_command_center = 1
+	vault_storage = 1
+	vault_water_plant = 1
+	vault_living_quarters = 1
+	vault_common_area = 1
+	vault_armory = 1
+	vault_medical_bay = 1
+	vault_classroom = 1
+	vault_hydro_agriculture_farm = 6
+	vault_power_plant = 2
+}

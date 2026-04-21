@@ -1,0 +1,39 @@
+@ratio = 1.5 # how wide the flags are compared to their height
+@height = 512 
+@width =  @[height*ratio]
+
+@five_sixths = @[5/6]
+@three_quarters = @[3/4]
+@two_thirds = @[2/3]
+@half = @[1/2]
+@third = @[1/3]
+@quarter = @[1/4]
+@sixth = @[1/6]
+
+@semy = 0.27
+@border_charge_scale = 0.75
+
+@nordic_cross_canton_pixel_width = 204
+@nordic_cross_canton_pixel_height = 204
+@nordic_cross_canton_width = @[nordic_cross_canton_pixel_width/width]
+@nordic_cross_canton_height = @[nordic_cross_canton_pixel_height/height]
+@nordic_cross_canton_center_x = @[nordic_cross_canton_width/2]
+@nordic_cross_canton_center_y = @[nordic_cross_canton_height/2]
+
+template = {	
+
+	template_usa_50_stars = { # USA - 50 stars
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 	{	320	50	35	} 
+		color2 = "white"
+					
+		sub = { 
+			parent = "sub_USA_stripes" 
+			#instance = { scale = { 0.5 1 } }
+		} 
+		sub = { 
+			parent = "sub_USA_canton_50" 
+			instance = { scale = { 0.5 0.54 } }
+		} 		
+	}
+}

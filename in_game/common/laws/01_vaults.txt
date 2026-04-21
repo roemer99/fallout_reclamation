@@ -1,0 +1,41 @@
+﻿vault_isolation_law = {
+    law_category = administrative
+
+    potential = {
+        culture = culture:vaultian_culture
+    }
+
+    isolation_isolationism = {
+        country_modifier = {
+            stability_cost = -0.1
+            monthly_towards_traditionalist = societal_value_monthly_move
+        }
+        estate_preferences = {
+            clergy_estate
+            nobles_estate
+        }
+        years = 2
+    }
+
+    isolation_limited_contacts = {
+        country_modifier = {
+            research_speed_modifier = 0.1
+            monthly_towards_innovative = societal_value_monthly_move
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+
+    isolation_unrestricted = {
+        country_modifier = {
+            diplomatic_reputation = 1
+            global_monthly_development_modifier = 0.05
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+}

@@ -1,0 +1,19 @@
+coat_of_arms_template_lists = {
+
+	### Flags
+	
+	dynasty = {
+	
+		## Root generic selection
+
+		5 = template_usa_50_stars
+		
+		
+		## European designs
+		special_selection = {
+            trigger = {
+                coa_def_USA_stars_14 = yes
+            }
+        } 
+	}
+}

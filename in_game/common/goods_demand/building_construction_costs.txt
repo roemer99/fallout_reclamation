@@ -1,0 +1,6 @@
+﻿default_construct_building = {
+	masonry = 0.1
+	lumber = 0.1
+	
+	category = building_construction
+}

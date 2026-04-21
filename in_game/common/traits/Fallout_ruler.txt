@@ -1,0 +1,11 @@
+﻿supercomputer = {
+	allow = {
+		always = no
+	}
+	category = ruler
+	flavor = personality
+	
+	modifier = {
+		character_life_expectancy = 10000
+	}
+}
