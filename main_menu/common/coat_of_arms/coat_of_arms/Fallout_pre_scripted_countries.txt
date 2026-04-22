@@ -111,7 +111,8 @@ VBH = {	#VAULT 33
 	}		
 }
 
-VDX = {	#VAULT 101
+#VAULT 101
+VDX = {
 	pattern = "pattern_solid.dds"
 	color1 = "vault_tec_blue"
 	color2 = "vault_tec_gold"
@@ -139,6 +140,31 @@ VDX = {	#VAULT 101
 		instance = { position = { 0.6 0.5 } scale = { 1.0 1.0 } }			
 	}		
 }
+
+#VAULT 11
+VAL = {
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}		
+} 
 
 VCY = {	#VAULT 76
 	pattern = "pattern_solid.dds"

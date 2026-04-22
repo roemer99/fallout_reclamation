@@ -25,19 +25,6 @@ dynasty_manager = {
 		}
 	}
 
-	# VAULT 33
-	calculator_dynasty = {
-		name = { name = calculator_dynasty }
-		home = yaanga
-		dynasty_name_type = location
-		male_names = {
-			name_calculator
-		}
-		female_names = {
-			name_calculator
-		}
-	}
-
 	# VAULT 76
 	barbeau_dynasty = {	#no name in-game, actors name used
 		name = { name = barbeau_dynasty }
@@ -48,19 +35,6 @@ dynasty_manager = {
 		}
 		female_names = {
 			name_barbeau
-		}
-	}
-
-	# VAULT 111
-	calculator_dynasty = {
-		name = { name = calculator_dynasty }
-		home = assabet
-		dynasty_name_type = location
-		male_names = {
-			name_calculator
-		}
-		female_names = {
-			name_calculator
 		}
 	}
 

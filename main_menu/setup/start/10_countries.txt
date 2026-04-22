@@ -170,6 +170,42 @@ countries = {
 			capital = manassas
 		}
 
+		
+		#Vault 11
+		VAL = {
+			own_control_core = {
+				moapa
+			}
+
+			starting_technology_level = 2
+			#include = "expl_western_europe"
+			#include = "catholic_monarchy_no_coast"
+			#include = "german_principality"
+			
+			discovered_regions = {
+				canada_region
+				east_coast_region
+				great_plains_region
+				west_coast_region
+				alaska_region
+				aridoamerica_region
+			}
+
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+
+				laws = {
+					my_custom_law = traditional_approach
+				}
+
+			}
+
+			country_rank = rank_duchy
+			capital = moapa
+		}
+
 		VEH = {	#Vault 111
 			own_control_core = {
 				assabet

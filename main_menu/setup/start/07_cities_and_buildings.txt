@@ -2,5 +2,6 @@ locations={
 	
 	#Vaults
 	onimgohow = { rank = town 		town_setup = vault_town }	#Vault 76
+	moapa = { rank = town 		town_setup = vault_town }	#Vault 11
 
 }

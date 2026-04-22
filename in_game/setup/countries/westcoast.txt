@@ -45,6 +45,16 @@ VCY = {
 	
 }
 
+# VAULT 11
+VAL = {
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
 # V101
 VDX = {
 	color = map_VAA

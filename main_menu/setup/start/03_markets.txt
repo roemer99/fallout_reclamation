@@ -168,6 +168,7 @@ market_manager = {
 	add_market = mutsisoone_yohe	#Vault 0
 	add_market = yaanga		#Vault 33
 	add_market = tubatulabam	#Vault 15
+	add_market = moapa	#Vault 11
 	
 	#Siberia
 	add_market = kazan

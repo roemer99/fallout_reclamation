@@ -5,6 +5,7 @@
 	text = { localization_key = country_history_VAA trigger = { tag = VAA } } # Vault 0
 	text = { localization_key = country_history_VAP trigger = { tag = VAP } } # Vault 15
 	text = { localization_key = country_history_VEH trigger = { tag = VEH } } # Vault 111
+	text = { localization_key = country_history_VAL trigger = { tag = VAL } } # Vault 11
 
 	# Generic Continental
 	# America
