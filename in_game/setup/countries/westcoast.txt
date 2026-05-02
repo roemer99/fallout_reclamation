@@ -64,3 +64,105 @@ VDX = {
 	religion_definition = lutheran
 	
 }
+
+VEO = {	# VAULT 118
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VBD = {	# VAULT 29
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VCS = {	# VAULT 70
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VAG = {	# VAULT 6
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VAI = {	# VAULT 8
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VAN = {	# VAULT 13
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VAV = {	# VAULT 21
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VDR = {	# VAULT 95
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VEK = {	# VAULT 114
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+VDD = {	# VAULT 81
+	color = map_VAA
+	color2 = rgb { 239 221 111 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}
+
+
+# CHINA
+
+USA = {	# VAULT 81
+	color = map_us_army
+	color2 = rgb { 80 87 72 }
+
+	culture_definition = vaultian_culture
+	religion_definition = lutheran
+	
+}

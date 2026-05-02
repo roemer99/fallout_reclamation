@@ -4,6 +4,7 @@ colors = {
  ### NORTH AMERICA
   ## VAULTS
 	map_VAA = rgb { 68 122 185 }
+  map_us_army = rgb { 80 87 72 }
 
   ## CULTURES
   map_american = rgb { 164 155 151 }

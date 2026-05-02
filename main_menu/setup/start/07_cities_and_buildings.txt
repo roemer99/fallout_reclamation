@@ -3,5 +3,19 @@ locations={
 	#Vaults
 	onimgohow = { rank = town 		town_setup = vault_town }	#Vault 76
 	moapa = { rank = town 		town_setup = vault_town }	#Vault 11
+	pemetic = { rank = town 		town_setup = vault_town }	#Vault 118
+	nih_iitkotousi_l = { rank = town 		town_setup = vault_town }	#Vault 29
+	pio_gwut = { rank = town 		town_setup = vault_town }	#Vault 70
+	tubatulabam = { rank = town 		town_setup = vault_town }	#Vault 15
+	yaanga = { rank = town 		town_setup = vault_town }	#Vault 33
+	mutsisoone_yohe = { rank = town 		town_setup = vault_town }	#Vault 0
+	manassas = { rank = town 		town_setup = vault_town }	#Vault 101
+	assabet = { rank = town 		town_setup = vault_town }	#Vault 111
+	klikitat = { rank = town 		town_setup = vault_town }	#Vault 6
+	koop_ticutta = { rank = town 		town_setup = vault_town }	#Vault 8
+	kawich = { rank = town 		town_setup = vault_town }	#Vault 15
+	sebit = { rank = town 		town_setup = vault_town }	#Vault 21
+	quinsigamond = { rank = town 		town_setup = vault_town }	#Vault 95
+	naumkeag = { rank = town 		town_setup = vault_town }	#Vault 81
 
 }

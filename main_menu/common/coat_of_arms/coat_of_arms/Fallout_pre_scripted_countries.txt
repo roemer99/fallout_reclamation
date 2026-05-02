@@ -162,7 +162,7 @@ VAL = {
 	colored_emblem = {
 		texture = "ce_no_1.dds"
 		color1 = color3
-		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+		instance = { position = { 0.56 0.5 } scale = { 1.0 1.0 } }			
 	}		
 } 
 
@@ -188,4 +188,263 @@ VCY = {	#VAULT 76
 		color1 = color3
 		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
 	}		
+}
+
+VEO = {	#VAULT 118
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.39 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.49 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_8.dds"
+		color1 = color3
+		instance = { position = { 0.6 0.5 } scale = { 1.0 1.0 } }			
+	}		
+}
+
+VBD = {	#VAULT 29
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_2.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_9.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}		
+}
+
+VCS = {	#VAULT 70
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_7.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_0.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}		
+}
+
+VAG = {	#VAULT 6
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_6.dds"
+		color1 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+}
+
+VAI = {	#VAULT 8
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_8.dds"
+		color1 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+}
+
+VAN = {	#VAULT 13
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_3.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}	
+}
+
+VAV = {	#VAULT 21
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_2.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}	
+}
+
+VDR = {	#VAULT 95
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_9.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_5.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}	
+}
+
+VEK = {	#VAULT 114
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.39 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.49 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_4.dds"
+		color1 = color3
+		instance = { position = { 0.6 0.5 } scale = { 1.0 1.0 } }			
+	}		
+}
+
+VDD = {	#VAULT 81
+	pattern = "pattern_solid.dds"
+	color1 = "vault_tec_blue"
+	color2 = "vault_tec_gold"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_vault_door.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_no_8.dds"
+		color1 = color3
+		instance = { position = { 0.43 0.5 } scale = { 1.0 1.0 } }			
+	}
+	colored_emblem = {
+		texture = "ce_no_1.dds"
+		color1 = color3
+		instance = { position = { 0.57 0.5 } scale = { 1.0 1.0 } }			
+	}	
+}
+
+# US ARMY
+USA = {	#VAULT 81
+	pattern = "pattern_solid.dds"
+	color1 = "us_army_green"
+	color2 = "white"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+		instance = { position = { 0.5 0.38 } scale = { 0.65 0.65 } }			
+	}
+	colored_emblem = {
+		texture = "ce_us_army.dds"
+		color1 = color2
+		instance = { position = { 0.5 0.49 } scale = { 0.7 0.7 } }			
+	}	
 }

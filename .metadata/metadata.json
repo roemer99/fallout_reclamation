@@ -10,6 +10,7 @@
 		"replace_paths" : [
 			"common/advances",
 			"common/age",
+			"common/flag_definitions",
 			"common/holy_sites",
 			"common/scripted_diplomatic_objectives",
 			"common/building_types",

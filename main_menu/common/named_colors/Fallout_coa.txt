@@ -7,5 +7,6 @@ colors = {
 	vault_tec_bright_blue_alt = rgb { 126 163 207 }
 	vault_tec_gold = rgb { 255 194 0 }
 	vault_tec_bright_gold = rgb { 239 221 111 }
+	us_army_green = rgb { 80 87 72 }
 	
 } 

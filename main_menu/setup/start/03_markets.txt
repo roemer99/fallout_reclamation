@@ -169,6 +169,17 @@ market_manager = {
 	add_market = yaanga		#Vault 33
 	add_market = tubatulabam	#Vault 15
 	add_market = moapa	#Vault 11
+	add_market = pemetic	#Vault 118
+	add_market = nih_iitkotousi_l	#Vault 29
+	add_market = pio_gwut	#Vault 70
+	add_market = klikitat	#Vault 6
+	add_market = koop_ticutta	#Vault 8
+	add_market = sebit	#Vault 21
+	add_market = quinsigamond	#Vault 95
+	add_market = shawmut	#Vault 114
+	add_market = naumkeag	#Vault 81
+
+	add_market = shanghai	#US ARMY
 	
 	#Siberia
 	add_market = kazan

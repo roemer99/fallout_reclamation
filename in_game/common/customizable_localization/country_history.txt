@@ -3,9 +3,25 @@
 
 	# Tag specific. Please keep alphabetical order
 	text = { localization_key = country_history_VAA trigger = { tag = VAA } } # Vault 0
-	text = { localization_key = country_history_VAP trigger = { tag = VAP } } # Vault 15
-	text = { localization_key = country_history_VEH trigger = { tag = VEH } } # Vault 111
+	text = { localization_key = country_history_VAG trigger = { tag = VAG } } # Vault 6
+	text = { localization_key = country_history_VAI trigger = { tag = VAI } } # Vault 8
 	text = { localization_key = country_history_VAL trigger = { tag = VAL } } # Vault 11
+	text = { localization_key = country_history_VAN trigger = { tag = VAN } } # Vault 13
+	text = { localization_key = country_history_VAP trigger = { tag = VAP } } # Vault 15
+	text = { localization_key = country_history_VAT trigger = { tag = VAT } } # Vault 19
+	text = { localization_key = country_history_VAV trigger = { tag = VAV } } # Vault 21
+	text = { localization_key = country_history_VBD trigger = { tag = VBD } } # Vault 29
+	text = { localization_key = country_history_VBH trigger = { tag = VBH } } # Vault 33
+	text = { localization_key = country_history_VCS trigger = { tag = VCS } } # Vault 70
+	text = { localization_key = country_history_VCY trigger = { tag = VCY } } # Vault 76
+	text = { localization_key = country_history_VDD trigger = { tag = VDD } } # Vault 81
+	text = { localization_key = country_history_VDR trigger = { tag = VDR } } # Vault 95
+	text = { localization_key = country_history_VDX trigger = { tag = VDX } } # Vault 101
+	text = { localization_key = country_history_VEH trigger = { tag = VEH } } # Vault 111
+	text = { localization_key = country_history_VEK trigger = { tag = VEK } } # Vault 114
+	text = { localization_key = country_history_VEO trigger = { tag = VEO } } # Vault 118
+
+	text = { localization_key = country_history_USA trigger = { tag = USA } } # US ARMY
 
 	# Generic Continental
 	# America
