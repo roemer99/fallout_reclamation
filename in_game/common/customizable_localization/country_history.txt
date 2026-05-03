@@ -22,6 +22,7 @@
 	text = { localization_key = country_history_VEO trigger = { tag = VEO } } # Vault 118
 
 	text = { localization_key = country_history_USA trigger = { tag = USA } } # US ARMY
+	text = { localization_key = country_history_SHI trigger = { tag = SHI } } # Shi
 
 	# Generic Continental
 	# America

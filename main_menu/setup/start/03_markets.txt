@@ -180,6 +180,7 @@ market_manager = {
 	add_market = naumkeag	#Vault 81
 
 	add_market = shanghai	#US ARMY
+	add_market = awaswas	#SHI
 	
 	#Siberia
 	add_market = kazan
