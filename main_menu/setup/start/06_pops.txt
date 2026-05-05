@@ -86433,31 +86433,31 @@ harris_lake = {
 apopka_lake = {
 }
 mayaimi = {
-	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.561	culture = southern_florida_culture		religion = lutheran }
 }
 ais = {
 	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
 }
 guacata = {
-	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.561	culture = southern_florida_culture		religion = lutheran }
 }
 tequesta = {
-	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.561	culture = southern_florida_culture		religion = lutheran }
 }
 guarungube = {
-	define_pop = {	type = tribesmen	size = 0.420	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.420	culture = southern_florida_culture		religion = lutheran }
 }
 tequemapo = {
-	define_pop = {	type = tribesmen	size = 0.701	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.701	culture = southern_florida_culture		religion = lutheran }
 }
 okeechobee = {
-	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.561	culture = southern_florida_culture		religion = lutheran }
 }
 caloosahatchee = {
-	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.561	culture = southern_florida_culture		religion = lutheran }
 }
 uriparacoxi = {
-	define_pop = {	type = tribesmen	size = 0.561	culture = american_culture	religion = lutheran }
+	define_pop = {	type = tribesmen	size = 0.561	culture = southern_florida_culture		religion = lutheran }
 }
 lake_okeechobee = {
 }

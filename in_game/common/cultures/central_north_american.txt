@@ -719,7 +719,21 @@ vaultian_culture = { #culture for all (human) vaults
 	opinions = {
 	}
 	culture_groups = {
-		caddoan_group
+		north_american_group
+	}
+}
+
+southern_florida_culture = {
+	language = english_dialect
+	
+	color = map_VAA
+
+	tags = { north_american_gfx american_gfx vaults_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		north_american_group
 	}
 }
 
@@ -733,6 +747,6 @@ american_culture = { #base for everyone for now, should represent pre-war preser
 	opinions = {
 	}
 	culture_groups = {
-		caddoan_group
+		north_american_group
 	}
 }
