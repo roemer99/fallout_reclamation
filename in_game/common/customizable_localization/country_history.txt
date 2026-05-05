@@ -23,8 +23,6 @@
 
 	text = { localization_key = country_history_USA trigger = { tag = USA } } # US ARMY
 	text = { localization_key = country_history_SHI trigger = { tag = SHI } } # Shi
-	text = { localization_key = country_history_ICH trigger = { tag = ICH } } # Imperial China
-	text = { localization_key = country_history_CCP trigger = { tag = CCP } } # Communist China
 
 	# Generic Continental
 	# America

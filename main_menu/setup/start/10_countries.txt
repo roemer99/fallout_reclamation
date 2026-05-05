@@ -598,7 +598,12 @@ countries = {
 			#include = "german_principality"
 			
 			discovered_regions = {
-				east_china_region
+				canada_region
+				east_coast_region
+				great_plains_region
+				west_coast_region
+				alaska_region
+				aridoamerica_region
 			}
 
 			government = {
@@ -648,75 +653,6 @@ countries = {
 
 			country_rank = rank_duchy
 			capital = awaswas
-		}
-
-	ICH = {	#IMPERIAL CHINA
-			own_control_core = {
-				dadu
-				changping
-				wanping
-				fangshan
-				daxing
-				luxian
-				shunyi
-			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				north_china_region
-			}
-
-			government = {
-				type = republic
-				heir_selection = oligarchic_elective
-				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
-			}
-
-			country_rank = rank_duchy
-			capital = dadu
-		}
-
-		CCP = {	#COMMUNIST CHINA
-			own_control_core = {
-				ruijin
-				ningdu
-				yudu
-				huichang
-				changting
-				shicheng_ningdu
-			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				east_china_region
-			}
-
-			government = {
-				type = republic
-				heir_selection = oligarchic_elective
-				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
-			}
-
-			country_rank = rank_duchy
-			capital = ruijin
 		}
 
 	}
