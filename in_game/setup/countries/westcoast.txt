@@ -167,11 +167,29 @@ USA = {	# VAULT 81
 }
 
 # CHINA
-SHI = {	# VAULT 81
+SHI = {	# SHI
 	color = map_SHI
 	color2 = rgb { 238 28 37 }
 
 	culture_definition = wu_culture
+	religion_definition = sanjiao
+	
+}
+
+ICH = {	# IMPERIAL CHINA
+	color = map_SHI
+	color2 = rgb { 238 28 37 }
+
+	culture_definition = yan_culture
+	religion_definition = sanjiao
+	
+}
+
+CCP = {	# COMMUNIST CHINA
+	color = map_SHI
+	color2 = rgb { 238 28 37 }
+
+	culture_definition = kejia_culture
 	religion_definition = sanjiao
 	
 }
