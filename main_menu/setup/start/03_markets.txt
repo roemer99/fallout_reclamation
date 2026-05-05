@@ -79,7 +79,6 @@ market_manager = {
 	
 	# East Asia
 	add_market = dadu
-	add_market = ruijin
 	add_market = kyoto #sakai
 	# add_market = kamakura
 	# add_market = hakata
