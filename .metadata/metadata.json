@@ -30,7 +30,9 @@
 			"events/government",
 			"events/missionevents",
 			"events/religion",
-			"events/situations"
+			"events/situations",
+			#"common/country_interactions",
+			#"common/generic_actions"
 		]
 	}
 }
