@@ -1,5 +1,5 @@
 ﻿tsatsaotine_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_tsatsaotine
 	
@@ -13,7 +13,7 @@
 }
 
 tlicho_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_tlicho
 	
@@ -27,7 +27,7 @@ tlicho_culture = {
 }
 
 dehcho_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_dehcho
 	
@@ -41,7 +41,7 @@ dehcho_culture = {
 }
 
 danezaa_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_danezaa
 	
@@ -55,7 +55,7 @@ danezaa_culture = {
 }
 
 nihithaw_culture = { 
-	language = english_dialect
+	language = cree_language
 	
 	color = map_nihithaw
 	
@@ -69,7 +69,7 @@ nihithaw_culture = {
 }
 
 matiyinini_culture = { 
-	language = english_dialect
+	language = cree_language
 	
 	color = map_matiyinini
 	
@@ -83,7 +83,7 @@ matiyinini_culture = {
 }
 
 mahmikiwini_culture = { 
-	language = english_dialect
+	language = cree_language
 	
 	color = map_mahmikiwini
 	
@@ -97,7 +97,7 @@ mahmikiwini_culture = {
 }
 
 nakoda_culture = { 
-	language = english_dialect
+	language = dakota_language
 	
 	color = map_nakoda
 	
@@ -111,7 +111,7 @@ nakoda_culture = {
 }
 
 tsuutina_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_tsuutina
 	
@@ -125,7 +125,7 @@ tsuutina_culture = {
 }
 
 haaninin_culture = { 
-	language = english_dialect
+	language = hinonoeitiit_language
 	
 	color = map_haaninin
 	
@@ -139,7 +139,7 @@ haaninin_culture = {
 }
 
 denesoline_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_denesoline
 	
@@ -153,7 +153,7 @@ denesoline_culture = {
 }
 
 ashalaho_culture = { 
-	language = english_dialect
+	language = apsaalooke_hiraaca_language
 	
 	color = map_ashalaho
 	
@@ -167,7 +167,7 @@ ashalaho_culture = {
 }
 
 ashshipite_culture = { 
-	language = english_dialect
+	language = apsaalooke_hiraaca_language
 	
 	color = map_ashshipite
 	
@@ -181,7 +181,7 @@ ashshipite_culture = {
 }
 
 tsetsehesahese_culture = { 
-	language = english_dialect
+	language = tsehesenestsestotse_language
 	
 	color = map_tsetsehesahese
 	
@@ -195,7 +195,7 @@ tsetsehesahese_culture = {
 }
 
 sotaeoo_culture = { 
-	language = english_dialect
+	language = tsehesenestsestotse_language
 	
 	color = map_sotaeoo
 	
@@ -209,7 +209,7 @@ sotaeoo_culture = {
 }
 
 lahkota_culture = { 
-	language = english_dialect
+	language = dakota_language
 	
 	color = map_lahkota
 	
@@ -223,7 +223,7 @@ lahkota_culture = {
 }
 
 ithanktunwan_culture = { 
-	language = english_dialect
+	language = dakota_language
 	
 	color = map_ithanktunwan
 	
@@ -237,7 +237,7 @@ ithanktunwan_culture = {
 }
 
 ithanktunwanna_culture = { 
-	language = english_dialect
+	language = dakota_language
 	
 	color = map_ithanktunwanna
 	
@@ -251,7 +251,7 @@ ithanktunwanna_culture = {
 }
 
 nanwuinenan_culture = { 
-	language = english_dialect
+	language = hinonoeitiit_language
 	
 	color = map_nanwuinenan
 	
@@ -265,7 +265,7 @@ nanwuinenan_culture = {
 }
 
 hinonoeino_culture = { 
-	language = english_dialect
+	language = hinonoeitiit_language
 	
 	color = map_hinonoeino
 	
@@ -279,7 +279,7 @@ hinonoeino_culture = {
 }
 
 hupe_culture = { 
-	language = english_dialect
+	language = shoshoni_language
 	
 	color = map_hupe
 	
@@ -293,7 +293,7 @@ hupe_culture = {
 }
 
 yapahruka_culture = { 
-	language = english_dialect
+	language = shoshoni_language
 	
 	color = map_yamparika
 	 
@@ -307,7 +307,7 @@ yapahruka_culture = {
 }
 
 kuhtsutuuka_culture = { 
-	language = english_dialect
+	language = shoshoni_language
 	
 	color = map_kotsoteka
 	
@@ -321,7 +321,7 @@ kuhtsutuuka_culture = {
 }
 
 tawakoni_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_tawakoni
 	
@@ -332,7 +332,7 @@ tawakoni_culture = {
 }
 
 kitikitish_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_kitikitish
 	
@@ -346,7 +346,7 @@ kitikitish_culture = {
 }
 
 cayas_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_cayas
 	
@@ -360,7 +360,7 @@ cayas_culture = {
 }
 
 taovaya_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_taovaya
 	
@@ -374,7 +374,7 @@ taovaya_culture = {
 }
 
 kaigwu_culture = { 
-	language = english_dialect
+	language = tanoan_language
 	
 	color = map_kaigwu
 	
@@ -388,7 +388,7 @@ kaigwu_culture = {
 }
 
 skiri_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_skiri
 	
@@ -402,7 +402,7 @@ skiri_culture = {
 }
 
 tsawi_culture = { #https://en.wikipedia.org/wiki/Pawnee_people
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_tsawi
 	
@@ -416,7 +416,7 @@ tsawi_culture = { #https://en.wikipedia.org/wiki/Pawnee_people
 }
 
 pitahwarita_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_pitahwarita
 	
@@ -430,7 +430,7 @@ pitahwarita_culture = {
 }
 
 kitkehaki_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_kitkehaki
 	
@@ -444,7 +444,7 @@ kitkehaki_culture = {
 }
 
 sahnish_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_sahnish
 	
@@ -458,7 +458,7 @@ sahnish_culture = {
 }
 
 nueta_culture = { 
-	language = english_dialect
+	language = apsaalooke_hiraaca_language
 	
 	color = map_nueta
 	
@@ -472,7 +472,7 @@ nueta_culture = {
 }
 
 hiraaca_culture = { 
-	language = english_dialect
+	language = apsaalooke_hiraaca_language
 	
 	color = map_hiraaca
 	
@@ -486,7 +486,7 @@ hiraaca_culture = {
 }
 
 yazoo_culture = { 
-	language = english_dialect
+	language = natchez_language
 	
 	color = map_yazoo
 	
@@ -500,7 +500,7 @@ yazoo_culture = {
 }
 
 koroa_culture = { 
-	language = english_dialect
+	language = natchez_language
 	
 	color = map_koroa
 	
@@ -514,7 +514,7 @@ koroa_culture = {
 }
 
 tiou_culture = { 
-	language = english_dialect
+	language = natchez_language
 	
 	color = map_tiou
 	
@@ -528,7 +528,7 @@ tiou_culture = {
 }
 
 chitimacha_culture = { #https://en.wikipedia.org/wiki/Chitimacha
-	language = english_dialect
+	language = chitimacha_language
 	
 	color = map_chitimacha
 	
@@ -542,7 +542,7 @@ chitimacha_culture = { #https://en.wikipedia.org/wiki/Chitimacha
 }
 
 bayagoula_culture = { #https://en.wikipedia.org/wiki/Bayogoula
-	language = english_dialect #Unknown language, using Chitimacha as a placeholder
+	language = chitimacha_language #Unknown language, using Chitimacha as a placeholder
 	
 	color = map_bayagoula
 	
@@ -556,7 +556,7 @@ bayagoula_culture = { #https://en.wikipedia.org/wiki/Bayogoula
 }
 
 avoyel_culture = { 
-	language = english_dialect
+	language = natchez_language
 	
 	color = map_avoyel
 	
@@ -570,7 +570,7 @@ avoyel_culture = {
 }
 
 tula_culture = { 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_tula
 	
@@ -584,7 +584,7 @@ tula_culture = {
 }
 
 asinikawithini_culture = { 
-	language = english_dialect
+	language = cree_language
 	
 	color = map_asinikawithini
 	
@@ -598,7 +598,7 @@ asinikawithini_culture = {
 }
 
 inuit_culture = { #https://en.wikipedia.org/wiki/Inuit_culture
-	language = english_dialect
+	language = inuit_language
 	
 	color = map_inuit
 	
@@ -612,7 +612,7 @@ inuit_culture = { #https://en.wikipedia.org/wiki/Inuit_culture
 }
 
 tinde_culture = { 
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_tinde
 
@@ -626,7 +626,7 @@ tinde_culture = {
 }
 
 hende_culture = { #Chiricahua Apache
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_hende
 
@@ -640,7 +640,7 @@ hende_culture = { #Chiricahua Apache
 }
 
 naadahende_culture = { #Mescalero Apache
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_naadahende
 
@@ -654,7 +654,7 @@ naadahende_culture = { #Mescalero Apache
 }
 
 lepai_nde_culture = { #Lipan Apache
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_lepai_nde
 
@@ -668,7 +668,7 @@ lepai_nde_culture = { #Lipan Apache
 }
 
 yattinde_culture = { #Plains Apache
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_yattinde
 
@@ -682,7 +682,7 @@ yattinde_culture = { #Plains Apache
 }
 
 inde_culture = { #Western Apache
-	language = english_dialect
+	language = nadene_language
 	
 	color = map_inde
 
@@ -696,7 +696,7 @@ inde_culture = { #Western Apache
 }
 
 tickanwatic_culture = { #Tonkawa People. Language is a simplification to avoid a language isolate that would be impossible to populate for names. 
-	language = english_dialect
+	language = caddoan_language
 	
 	color = map_tickanwatic
 
@@ -719,20 +719,34 @@ vaultian_culture = { #culture for all (human) vaults
 	opinions = {
 	}
 	culture_groups = {
-		caddoan_group
+		north_american_group
+	}
+}
+
+southern_florida_culture = {
+	language = english_dialect
+	
+	color = map_VAA
+
+	tags = { north_american_gfx american_gfx vaults_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		north_american_group
 	}
 }
 
 american_culture = { #base for everyone for now, should represent pre-war preservation (BoS)
 	language = english_dialect
 	
-	color = map_american
+	color = map_VAA
 
 	tags = { native_american_tag north_american_gfx american_gfx central_plains_coa_gfx }
 
 	opinions = {
 	}
 	culture_groups = {
-		caddoan_group
+		north_american_group
 	}
 }

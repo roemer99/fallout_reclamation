@@ -1,0 +1,12 @@
+﻿l_english:
+
+### GROUPS
+ north_american_group: "North American"
+ north_american_group_desc: "Although originally encompassing a diverse array of immigrant diaspora and colonial settlements spread across a vast continental expanse, the relentless cultural standardization and political unification of the late pre-war era has allowed these various regional populations to develop a deeply entrenched, shared identity."
+
+# NORTH AMERICA
+ southern_florida_culture: "Southern Florida"
+ southern_florida_culture_desc: "The $north_american_group$ $group_text$ $english_language$ language."
+ vaultian_culture: "Vaultian"
+ vaultian_culture: "American"
+ american_culture: "American"
