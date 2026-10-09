@@ -6,6 +6,6 @@
 # NORTH AMERICA
  southern_florida_culture: "Southern Florida"
  southern_florida_culture_desc: "The $north_american_group$ $group_text$ $english_language$ language."
- vaultian_culture: "Vaultian"
+ #vaultian_culture: "Vaultian"
  vaultian_culture: "American"
  american_culture: "American"

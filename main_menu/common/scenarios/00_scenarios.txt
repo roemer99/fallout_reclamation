@@ -1,0 +1,43 @@
+﻿# You can use the "coa" console command to get the flag for a particular country.
+
+VCY_scenario = {
+	country = VCY
+	player_playstyle = MILITARY
+	player_proficiency = EXPERIENCED
+	bookmark = bookmark_2078
+}
+
+VDX_scenario = {
+	country = VDX
+	player_playstyle = DIPLOMATIC
+	player_proficiency = EXPERIENCED
+	bookmark = bookmark_2078
+}
+
+VDD_scenario = {	#VAULT 81
+	country = VDD
+	player_playstyle = ADMINISTRATIVE
+	player_proficiency = EXPERIENCED
+	bookmark = bookmark_2078
+}
+
+VAV_scenario = {	#VAULT 21
+	country = VAV
+	player_playstyle = ADMINISTRATIVE
+	player_proficiency = EXPERIENCED
+	bookmark = bookmark_2078
+}
+
+VAI_scenario = {	#VAULT 8
+	country = VAI
+	player_playstyle = DIPLOMATIC
+	player_proficiency = EXPERIENCED
+	bookmark = bookmark_2078
+}
+
+VAP_scenario = {	#VAULT 15
+	country = VAP
+	player_playstyle = MILITARY
+	player_proficiency = EXPERIENCED
+	bookmark = bookmark_2078
+}

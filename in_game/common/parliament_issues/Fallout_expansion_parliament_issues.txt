@@ -1,0 +1,41 @@
+﻿
+#####################################################################
+## New Generic Parliament Issues – 1.2 Expansion
+## Covers Crown, Nobles, Clergy, Burghers, Peasants, Wartime, Proximity
+#####################################################################
+
+############################################
+## GENERIC
+############################################
+
+fallout_generic_debate = {
+	estate = crown_estate
+
+	modifier_when_in_debate = {
+		trade_income = 0.05
+	}
+
+	allow = {
+		"estate_power(estate_type:burghers_estate)" < 0.5
+		at_war = no
+	}
+
+	chance = {
+		add = 1
+		add = {
+			if = {
+				limit = { "estate_power(estate_type:burghers_estate)" < 0.3 }
+				value = 2
+			}
+		}
+	}
+
+	on_debate_passed = {
+		change_societal_value = { type = mercantilism_vs_free_trade value = societal_value_tiny_move_to_left }
+	}
+
+	on_debate_failed = {
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_extreme_bonus }
+		parliament_debate_failed_effect = yes
+	}
+}

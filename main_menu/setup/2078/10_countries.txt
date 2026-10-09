@@ -1,8 +1,51 @@
 current_age = age_1_traditions
 
+# own_control_core
+# own_control_integrated
+# own_control_conquered
+# own_control_colony
+# own_core
+# own_conquered
+# own_integrated
+# own_colony
+# control_core
+# control
+# our_cores_conquered_by_others
+
 countries = {
 	countries = {
-		VAA = {	#Vault 0
+
+	VAP = {	#Vault 0
+			own_control_core = {
+				mutsisooni_yohe
+			}
+
+			starting_technology_level = 2
+			#include = "expl_western_europe"
+			#include = "catholic_monarchy_no_coast"
+			#include = "german_principality"
+			
+			discovered_regions = {
+				canada_region
+				east_coast_region
+				great_plains_region
+				west_coast_region
+				alaska_region
+				aridoamerica_region
+			}
+
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = vaa_calculator
+			}
+
+			country_rank = rank_duchy
+			dynasty = calculator_dynasty
+			capital = mutsisooni_yohe
+		}
+
+			VAA = {	#Vault 0
 			own_control_core = {
 				mutsisooni_yohe
 			}
@@ -720,5 +763,4 @@ countries = {
 		}
 
 	}
-
-}	
+}

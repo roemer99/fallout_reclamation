@@ -1,0 +1,1351 @@
+[08:56:18][pdx_mod_metadata.cpp:218]: Mod metadata read error. File: C:/Users/richa/Documents/Paradox Interactive/Europa Universalis V/mod/test/.metadata/metadata.json Error: Failed to open file for reading: C:/Users/richa/Documents/Paradox Interactive/Europa Universalis V/mod/test/.metadata/metadata.json
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_HEADER: "WE PERFORM cas demand war entry ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_TITLE: "WE PERFORM cas demand war entry ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_LOG: "WE PERFORM cas demand war entry ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_war_entry_ACTION_MAP: "WE PERFORM cas demand war entry ACTION MAP"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_HEADER: "ACTION cas demand war entry PERFORMED ON US HEADER"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_TITLE: "ACTION cas demand war entry PERFORMED ON US TITLE"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_LOG: "ACTION cas demand war entry PERFORMED ON US LOG"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_demand_war_entry_PERFORMED_ON_US_MAP: "ACTION cas demand war entry PERFORMED ON US MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_HEADER: "WE PERFORM assert patronato real ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_TITLE: "WE PERFORM assert patronato real ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_LOG: "WE PERFORM assert patronato real ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_assert_patronato_real_ACTION_MAP: "WE PERFORM assert patronato real ACTION MAP"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_HEADER: "ACTION assert patronato real PERFORMED ON US HEADER"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_TITLE: "ACTION assert patronato real PERFORMED ON US TITLE"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_LOG: "ACTION assert patronato real PERFORMED ON US LOG"
+[08:56:45][localization_util.cpp:103]: ACTION_assert_patronato_real_PERFORMED_ON_US_MAP: "ACTION assert patronato real PERFORMED ON US MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_HEADER: "WE PERFORM cas encomienda visitation ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_TITLE: "WE PERFORM cas encomienda visitation ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_LOG: "WE PERFORM cas encomienda visitation ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_encomienda_visitation_ACTION_MAP: "WE PERFORM cas encomienda visitation ACTION MAP"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_HEADER: "ACTION cas encomienda visitation PERFORMED ON US HEADER"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_TITLE: "ACTION cas encomienda visitation PERFORMED ON US TITLE"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_LOG: "ACTION cas encomienda visitation PERFORMED ON US LOG"
+[08:56:45][localization_util.cpp:103]: ACTION_cas_encomienda_visitation_PERFORMED_ON_US_MAP: "ACTION cas encomienda visitation PERFORMED ON US MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_HEADER: "PERFORM cas demand muslim converts ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_TITLE: "PERFORM cas demand muslim converts ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_LOG: "PERFORM cas demand muslim converts ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_demand_muslim_converts_ACTION_MAP: "PERFORM cas demand muslim converts ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_HEADER: "WE PERFORM cas demand muslim converts ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_TITLE: "WE PERFORM cas demand muslim converts ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_LOG: "WE PERFORM cas demand muslim converts ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_demand_muslim_converts_ACTION_MAP: "WE PERFORM cas demand muslim converts ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_HEADER: "OTHER PERFORMS cas demand muslim converts ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_TITLE: "OTHER PERFORMS cas demand muslim converts ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_LOG: "OTHER PERFORMS cas demand muslim converts ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_demand_muslim_converts_ACTION_MAP: "OTHER PERFORMS cas demand muslim converts ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_HEADER: "PERFORM cas dismantle fortifications ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_TITLE: "PERFORM cas dismantle fortifications ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_LOG: "PERFORM cas dismantle fortifications ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_dismantle_fortifications_ACTION_MAP: "PERFORM cas dismantle fortifications ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_HEADER: "WE PERFORM cas dismantle fortifications ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_TITLE: "WE PERFORM cas dismantle fortifications ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_LOG: "WE PERFORM cas dismantle fortifications ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_dismantle_fortifications_ACTION_MAP: "WE PERFORM cas dismantle fortifications ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_HEADER: "OTHER PERFORMS cas dismantle fortifications ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_TITLE: "OTHER PERFORMS cas dismantle fortifications ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_LOG: "OTHER PERFORMS cas dismantle fortifications ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_dismantle_fortifications_ACTION_MAP: "OTHER PERFORMS cas dismantle fortifications ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_HEADER: "PERFORM cas reduce granadan sovereignty ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_TITLE: "PERFORM cas reduce granadan sovereignty ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_LOG: "PERFORM cas reduce granadan sovereignty ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_reduce_granadan_sovereignty_ACTION_MAP: "PERFORM cas reduce granadan sovereignty ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_HEADER: "WE PERFORM cas reduce granadan sovereignty ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_TITLE: "WE PERFORM cas reduce granadan sovereignty ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_LOG: "WE PERFORM cas reduce granadan sovereignty ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_reduce_granadan_sovereignty_ACTION_MAP: "WE PERFORM cas reduce granadan sovereignty ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_HEADER: "OTHER PERFORMS cas reduce granadan sovereignty ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_TITLE: "OTHER PERFORMS cas reduce granadan sovereignty ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_LOG: "OTHER PERFORMS cas reduce granadan sovereignty ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_reduce_granadan_sovereignty_ACTION_MAP: "OTHER PERFORMS cas reduce granadan sovereignty ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_HEADER: "PERFORM mor force tribute ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_TITLE: "PERFORM mor force tribute ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_LOG: "PERFORM mor force tribute ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_force_tribute_ACTION_MAP: "PERFORM mor force tribute ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_HEADER: "WE PERFORM mor force tribute ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_TITLE: "WE PERFORM mor force tribute ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_LOG: "WE PERFORM mor force tribute ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_force_tribute_ACTION_MAP: "WE PERFORM mor force tribute ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_HEADER: "OTHER PERFORMS mor force tribute ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_TITLE: "OTHER PERFORMS mor force tribute ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_LOG: "OTHER PERFORMS mor force tribute ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_force_tribute_ACTION_MAP: "OTHER PERFORMS mor force tribute ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_HEADER: "PERFORM cas force tribute ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_TITLE: "PERFORM cas force tribute ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_LOG: "PERFORM cas force tribute ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_cas_force_tribute_ACTION_MAP: "PERFORM cas force tribute ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_HEADER: "WE PERFORM cas force tribute ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_TITLE: "WE PERFORM cas force tribute ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_LOG: "WE PERFORM cas force tribute ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_cas_force_tribute_ACTION_MAP: "WE PERFORM cas force tribute ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_HEADER: "OTHER PERFORMS cas force tribute ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_TITLE: "OTHER PERFORMS cas force tribute ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_LOG: "OTHER PERFORMS cas force tribute ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_cas_force_tribute_ACTION_MAP: "OTHER PERFORMS cas force tribute ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_HEADER: "PERFORM adu proclaim crown al andalus ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_TITLE: "PERFORM adu proclaim crown al andalus ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_LOG: "PERFORM adu proclaim crown al andalus ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_crown_al_andalus_ACTION_MAP: "PERFORM adu proclaim crown al andalus ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_HEADER: "PERFORM adu proclaim a fatwa ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_TITLE: "PERFORM adu proclaim a fatwa ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_LOG: "PERFORM adu proclaim a fatwa ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_proclaim_a_fatwa_ACTION_MAP: "PERFORM adu proclaim a fatwa ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_HEADER: "PERFORM adu muster the ghuzat ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_TITLE: "PERFORM adu muster the ghuzat ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_LOG: "PERFORM adu muster the ghuzat ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_muster_the_ghuzat_ACTION_MAP: "PERFORM adu muster the ghuzat ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_HEADER: "PERFORM adu integrate natives ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_TITLE: "PERFORM adu integrate natives ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_LOG: "PERFORM adu integrate natives ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_integrate_natives_ACTION_MAP: "PERFORM adu integrate natives ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_HEADER: "PERFORM invoke ummayad legacy ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_TITLE: "PERFORM invoke ummayad legacy ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_LOG: "PERFORM invoke ummayad legacy ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_invoke_ummayad_legacy_ACTION_MAP: "PERFORM invoke ummayad legacy ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_HEADER: "PERFORM spa demand tribute fleets ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_TITLE: "PERFORM spa demand tribute fleets ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_LOG: "PERFORM spa demand tribute fleets ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_demand_tribute_fleets_ACTION_MAP: "PERFORM spa demand tribute fleets ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_HEADER: "PERFORM adu build qadi office ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_TITLE: "PERFORM adu build qadi office ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_LOG: "PERFORM adu build qadi office ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_build_qadi_office_ACTION_MAP: "PERFORM adu build qadi office ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_HEADER: "PERFORM spa enforce conformity ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_TITLE: "PERFORM spa enforce conformity ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_LOG: "PERFORM spa enforce conformity ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_enforce_conformity_ACTION_MAP: "PERFORM spa enforce conformity ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_HEADER: "PERFORM spa patronize golden century ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_TITLE: "PERFORM spa patronize golden century ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_LOG: "PERFORM spa patronize golden century ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_patronize_golden_century_ACTION_MAP: "PERFORM spa patronize golden century ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_HEADER: "PERFORM spa seize colony ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_TITLE: "PERFORM spa seize colony ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_LOG: "PERFORM spa seize colony ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_seize_colony_ACTION_MAP: "PERFORM spa seize colony ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_HEADER: "PERFORM adu dispatch gold caravan ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_TITLE: "PERFORM adu dispatch gold caravan ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_LOG: "PERFORM adu dispatch gold caravan ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_dispatch_gold_caravan_ACTION_MAP: "PERFORM adu dispatch gold caravan ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_HEADER: "PERFORM spa issue royal decree ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_TITLE: "PERFORM spa issue royal decree ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_LOG: "PERFORM spa issue royal decree ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_issue_royal_decree_ACTION_MAP: "PERFORM spa issue royal decree ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_HEADER: "PERFORM spa increase capital market demands ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_TITLE: "PERFORM spa increase capital market demands ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_LOG: "PERFORM spa increase capital market demands ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_increase_capital_market_demands_ACTION_MAP: "PERFORM spa increase capital market demands ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_HEADER: "PERFORM adu charter saharan trade house ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_TITLE: "PERFORM adu charter saharan trade house ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_LOG: "PERFORM adu charter saharan trade house ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_adu_charter_saharan_trade_house_ACTION_MAP: "PERFORM adu charter saharan trade house ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_HEADER: "PERFORM spa edict expulsion ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_TITLE: "PERFORM spa edict expulsion ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_LOG: "PERFORM spa edict expulsion ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_spa_edict_expulsion_ACTION_MAP: "PERFORM spa edict expulsion ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_HEADER: "PERFORM plan partition campaign ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_TITLE: "PERFORM plan partition campaign ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_LOG: "PERFORM plan partition campaign ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_plan_partition_campaign_ACTION_MAP: "PERFORM plan partition campaign ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_HEADER: "WE PERFORM plan partition campaign ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_TITLE: "WE PERFORM plan partition campaign ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_LOG: "WE PERFORM plan partition campaign ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_plan_partition_campaign_ACTION_MAP: "WE PERFORM plan partition campaign ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_HEADER: "OTHER PERFORMS plan partition campaign ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_TITLE: "OTHER PERFORMS plan partition campaign ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_LOG: "OTHER PERFORMS plan partition campaign ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_plan_partition_campaign_ACTION_MAP: "OTHER PERFORMS plan partition campaign ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_HEADER: "PERFORM mor invite granadan scholars ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_TITLE: "PERFORM mor invite granadan scholars ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_LOG: "PERFORM mor invite granadan scholars ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_scholars_ACTION_MAP: "PERFORM mor invite granadan scholars ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_HEADER: "WE PERFORM mor invite granadan scholars ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_TITLE: "WE PERFORM mor invite granadan scholars ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_LOG: "WE PERFORM mor invite granadan scholars ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_scholars_ACTION_MAP: "WE PERFORM mor invite granadan scholars ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_HEADER: "OTHER PERFORMS mor invite granadan scholars ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_TITLE: "OTHER PERFORMS mor invite granadan scholars ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_LOG: "OTHER PERFORMS mor invite granadan scholars ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_scholars_ACTION_MAP: "OTHER PERFORMS mor invite granadan scholars ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_HEADER: "PERFORM mor invite granadan advisor ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_TITLE: "PERFORM mor invite granadan advisor ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_LOG: "PERFORM mor invite granadan advisor ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_invite_granadan_advisor_ACTION_MAP: "PERFORM mor invite granadan advisor ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_HEADER: "WE PERFORM mor invite granadan advisor ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_TITLE: "WE PERFORM mor invite granadan advisor ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_LOG: "WE PERFORM mor invite granadan advisor ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_invite_granadan_advisor_ACTION_MAP: "WE PERFORM mor invite granadan advisor ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_HEADER: "OTHER PERFORMS mor invite granadan advisor ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_TITLE: "OTHER PERFORMS mor invite granadan advisor ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_LOG: "OTHER PERFORMS mor invite granadan advisor ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_invite_granadan_advisor_ACTION_MAP: "OTHER PERFORMS mor invite granadan advisor ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_HEADER: "PERFORM mor garrison granadan strongholds ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_TITLE: "PERFORM mor garrison granadan strongholds ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_LOG: "PERFORM mor garrison granadan strongholds ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_garrison_granadan_strongholds_ACTION_MAP: "PERFORM mor garrison granadan strongholds ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_HEADER: "WE PERFORM mor garrison granadan strongholds ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_TITLE: "WE PERFORM mor garrison granadan strongholds ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_LOG: "WE PERFORM mor garrison granadan strongholds ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_garrison_granadan_strongholds_ACTION_MAP: "WE PERFORM mor garrison granadan strongholds ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_HEADER: "OTHER PERFORMS mor garrison granadan strongholds ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_TITLE: "OTHER PERFORMS mor garrison granadan strongholds ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_LOG: "OTHER PERFORMS mor garrison granadan strongholds ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_garrison_granadan_strongholds_ACTION_MAP: "OTHER PERFORMS mor garrison granadan strongholds ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_HEADER: "PERFORM mor attract andalusi craftsmen ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_TITLE: "PERFORM mor attract andalusi craftsmen ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_LOG: "PERFORM mor attract andalusi craftsmen ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_mor_attract_andalusi_craftsmen_ACTION_MAP: "PERFORM mor attract andalusi craftsmen ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_HEADER: "WE PERFORM mor attract andalusi craftsmen ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_TITLE: "WE PERFORM mor attract andalusi craftsmen ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_LOG: "WE PERFORM mor attract andalusi craftsmen ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_mor_attract_andalusi_craftsmen_ACTION_MAP: "WE PERFORM mor attract andalusi craftsmen ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_HEADER: "OTHER PERFORMS mor attract andalusi craftsmen ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_TITLE: "OTHER PERFORMS mor attract andalusi craftsmen ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_LOG: "OTHER PERFORMS mor attract andalusi craftsmen ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_mor_attract_andalusi_craftsmen_ACTION_MAP: "OTHER PERFORMS mor attract andalusi craftsmen ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_HEADER: "PERFORM gra reduce castilian influence ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_TITLE: "PERFORM gra reduce castilian influence ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_LOG: "PERFORM gra reduce castilian influence ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_castilian_influence_ACTION_MAP: "PERFORM gra reduce castilian influence ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_HEADER: "WE PERFORM gra reduce castilian influence ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_TITLE: "WE PERFORM gra reduce castilian influence ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_LOG: "WE PERFORM gra reduce castilian influence ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_castilian_influence_ACTION_MAP: "WE PERFORM gra reduce castilian influence ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_HEADER: "OTHER PERFORMS gra reduce castilian influence ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_TITLE: "OTHER PERFORMS gra reduce castilian influence ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_LOG: "OTHER PERFORMS gra reduce castilian influence ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_castilian_influence_ACTION_MAP: "OTHER PERFORMS gra reduce castilian influence ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_HEADER: "PERFORM gra reduce moroccan influence ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_TITLE: "PERFORM gra reduce moroccan influence ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_LOG: "PERFORM gra reduce moroccan influence ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_reduce_moroccan_influence_ACTION_MAP: "PERFORM gra reduce moroccan influence ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_HEADER: "WE PERFORM gra reduce moroccan influence ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_TITLE: "WE PERFORM gra reduce moroccan influence ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_LOG: "WE PERFORM gra reduce moroccan influence ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_reduce_moroccan_influence_ACTION_MAP: "WE PERFORM gra reduce moroccan influence ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_HEADER: "OTHER PERFORMS gra reduce moroccan influence ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_TITLE: "OTHER PERFORMS gra reduce moroccan influence ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_LOG: "OTHER PERFORMS gra reduce moroccan influence ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_reduce_moroccan_influence_ACTION_MAP: "OTHER PERFORMS gra reduce moroccan influence ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_HEADER: "PERFORM gra construct alhambra ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_TITLE: "PERFORM gra construct alhambra ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_LOG: "PERFORM gra construct alhambra ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_construct_alhambra_ACTION_MAP: "PERFORM gra construct alhambra ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_HEADER: "WE PERFORM gra construct alhambra ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_TITLE: "WE PERFORM gra construct alhambra ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_LOG: "WE PERFORM gra construct alhambra ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_construct_alhambra_ACTION_MAP: "WE PERFORM gra construct alhambra ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_HEADER: "OTHER PERFORMS gra construct alhambra ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_TITLE: "OTHER PERFORMS gra construct alhambra ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_LOG: "OTHER PERFORMS gra construct alhambra ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_construct_alhambra_ACTION_MAP: "OTHER PERFORMS gra construct alhambra ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_HEADER: "PERFORM gra enforce sovereignty ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_TITLE: "PERFORM gra enforce sovereignty ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_LOG: "PERFORM gra enforce sovereignty ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_gra_enforce_sovereignty_ACTION_MAP: "PERFORM gra enforce sovereignty ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_HEADER: "WE PERFORM gra enforce sovereignty ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_TITLE: "WE PERFORM gra enforce sovereignty ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_LOG: "WE PERFORM gra enforce sovereignty ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_gra_enforce_sovereignty_ACTION_MAP: "WE PERFORM gra enforce sovereignty ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_HEADER: "OTHER PERFORMS gra enforce sovereignty ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_TITLE: "OTHER PERFORMS gra enforce sovereignty ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_LOG: "OTHER PERFORMS gra enforce sovereignty ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_gra_enforce_sovereignty_ACTION_MAP: "OTHER PERFORMS gra enforce sovereignty ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_HEADER: "PERFORM hire granadan jinetes ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_TITLE: "PERFORM hire granadan jinetes ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_LOG: "PERFORM hire granadan jinetes ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_hire_granadan_jinetes_ACTION_MAP: "PERFORM hire granadan jinetes ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_HEADER: "WE PERFORM hire granadan jinetes ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_TITLE: "WE PERFORM hire granadan jinetes ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_LOG: "WE PERFORM hire granadan jinetes ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_hire_granadan_jinetes_ACTION_MAP: "WE PERFORM hire granadan jinetes ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_HEADER: "OTHER PERFORMS hire granadan jinetes ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_TITLE: "OTHER PERFORMS hire granadan jinetes ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_LOG: "OTHER PERFORMS hire granadan jinetes ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_hire_granadan_jinetes_ACTION_MAP: "OTHER PERFORMS hire granadan jinetes ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_HEADER: "PERFORM vassalize granada ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_TITLE: "PERFORM vassalize granada ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_LOG: "PERFORM vassalize granada ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_vassalize_granada_ACTION_MAP: "PERFORM vassalize granada ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_HEADER: "WE PERFORM vassalize granada ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_TITLE: "WE PERFORM vassalize granada ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_LOG: "WE PERFORM vassalize granada ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_vassalize_granada_ACTION_MAP: "WE PERFORM vassalize granada ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_HEADER: "OTHER PERFORMS vassalize granada ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_TITLE: "OTHER PERFORMS vassalize granada ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_LOG: "OTHER PERFORMS vassalize granada ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_vassalize_granada_ACTION_MAP: "OTHER PERFORMS vassalize granada ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_HEADER: "PERFORM claim andalusi inheritance ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_TITLE: "PERFORM claim andalusi inheritance ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_LOG: "PERFORM claim andalusi inheritance ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_claim_andalusi_inheritance_ACTION_MAP: "PERFORM claim andalusi inheritance ACTION MAP"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_HEADER: "WE PERFORM claim andalusi inheritance ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_TITLE: "WE PERFORM claim andalusi inheritance ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_LOG: "WE PERFORM claim andalusi inheritance ACTION LOG"
+[08:56:45][localization_util.cpp:103]: WE_PERFORM_claim_andalusi_inheritance_ACTION_MAP: "WE PERFORM claim andalusi inheritance ACTION MAP"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_HEADER: "OTHER PERFORMS claim andalusi inheritance ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_TITLE: "OTHER PERFORMS claim andalusi inheritance ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_LOG: "OTHER PERFORMS claim andalusi inheritance ACTION LOG"
+[08:56:45][localization_util.cpp:103]: OTHER_PERFORMS_claim_andalusi_inheritance_ACTION_MAP: "OTHER PERFORMS claim andalusi inheritance ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_HEADER: "PERFORM petition for the bula de cruzada ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_TITLE: "PERFORM petition for the bula de cruzada ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_LOG: "PERFORM petition for the bula de cruzada ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_petition_for_the_bula_de_cruzada_ACTION_MAP: "PERFORM petition for the bula de cruzada ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_HEADER: "PERFORM summon iberian military orders crusade ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_TITLE: "PERFORM summon iberian military orders crusade ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_LOG: "PERFORM summon iberian military orders crusade ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_iberian_military_orders_crusade_ACTION_MAP: "PERFORM summon iberian military orders crusade ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_HEADER: "PERFORM launch a cabalgada ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_TITLE: "PERFORM launch a cabalgada ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_LOG: "PERFORM launch a cabalgada ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_launch_a_cabalgada_ACTION_MAP: "PERFORM launch a cabalgada ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_HEADER: "PERFORM demand parias ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_TITLE: "PERFORM demand parias ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_LOG: "PERFORM demand parias ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_demand_parias_ACTION_MAP: "PERFORM demand parias ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_HEADER: "PERFORM summon volunteers of the faith ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_TITLE: "PERFORM summon volunteers of the faith ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_LOG: "PERFORM summon volunteers of the faith ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_summon_volunteers_of_the_faith_ACTION_MAP: "PERFORM summon volunteers of the faith ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_HEADER: "PERFORM proclaim the ghazw ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_TITLE: "PERFORM proclaim the ghazw ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_LOG: "PERFORM proclaim the ghazw ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_proclaim_the_ghazw_ACTION_MAP: "PERFORM proclaim the ghazw ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_HEADER: "PERFORM cross the strait ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_TITLE: "PERFORM cross the strait ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_LOG: "PERFORM cross the strait ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_cross_the_strait_ACTION_MAP: "PERFORM cross the strait ACTION MAP"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_LOG: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_MAP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_SETUP: "TODO : Write a desc"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_HEADER: "PERFORM raid the shores ACTION HEADER"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_TITLE: "PERFORM raid the shores ACTION TITLE"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_LOG: "PERFORM raid the shores ACTION LOG"
+[08:56:45][localization_util.cpp:103]: PERFORM_raid_the_shores_ACTION_MAP: "PERFORM raid the shores ACTION MAP"
+[08:56:50][virtualfilesystem.cpp:634]: Could not find texture due to 'VFSOpen Error: gfx/interface/icons/situations/flashpoint.dds not found'. (trying to open file "gfx/interface/icons/situations/flashpoint.dds")
+[08:56:50][pdx_gui_texture.cpp:61]: gui/shared/textures.gui:89 - Missing file 'gfx/interface/icons/situations/flashpoint.dds' for texture property
+[08:56:50][virtualfilesystem.cpp:634]: Could not find texture due to 'VFSOpen Error: gfx/interface/icons/situations/gc_colonial_dominance.dds not found'. (trying to open file "gfx/interface/icons/situations/gc_colonial_dominance.dds")
+[08:56:50][pdx_gui_texture.cpp:61]: gui/shared/textures.gui:101 - Missing file 'gfx/interface/icons/situations/gc_colonial_dominance.dds' for texture property
+[08:56:50][virtualfilesystem.cpp:634]: Could not find texture due to 'VFSOpen Error: gfx/interface/icons/situations/gc_european_dominance.dds not found'. (trying to open file "gfx/interface/icons/situations/gc_european_dominance.dds")
+[08:56:50][pdx_gui_texture.cpp:61]: gui/shared/textures.gui:106 - Missing file 'gfx/interface/icons/situations/gc_european_dominance.dds' for texture property
+[08:57:13][dnamodifier.cpp:342]: could not find template [castilian_mustache]. gfx/portraits/portrait_modifiers/zz_beard_pool_prototype.txt:79
+[08:57:13][dnamodifier.cpp:342]: could not find template [castilian_full]. gfx/portraits/portrait_modifiers/zz_beard_pool_prototype.txt:101
+[08:57:13][dnamodifier.cpp:342]: could not find template [castilian_full_early]. gfx/portraits/portrait_modifiers/zz_beard_pool_prototype.txt:124
+[08:57:13][dnamodifier.cpp:342]: could not find template [byzantine_full_beards]. gfx/portraits/portrait_modifiers/zz_beard_pool_prototype.txt:147
+[08:57:17][advance_definition.cpp:842]: Unknown levy-setup 'levy_sometent' to unlock
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:40
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_european_dominance at events/DHE/flavor_CAS.txt:1372
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:1697
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:2503
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_european_dominance at events/DHE/flavor_CAS.txt:5416
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:6708
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:6762
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:6821
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:6903
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:6972
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:7064
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:11011
+[08:57:18][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_CAS.txt:11180
+[08:57:19][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_MOR.txt:2239
+[08:57:19][jomini_effect.cpp:557]: Unknown effect gc_change_european_dominance at events/DHE/flavor_MOR.txt:2425
+[08:57:19][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at events/DHE/flavor_MOR.txt:2833
+[08:57:22][jomini_effect.cpp:557]: Unknown effect andalusi_maghrebi_bureaucracy_set_up at common/on_action/_hardcoded.txt:160
+[08:57:22][jomini_effect.cpp:557]: Unknown effect andalusi_maghrebi_bureaucracy_set_up at common/on_action/_hardcoded.txt:168
+[08:57:22][jomini_effect.cpp:557]: Unknown effect gc_change_colonial_dominance at common/on_action/exploration_mission_monthly.txt:66
+[08:57:41][pdx_mod_metadata.cpp:218]: Mod metadata read error. File: C:/Users/richa/Documents/Paradox Interactive/Europa Universalis V/mod/test/.metadata/metadata.json Error: Failed to open file for reading: C:/Users/richa/Documents/Paradox Interactive/Europa Universalis V/mod/test/.metadata/metadata.json
+[08:58:45][virtualfilesystem.cpp:634]: Could not find texture due to 'VFSOpen Error: gfx/interface/icons/situations/flashpoint.dds not found'. (trying to open file "gfx/interface/icons/situations/flashpoint.dds")
+[08:58:45][pdx_gui_texture.cpp:61]: gui/shared/textures.gui:89 - Missing file 'gfx/interface/icons/situations/flashpoint.dds' for texture property
+[08:58:45][virtualfilesystem.cpp:634]: Could not find texture due to 'VFSOpen Error: gfx/interface/icons/situations/gc_colonial_dominance.dds not found'. (trying to open file "gfx/interface/icons/situations/gc_colonial_dominance.dds")
+[08:58:45][pdx_gui_texture.cpp:61]: gui/shared/textures.gui:101 - Missing file 'gfx/interface/icons/situations/gc_colonial_dominance.dds' for texture property
+[08:58:45][virtualfilesystem.cpp:634]: Could not find texture due to 'VFSOpen Error: gfx/interface/icons/situations/gc_european_dominance.dds not found'. (trying to open file "gfx/interface/icons/situations/gc_european_dominance.dds")
+[08:58:45][pdx_gui_texture.cpp:61]: gui/shared/textures.gui:106 - Missing file 'gfx/interface/icons/situations/gc_european_dominance.dds' for texture property
+[08:58:47][unit_illustration_database.cpp:131]: Unit illustration mask 'gfx/interface/illustrations/units/masks/army_cavalry_2_heavy_tag_east_mediterranean_gfx.dds' has no matching illustration 'gfx/interface/illustrations/units/army_cavalry_2_heavy_tag_east_mediterranean_gfx.dds' - was the illustration renamed without renaming its mask?
+[08:58:47][unit_illustration_database.cpp:131]: Unit illustration mask 'gfx/interface/illustrations/units/masks/army_cavalry_heavy_tag_east_mediterranean_gfx.dds' has no matching illustration 'gfx/interface/illustrations/units/army_cavalry_heavy_tag_east_mediterranean_gfx.dds' - was the illustration renamed without renaming its mask?
+[08:58:47][jomini_onaction.cpp:862]: Couldn't find predefined on action named on_colonial_charter_finished
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/estate_privileges/burghers_estate.txt:1096
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/estate_privileges/burghers_estate.txt:1096
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/decisions/spanish_councils_decisions.txt:41
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/decisions/spanish_councils_decisions.txt:41
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/laws/01_common.txt:929
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/laws/01_common.txt:929
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/cabinet_actions/iberia.txt:14
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/cabinet_actions/iberia.txt:14
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/international_organizations/union.txt:218
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/international_organizations/union.txt:218
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/international_organizations/union.txt:258
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/international_organizations/union.txt:258
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/international_organizations/union.txt:282
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/international_organizations/union.txt:282
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/unit_types/1_uniques_for_age_1_traditions.txt:316
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/unit_types/1_uniques_for_age_1_traditions.txt:316
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/unit_types/1_uniques_for_age_1_traditions.txt:881
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/unit_types/1_uniques_for_age_1_traditions.txt:881
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/religious_order_types/00_catholic.txt:18
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/religious_order_types/00_catholic.txt:18
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: setup/religious_orders/00_iberian.txt:4
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at setup/religious_orders/00_iberian.txt:4
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: setup/religious_orders/00_iberian.txt:17
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at setup/religious_orders/00_iberian.txt:17
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: setup/religious_orders/00_iberian.txt:30
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at setup/religious_orders/00_iberian.txt:30
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: setup/religious_orders/00_iberian.txt:43
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at setup/religious_orders/00_iberian.txt:43
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: setup/religious_orders/00_iberian.txt:56
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at setup/religious_orders/00_iberian.txt:56
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: setup/religious_orders/00_iberian.txt:68
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at setup/religious_orders/00_iberian.txt:68
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/building_types/capital_buildings.txt:955
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/building_types/capital_buildings.txt:955
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/building_types/culture_buildings.txt:79
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/building_types/culture_buildings.txt:79
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/building_types/unique_buildings.txt:1368
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/building_types/unique_buildings.txt:1368
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/building_types/unique_buildings.txt:1415
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/building_types/unique_buildings.txt:1415
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/building_types/unique_buildings.txt:1446
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/building_types/unique_buildings.txt:1446
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/building_types/unique_buildings.txt:4410
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/building_types/unique_buildings.txt:4410
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/advances/region_iberia.txt:186
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/advances/region_iberia.txt:186
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:35
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:35
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:1285
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:1285
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:1367
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:1367
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:1692
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:1692
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:2498
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:2498
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:5411
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:5411
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:6703
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:6703
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:6757
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:6757
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:6816
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:6816
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:6898
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:6898
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:6967
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:6967
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:7059
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:7059
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:9668
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:9668
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:9856
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:9856
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:9869
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:9869
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:11006
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:11006
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_CAS.txt:11175
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_CAS.txt:11175
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_MOR.txt:2234
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_MOR.txt:2234
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_MOR.txt:2420
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_MOR.txt:2420
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_MOR.txt:2430
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_MOR.txt:2430
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_MOR.txt:2828
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_MOR.txt:2828
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_MOR.txt:2945
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_MOR.txt:2945
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_cas_rio_salado.txt:124
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_cas_rio_salado.txt:124
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_cas_rio_salado.txt:191
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_cas_rio_salado.txt:191
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_cas_rio_salado.txt:222
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_cas_rio_salado.txt:222
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_cas_rio_salado.txt:249
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_cas_rio_salado.txt:249
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_cas_rio_salado.txt:508
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_cas_rio_salado.txt:508
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:636
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:636
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:871
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:871
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:1096
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:1096
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:1127
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:1127
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:1161
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:1161
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:1180
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:1180
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_gra.txt:1833
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_gra.txt:1833
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_por.txt:1830
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_por.txt:1830
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_por.txt:1854
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_por.txt:1854
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_por.txt:2568
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_por.txt:2568
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/DHE/flavor_por.txt:3792
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/DHE/flavor_por.txt:3792
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/expeditions/western_ocean_voyage_events.txt:320
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/expeditions/western_ocean_voyage_events.txt:320
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/government/succession.txt:1034
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/government/succession.txt:1034
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:535
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:535
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:598
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:598
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:661
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:661
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:755
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:755
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:836
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:836
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:889
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:889
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:974
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:974
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: events/religion/religious_order_events.txt:1047
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at events/religion/religious_order_events.txt:1047
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/_hardcoded.txt:158
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/_hardcoded.txt:158
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/_hardcoded.txt:166
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/_hardcoded.txt:166
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/_hardcoded.txt:2177
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/_hardcoded.txt:2177
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/_hardcoded.txt:3868
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/_hardcoded.txt:3868
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/_hardcoded.txt:4571
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/_hardcoded.txt:4571
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/_hardcoded.txt:4679
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/_hardcoded.txt:4679
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/on_action/exploration_mission_monthly.txt:61
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/on_action/exploration_mission_monthly.txt:61
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/scripted_triggers/unit_triggers.txt:471
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/scripted_triggers/unit_triggers.txt:471
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/scripted_effects/situation_effects.txt:1201
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/scripted_effects/situation_effects.txt:1201
+[08:58:48][jomini_script_system.cpp:256]: Script system error!
+  Error: has_dlc trigger [ DLC doesn't exist: d009_across_the_pillars ]
+  Script location: common/scripted_effects/situation_effects.txt:1201
+
+[08:58:48][jomini_trigger.cpp:275]: PostValidate of trigger 'has_dlc' returned false at common/scripted_effects/situation_effects.txt:1201
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: change_granadan_sovereignty_effect_tt
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_colonial_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][persistence_tests.cpp:1068]: Effect localization string missing: gc_change_european_dominance
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CBuildingType, Num: 492, Expected: 525
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CSituation, Num: 22, Expected: 24
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CBuildingType, Num: 492, Expected: 525
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CGoodsDemand, Num: 848, Expected: 874
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CSubUnitDefinition, Num: 365, Expected: 401
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CBuildingType, Num: 492, Expected: 525
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CCultureGroup, Num: 213, Expected: 210
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CSubjectType, Num: 21, Expected: 22
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CSubUnitDefinition, Num: 365, Expected: 401
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CClimate, Num: 11, Expected: 15
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CTopography, Num: 22, Expected: 30
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/laws/01_common.txt:930
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'religious_authority_law' from database for link 'law' at common/laws/40_personal_unions.txt:424
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'religious_authority_law' from database for link 'law' at common/laws/40_personal_unions.txt:545
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'legislative_authority_law' from database for link 'law' at common/laws/40_personal_unions.txt:598
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'legislative_authority_law' from database for link 'law' at common/laws/40_personal_unions.txt:662
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'crown_settlement_law' from database for link 'law' at common/laws/40_personal_unions.txt:711
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'crown_settlement_law' from database for link 'law' at common/laws/40_personal_unions.txt:759
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'proclaim_pase_foral' from database for link 'cabinet_action' at common/cabinet_actions/frustrate_annexation.txt:20
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'anr_coprincipality_reform' from database for link 'government_reform' at common/cabinet_actions/iberia.txt:15
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CGenericAction, Num: 485, Expected: 531
+[08:59:01][database_object_reflection.h:694]: Optimization warning: Database static size differs from the actual number of elements, might be wasteful or cause slowdowns! Type: class CCountryInteraction, Num: 144, Expected: 147
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'agraw_federation_reform' from database for link 'government_reform' at common/government_reforms/country_specific.txt:4161
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'amenokal_paramountcy_reform' from database for link 'government_reform' at common/government_reforms/country_specific.txt:4162
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'diwan_of_the_azzaba_reform' from database for link 'government_reform' at common/government_reforms/country_specific.txt:4163
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'ribat_state_tradition_reform' from database for link 'government_reform' at common/government_reforms/country_specific.txt:4164
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_castile_bureaucracy' from database for link 'bureaucracy_type' at common/government_reforms/country_specific.txt:4538
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/subject_types/tributary.txt:66
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'library_cordoba' from database for link 'building_type' at common/building_types/culture_buildings.txt:81
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'library_cordoba' from database for link 'building_type' at common/building_types/culture_buildings.txt:83
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_castile_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1372
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_aragon_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1376
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_portugal_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1380
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_flanders_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1384
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_italy_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1388
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_castile_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1451
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_aragon_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1455
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_portugal_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1459
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_flanders_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1463
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'spa_council_of_italy_bureaucracy' from database for link 'bureaucracy_type' at common/building_types/unique_buildings.txt:1467
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'basque_universidad_mercaderes_bilbao' from database for link 'estate_privilege' at common/building_types/unique_buildings.txt:4413
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:36
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_CAS.txt:1286
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:1368
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:1693
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:2499
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:5412
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:6704
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:6758
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:6817
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:6899
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:6968
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:7060
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:11007
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_CAS.txt:11176
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_MOR.txt:2235
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_MOR.txt:2421
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_MOR.txt:2431
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at events/DHE/flavor_MOR.txt:2829
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_cas_rio_salado.txt:125
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_cas_rio_salado.txt:127
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_cas_rio_salado.txt:192
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_cas_rio_salado.txt:193
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_cas_rio_salado.txt:223
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_cas_rio_salado.txt:250
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:639
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'ghuzat_mujahidin_bureaucracy' from database for link 'bureaucracy_type' at events/DHE/flavor_gra.txt:682
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'ghuzat_mujahidin_bureaucracy' from database for link 'bureaucracy_type' at events/DHE/flavor_gra.txt:685
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'ghuzat_mujahidin_bureaucracy' from database for link 'bureaucracy_type' at events/DHE/flavor_gra.txt:725
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'ghuzat_mujahidin_bureaucracy' from database for link 'bureaucracy_type' at events/DHE/flavor_gra.txt:728
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:872
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1097
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1101
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1102
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1128
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1162
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1166
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1167
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1181
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at events/DHE/flavor_gra.txt:1834
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_wedding_pact' from database for link 'relation_type' at events/government/succession.txt:1019
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_union_succession' from database for link 'heir_selection' at events/government/succession.txt:1035
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_union_succession' from database for link 'heir_selection' at events/government/succession.txt:1046
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_wedding_pact' from database for link 'relation_type' at events/government/succession.txt:1051
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_union_succession' from database for link 'heir_selection' at events/government/succession.txt:1084
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_union_succession' from database for link 'heir_selection' at common/on_action/_hardcoded.txt:3869
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_union_succession' from database for link 'heir_selection' at common/on_action/_hardcoded.txt:3871
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iberian_wedding_pact' from database for link 'relation_type' at common/on_action/_hardcoded.txt:3872
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iu_tanto_monta_policy' from database for link 'policy' at common/on_action/_hardcoded.txt:4580
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'iu_dynastic_primacy_policy' from database for link 'policy' at common/on_action/_hardcoded.txt:4602
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/on_action/_hardcoded.txt:4684
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'gold_fleet_nueva_espana_expedition' from database for link 'expedition_type' at common/on_action/character_death_pulses.txt:203
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'gold_fleet_nueva_espana_expedition' from database for link 'expedition_type' at common/on_action/character_death_pulses.txt:209
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'gold_fleet_tierra_firme_expedition' from database for link 'expedition_type' at common/on_action/character_death_pulses.txt:221
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'gold_fleet_tierra_firme_expedition' from database for link 'expedition_type' at common/on_action/character_death_pulses.txt:227
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'golden_century' from database for link 'situation' at common/on_action/exploration_mission_monthly.txt:64
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'a_sanhaja_camel_cavalry' from database for link 'unit_type' at common/scripted_triggers/unit_triggers.txt:472
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1154
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1154
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1154
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1154
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1171
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1184
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1184
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1184
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1202
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1184
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1202
+[08:59:01][jomini_eventtarget.h:314]: Failed to find 'battle_for_the_strait' from database for link 'situation' at common/scripted_effects/situation_effects.txt:1184
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: trigger_event_silently effect [ Event [flavor_gra.24] not found ]
+  Script location: common/on_action/_hardcoded.txt:2181
+
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: add_location_modifier effect [ Invalid database object 'crypto_jewish_community' ]
+  Script location: events/DHE/flavor_CAS.txt:9671
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'add_location_modifier' returned false at events/DHE/flavor_CAS.txt:9671
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: add_location_modifier effect [ Invalid database object 'crypto_muslim_community' ]
+  Script location: events/DHE/flavor_CAS.txt:9859
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'add_location_modifier' returned false at events/DHE/flavor_CAS.txt:9859
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: add_location_modifier effect [ Invalid database object 'crypto_jewish_community' ]
+  Script location: events/DHE/flavor_por.txt:1833
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'add_location_modifier' returned false at events/DHE/flavor_por.txt:1833
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: add_location_modifier effect [ Invalid database object 'crypto_jewish_community' ]
+  Script location: events/DHE/flavor_por.txt:1857
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'add_location_modifier' returned false at events/DHE/flavor_por.txt:1857
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: add_location_modifier effect [ Invalid database object 'crypto_muslim_community' ]
+  Script location: events/DHE/flavor_por.txt:2581
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'add_location_modifier' returned false at events/DHE/flavor_por.txt:2581
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key por_assumed_grandmastership_of_military_orders_tt ]
+  Script location: events/DHE/flavor_por.txt:3793
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at events/DHE/flavor_por.txt:3793
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key summon_iberian_military_orders_effect_tt ]
+  Script location: common/scripted_effects/holy_war_effects.txt:305
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at common/scripted_effects/holy_war_effects.txt:305
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key expedition_brought_back_riches_tt ]
+  Script location: common/scripted_effects/seven_cities_effects.txt:4
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at common/scripted_effects/seven_cities_effects.txt:4
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key expedition_brought_back_exotic_goods_tt ]
+  Script location: common/scripted_effects/seven_cities_effects.txt:22
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at common/scripted_effects/seven_cities_effects.txt:22
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key expedition_brought_back_artifacts_tt ]
+  Script location: common/scripted_effects/seven_cities_effects.txt:35
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at common/scripted_effects/seven_cities_effects.txt:35
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key expedition_healer_joins_court_tt ]
+  Script location: common/scripted_effects/seven_cities_effects.txt:65
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at common/scripted_effects/seven_cities_effects.txt:65
+[08:59:01][jomini_script_system.cpp:256]: Script system error!
+  Error: custom_tooltip effect [ Unknown loc key warned_expedition_avoids_calamity_tt ]
+  Script location: common/scripted_effects/seven_cities_effects.txt:105
+
+[08:59:01][jomini_effect.cpp:141]: PostValidate of effect 'custom_tooltip' returned false at common/scripted_effects/seven_cities_effects.txt:105
+[08:59:02][jomini_effect.cpp:1165]: Flag 'tanto_monta' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'same_international_organization'
+[08:59:02][jomini_effect.cpp:1165]: Flag 'dynastic_primacy' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'possible_colonial_charters_bordering_only'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'disease_map_color_presence_override'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'wants_military_access_in'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'border_or_recipients_capital_area'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'diplomatic_range'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'last_exotic_good' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'had_execution_of_king_louis_event_flag'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'had_good_royal_textile_rights_event_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'mission_task_total_goods_value_increase'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'eng_taxation_law_decision_only_once'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'scotland_did_not_extend_regency'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'battle_for_the_strait_winner_country' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'gag_guelphs_winner_may_form_italy_without_location_requirements'
+[08:59:02][jomini_effect.cpp:1160]: Variable 'd009_morisco_conversion_occurred' is set but is never used. Note that use in localization doesn't count due to technical limitations. Use in unused scripted triggers and effects also does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_casa_de_contratacion'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_promissione_ducale_reform'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_divided_persian_aristocracy'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_zmw_council_of_senior_wives'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_royal_council_of_castile'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'expedition_receives_exotic_goods_variable' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_office_of_the_farima_soura_privilege'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_vij_allowance_of_religious_practices'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_lit_equal_status_of_orthodox_nobility'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_office_of_the_sankar_zouma_privilege'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'previously_recently_used_migration_province_variable'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'chance_avoid_calamity_variable' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'recently_had_coup_attempt_inconclusive_or_negative_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'recently_had_generic_capital_economy_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'recently_had_generic_traditional_economy_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'target_merchant_capacity_modifier_variable'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'iu_catholic_monarchs_choice' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_venetian_school_of_music_characters'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_plc_cossack_treaty_of_hadiach'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_policy_french_east_india_company'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'tumu_crisis_location_target_on_character'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'cas_spanish_cloth_industry_decision_only_once'
+[08:59:02][jomini_effect.cpp:1160]: Variable 'por_assumed_grandmastership_of_military_orders' is set but is never used. Note that use in localization doesn't count due to technical limitations. Use in unused scripted triggers and effects also does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_divided_persian_aristocracy'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_lit_grand_duchy_of_lithuania_reform'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'completed_nahuatl_reform_society_disaster_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_east_india_trading_company'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_parliament_issue_hre_force_emperor_to_abdicate'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'por_estado_da_india' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'por_casa_de_india_decision_only_once'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'found_trade_company_india_decision_only_once'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_east_india_trading_company'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'por_assumed_grandmastership_of_military_orders'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_policy_french_east_india_company'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'cas_adelantado_mayor_character' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'character_pop_satisfaction_gain_variable_display'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'healer_location' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'target_location_clothmakers_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'target_location_fishing_village_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'revolter_location'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'chinese_treasure_start_location'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'chinese_treasure_target_location'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'has_bula_de_cruzada' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'had_disaster_byzantine_succession_crisis_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_advance_preobrazhensky_semyonovsky_imperial_guard'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'last_artifact_location' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'target_location_clothmakers_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'target_location_maritime_presence_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'location_coastal_harbor_suitability_var'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'gag_guelphs_winner_may_form_italy_without_location_requirements'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'capital_started_as_town_location_variable'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'granadan_sovereignty' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'grand_embassy_institution_progress_amount'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_east_india_trading_company'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'grand_embassy_institution_progress_capital_amount'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'had_good_granary_town_event_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_government_reform_songhai_professional_army_reform'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'expedition_receives_artifacts_as_gifts_variable' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_vij_allowance_of_religious_practices'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_parliament_issue_establish_the_signoria_of_venice'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_office_of_the_farima_soura_privilege'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'target_province_control_pop_satisfaction_variable_display'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'unlocked_estate_privilege_office_of_the_sankar_zouma_privilege'
+[08:59:02][jomini_effect.cpp:1165]: Variable 'uncovered_riches_variable' is used but is never set. Setting it in an unused scripted trigger or effect does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'recently_forced_to_revoke_town_rights_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'had_disaster_byzantine_succession_crisis_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'recently_had_coup_attempt_inconclusive_or_negative_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'heretics_converted_variable'
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'crisis_of_faith_heresiarch_denounced_variable'
+[08:59:02][jomini_effect.cpp:1160]: Variable 'decision_taken_to_establish_the_council_of_castile' is set but is never used. Note that use in localization doesn't count due to technical limitations. Use in unused scripted triggers and effects also does not count. Check for typos.
+[08:59:02][jomini_effect.cpp:1207]:  Possible match: 'spa_establish_the_council_of_castile_decision_only_once'
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[08:59:44][dlc_setup_reader.h:18]: Invalid DLC specified! DLC: "d009_across_the_pillars" for has_dlc in setup data
+[09:00:06][static_modifier.cpp:537]: Modifier 'gra_protector_of_islam_in_iberia' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][static_modifier.cpp:537]: Modifier 'ara_honorable_ruler' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][static_modifier.cpp:537]: Modifier 'TLE_algerian' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][static_modifier.cpp:537]: Modifier 'TLE_stayed_berber' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][localization_util.cpp:103]: STATIC_MODIFIER_NAME_cas_adelantado_crown_estate_modifier: "STATIC MODIFIER NAME cas adelantado crown estate modifier"
+[09:00:06][localization_util.cpp:103]: STATIC_MODIFIER_NAME_cas_adelantado_nobles_estate_modifier: "STATIC MODIFIER NAME cas adelantado nobles estate modifier"
+[09:00:06][static_modifier.cpp:537]: Modifier 'cas_colonial_reputation_slandered' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][static_modifier.cpp:537]: Modifier 'mustered_against_raiders' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][static_modifier.cpp:537]: Modifier 'efficient_mining_expansion_plans_modifier' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][static_modifier.cpp:537]: Modifier 'benefits_from_mining_discoveries_modifier' was not used by the script or code but exists in the database, this is a waste
+[09:00:06][localization_util.cpp:103]: STATIC_MODIFIER_NAME_seat_of_governance_modifier: "STATIC MODIFIER NAME seat of governance modifier"
+[09:00:06][static_modifier.cpp:537]: Modifier 'ara_main_court' was not used by the script or code but exists in the database, this is a waste
+[09:00:08][government.cpp:3766]: Removing invalid bureaucracy 'themata_bureaucracy' for 'TRE Trebizond' 40 at game start - might want to look into this
+[09:00:08][government.cpp:3766]: Removing invalid bureaucracy 'themata_bureaucracy' for 'BYZ Byzantium' 203 at game start - might want to look into this
+[09:00:08][government.cpp:3766]: Removing invalid bureaucracy 'imperial_senate_bureaucracy' for 'BYZ Byzantium' 203 at game start - might want to look into this
+[09:00:08][government.cpp:3766]: Removing invalid bureaucracy 'honorary_titles_bureaucracy' for 'BYZ Byzantium' 203 at game start - might want to look into this
+[09:00:08][government.cpp:3766]: Removing invalid bureaucracy 'sixty_books_of_the_basilika_bureaucracy' for 'BYZ Byzantium' 203 at game start - might want to look into this
+[09:00:08][government.cpp:3807]: Removing invalid reform 'katepanata' for 'BYZ Byzantium' 203 at game start - might want to look into this
+[09:00:35][pdx_mod_metadata.cpp:218]: Mod metadata read error. File: C:/Users/richa/Documents/Paradox Interactive/Europa Universalis V/mod/test/.metadata/metadata.json Error: Failed to open file for reading: C:/Users/richa/Documents/Paradox Interactive/Europa Universalis V/mod/test/.metadata/metadata.json
+[09:00:58][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
+[09:01:02][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
+[09:01:02][tooltips_utils.h:86]: Error building from string ( TYPE = NCoatOfArms::SCoatOfArmsSpriteWrapper, HASH = 1227078608 ).
+[09:01:02][tooltips_utils.h:86]: Error building from string ( TYPE = NCoatOfArms::SCoatOfArmsSpriteWrapper, HASH = 3292108630 ).
+[09:01:03][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
+[09:01:03][tooltips_utils.h:86]: Error building from string ( TYPE = NCoatOfArms::SCoatOfArmsSpriteWrapper, HASH = 4248153224 ).
+[09:01:08][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
+[09:01:09][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
+[09:01:11][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
+[09:01:28][jomini_script_system.cpp:256]: Script system error!
+  Error: is_situation_active trigger [ Object incorrect type! Field: target, Expected: situation, Type: none/any ]
+  Script location: common/subject_types/tributary.txt:66
+
