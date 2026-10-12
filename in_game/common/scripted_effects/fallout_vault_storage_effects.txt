@@ -1,0 +1,51 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault storage (REAL market goods)
+# =============================================================================
+# Every Vault is its own one-location market (main_menu/setup/2078/03_markets.txt).
+# At game start the Vault market gets 200 years of maintenance goods via
+# add_goods_supply (market scope). The Vault buildings' production methods
+# (common/building_types/vault_buildings.txt) really consume them from there.
+# While sealed (Isolationism) the market is closed to the outside
+# (trade_isolation) and the dwellers do not consume these goods
+# (global_<goods>_pop_demand = -1), so the stock is reserved for maintenance.
+#
+# Stock = monthly building input x 2400 months (200 years):
+#   good          per month (all buildings)   stock (200 y)  used by
+#   glass         0.01667                      40             command center, blast door
+#   paper         0.01667                      40             armory
+#   fine_cloth    0.03333                      80             command center, blast door
+#   cloth         0.00833                      20             armory
+#   tools         0.02083                      50             command center, blast door, power plant
+#   furniture     0.025                        60             command center, blast door
+#   books         0.01667                      40             command center, blast door
+#   medicaments   0.01667                      40             medical bay
+#   firearms      0.04167                      100            armory
+#   weaponry      0.04167                      100            armory
+# Spare parts: 1 fusion core + 1 water chip (the installed ones are counted in
+# the country variables vault_fusion_cores / vault_water_chips).
+# Capacity: vault_storage gives maximum_stockpile_capacity = 200 per level.
+# =============================================================================
+
+# Country scope (Vault). Called once at game start from fallout_vault_resources_init_effect.
+fallout_vault_storage_init_effect = {
+	if = {
+		limit = { exists = capital }
+		capital = {
+			market = {
+			add_goods_supply = { goods = goods:glass amount = 40 }
+			add_goods_supply = { goods = goods:paper amount = 40 }
+			add_goods_supply = { goods = goods:fine_cloth amount = 80 }
+			add_goods_supply = { goods = goods:cloth amount = 20 }
+			add_goods_supply = { goods = goods:tools amount = 50 }
+			add_goods_supply = { goods = goods:furniture amount = 60 }
+			add_goods_supply = { goods = goods:books amount = 40 }
+			add_goods_supply = { goods = goods:medicaments amount = 40 }
+			add_goods_supply = { goods = goods:firearms amount = 100 }
+			add_goods_supply = { goods = goods:weaponry amount = 100 }
+			# Spare parts
+			add_goods_supply = { goods = goods:fusion_core amount = 1 }
+			add_goods_supply = { goods = goods:water_chip amount = 1 }
+			}
+		}
+	}
+}

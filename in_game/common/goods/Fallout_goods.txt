@@ -1,0 +1,73 @@
+﻿##############################
+##### Fallout Reclamation ####
+##############################
+# New produced goods (vanilla goods come from vanilla 02_produced_goods.txt)
+
+energy  = {
+	category = produced
+	color = goods_furniture
+	default_market_price = 1
+	
+	transport_cost = 0.5
+	
+	demand_add = {
+		all =  0.001
+	}	
+	demand_multiply = {
+		upper = 5
+		nobles = 2
+		slaves = 0.5
+		tribesmen = 0
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
+	}
+}
+
+fusion_core  = {
+	category = produced
+	color = goods_furniture
+	default_market_price = 10
+	
+	transport_cost = 0.5
+	
+	demand_add = {
+		all =  0.0
+	}	
+	demand_multiply = {
+		upper = 0
+		nobles = 0
+		slaves = 0
+		tribesmen = 0
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
+	}
+}
+
+# Water chip: control chip of a Vault's water purification plant.
+# Like the fusion core it is installed 1:1 and not used up
+# (assigned chips: country variable vault_water_chips).
+water_chip  = {
+	category = produced
+	color = goods_furniture
+	default_market_price = 10
+	
+	transport_cost = 0.5
+	
+	demand_add = {
+		all =  0.0
+	}	
+	demand_multiply = {
+		upper = 0
+		nobles = 0
+		slaves = 0
+		tribesmen = 0
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
+	}
+}

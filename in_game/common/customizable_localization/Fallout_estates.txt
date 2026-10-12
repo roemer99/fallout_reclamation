@@ -4,7 +4,7 @@
 	text = {
 		localization_key = crown_estate_management
 		trigger = {
-			culture = culture:vaultian_culture
+			is_vault_country = yes
 		}
 	}
 
@@ -14,9 +14,9 @@ nobles_estate = {
 	type = country
 
 	text = {
-		localization_key = nobles_estate_management
+		localization_key = nobles_estate_scientists
 		trigger = {
-			culture = culture:vaultian_culture
+			is_vault_country = yes
 		}
 	}
 }
@@ -27,7 +27,7 @@ burghers_estate = {
 	text = {
 		localization_key = burghers_estate_vaults
 		trigger = {
-			culture = culture:vaultian_culture
+			is_vault_country = yes
 		}
 	}
 }
@@ -38,7 +38,7 @@ clergy_estate = {
 	text = {
 		localization_key = clergy_estate_vaults
 		trigger = {
-			culture = culture:vaultian_culture
+			is_vault_country = yes
 		}
 	}
 }
@@ -49,7 +49,7 @@ peasants_estate = {
 	text = {
 		localization_key = peasants_estate_vaults
 		trigger = {
-			culture = culture:vaultian_culture
+			is_vault_country = yes
 		}
 	}
 }

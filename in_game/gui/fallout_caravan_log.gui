@@ -1,0 +1,264 @@
+﻿#####################################################################
+## FALLOUT RECLAMATION - Vault 21: Caravan move log (GUI type)
+## Opened / closed with the "Log" button of the Caravan window (vav_cv_toggle_log).
+## One row per turn: your card -> target, opponent's card -> target.
+## Cards are shown by value (legend: A = 1, J = 11, Q = 12, K = 13, Joker = 14).
+## Data: scripted_effects/fallout_vav_caravan_log_effects.txt,
+##       script_values/fallout_vav_caravan_values.txt (vcv_l...)
+## Side: 0 = discarded, 1 = player's caravan, 2 = opponent's caravan.
+#####################################################################
+
+types FalloutCaravanLog
+{
+	# One target text (discarded / your caravan n / opponent's caravan n).
+	# SIDE / YOURS / THEIRS are set per row with blockoverride.
+	type vcv_log_target = widget {
+		size = { 210 24 }
+		widget = { size = { 100% 100% } block "side_none" {} text_single = { text = "VAV_CV_LOG_DISCARDED" } }
+		widget = { size = { 100% 100% } block "side_min_yours" {} widget = { size = { 100% 100% } block "side_max_yours" {} text_single = { block "text_yours" {} } } }
+		widget = { size = { 100% 100% } block "side_theirs" {} text_single = { block "text_theirs" {} } }
+	}
+
+	type vcv_log_panel = widget {
+		size = { 720 470 }
+		alwaystransparent = yes
+		visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_showlog'), '(CFixedPoint)1')]"
+		icon = { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/table/shade.dds" alpha = 0.85 alwaystransparent = yes }
+		widget = { size = { 100% 100% } alwaystransparent = yes background = { using = bg_expeditions_card_frame_texture } }
+		vbox = {
+			size = { 100% 100% }
+			margin = { 24 18 }
+			spacing = 6
+			text_single = { text = "VAV_CV_LOG_TITLE" using = Font_Size_Big }
+			text_single = { text = "VAV_CV_LOG_LEGEND" }
+			text_single = { text = "VAV_CV_LOG_EMPTY" visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc1'), '(CFixedPoint)1')]" }
+
+			# --- turn 1 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc1'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_1" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P1" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps1'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps1'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps1'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps1'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P1" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P1" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O1" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los1'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los1'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los1'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los1'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O1" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O1" }
+				}
+			}
+
+			# --- turn 2 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc2'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_2" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P2" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps2'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps2'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps2'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps2'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P2" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P2" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O2" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los2'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los2'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los2'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los2'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O2" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O2" }
+				}
+			}
+
+			# --- turn 3 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc3'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_3" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P3" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps3'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps3'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps3'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps3'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P3" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P3" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O3" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los3'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los3'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los3'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los3'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O3" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O3" }
+				}
+			}
+
+			# --- turn 4 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc4'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_4" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P4" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps4'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps4'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps4'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps4'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P4" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P4" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O4" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los4'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los4'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los4'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los4'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O4" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O4" }
+				}
+			}
+
+			# --- turn 5 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc5'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_5" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P5" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps5'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps5'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps5'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps5'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P5" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P5" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O5" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los5'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los5'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los5'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los5'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O5" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O5" }
+				}
+			}
+
+			# --- turn 6 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc6'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_6" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P6" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps6'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps6'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps6'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps6'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P6" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P6" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O6" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los6'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los6'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los6'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los6'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O6" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O6" }
+				}
+			}
+
+			# --- turn 7 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc7'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_7" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P7" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps7'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps7'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps7'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps7'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P7" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P7" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O7" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los7'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los7'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los7'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los7'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O7" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O7" }
+				}
+			}
+
+			# --- turn 8 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc8'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_8" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P8" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps8'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps8'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps8'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps8'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P8" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P8" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O8" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los8'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los8'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los8'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los8'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O8" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O8" }
+				}
+			}
+
+			# --- turn 9 ---
+			hbox = {
+				spacing = 6
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lpc9'), '(CFixedPoint)1')]"
+				text_single = { size = { 36 24 } autoresize = no text = "VAV_CV_LOG_TURN_9" }
+				text_single = { size = { 90 24 } autoresize = no text = "VAV_CV_LOG_CARD_P9" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps9'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps9'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps9'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_lps9'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_P9" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_P9" }
+				}
+				text_single = { size = { 140 24 } autoresize = no text = "VAV_CV_LOG_CARD_O9" }
+				vcv_log_target = {
+					blockoverride "side_none" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los9'), '(CFixedPoint)1')]" }
+					blockoverride "side_min_yours" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los9'), '(CFixedPoint)1')]" }
+					blockoverride "side_max_yours" { visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los9'), '(CFixedPoint)2')]" }
+					blockoverride "side_theirs" { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_los9'), '(CFixedPoint)2')]" }
+					blockoverride "text_yours" { text = "VAV_CV_LOG_YOURS_O9" }
+					blockoverride "text_theirs" { text = "VAV_CV_LOG_THEIRS_O9" }
+				}
+			}
+
+			expand = {}
+		}
+	}
+}

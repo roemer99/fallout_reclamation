@@ -1,0 +1,95 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - on_actions
+# =============================================================================
+# Note: the mod's _hardcoded.txt overrides the vanilla file and no longer
+# contains on_game_start, so it is defined here.
+
+on_game_start = {
+	on_actions = {
+		fallout_on_game_start
+	}
+}
+
+# Appended to the vanilla monthly_country_pulse (common/on_action/country_monthly.txt).
+# root = country
+monthly_country_pulse = {
+	on_actions = {
+		fallout_vault_monthly_pulse
+	}
+}
+
+# Appended to the vanilla weather_monthly_pulse (common/on_action/location_pulses.txt).
+# Global monthly pulse, used for radiation decay and transport.
+weather_monthly_pulse = {
+	on_actions = {
+		fallout_radiation_monthly_pulse
+	}
+}
+
+# root = none (global), fires once when a new game starts
+fallout_on_game_start = {
+	effect = {
+		# Situation (common/situations/): Vault Management (only Vaults see it)
+		# Radiation is a disaster now (common/disasters/radiation_contamination.txt)
+		activate_situation = situation:vault_management
+
+		# DEBUG (remove when the situations work): results appear in logs/debug.log as "FALLOUT DEBUG"
+		debug_log = "FALLOUT DEBUG: on_game_start ran, situations activated"
+		if = {
+			limit = { is_situation_active = situation:vault_management }
+			debug_log = "FALLOUT DEBUG: vault_management IS active"
+		}
+		else = {
+			debug_log = "FALLOUT DEBUG: vault_management is NOT active"
+		}
+		if = {
+			limit = { any_country = { can_see_situation = situation:vault_management } }
+			debug_log = "FALLOUT DEBUG: vault_management is visible to at least one country"
+		}
+		else = {
+			debug_log = "FALLOUT DEBUG: vault_management is visible to NO country"
+		}
+
+		# Radiation from the Great War (see scripted_effects/fallout_radiation_effects.txt)
+		fallout_setup_nuclear_strikes_effect = yes
+		every_country = {
+			limit = { is_vault_country = yes }
+
+			# All Vaults start sealed: only own + neighbouring provinces are known
+			fallout_vault_reveal_surroundings_effect = yes
+
+			# Water & Energy stockpiles (scripted_effects/fallout_vault_resource_effects.txt)
+			fallout_vault_resources_init_effect = yes
+
+			# Remember the starting population for the "first birth" event (flavor_vaults.2)
+			set_variable = {
+				name = vault_start_population
+				value = capital.population
+			}
+
+			# Anniversary of the Great War: exactly one year after the bombs (2077.10.23)
+			# Game starts 2078.1.1 -> +295 days = 2078.10.23
+			trigger_event_non_silently = { id = flavor_vaults.1 days = 295 }
+		}
+	}
+}
+
+# root = country
+fallout_vault_monthly_pulse = {
+	trigger = {
+		is_vault_country = yes
+	}
+	effect = {
+		fallout_vault_resources_monthly_effect = yes
+	}
+	events = {
+		flavor_vaults.2	# First birth in the Vault
+	}
+}
+
+# Global, monthly: radiation transport + decay
+fallout_radiation_monthly_pulse = {
+	effect = {
+		fallout_radiation_monthly_effect = yes
+	}
+}

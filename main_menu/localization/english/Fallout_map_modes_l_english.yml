@@ -1,0 +1,7 @@
+﻿l_english:
+ mapmode_fallout_radiation_name: "Radiation"
+ MAPMODE_FALLOUT_RADIATION: "#T $mapmode_fallout_radiation_name$#!\nEach [location|e] is colored by its radiation level: a background level everywhere, and much higher values around the places where the bombs fell. Strike radiation decays over time following the real half-lives of I-131, Cs-134 and Cs-137."
+ LEGEND_KEY_FALLOUT_RADIATION_NONE: "No measurable radiation"
+ LEGEND_KEY_FALLOUT_RADIATION_LOW: "Background radiation"
+ LEGEND_KEY_FALLOUT_RADIATION_MID: "High radiation (25)"
+ LEGEND_KEY_FALLOUT_RADIATION_HIGH: "Ground zero (100)"

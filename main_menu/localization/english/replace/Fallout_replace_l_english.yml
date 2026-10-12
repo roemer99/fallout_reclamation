@@ -1,0 +1,54 @@
+﻿l_english:
+ # Keys that intentionally override vanilla localization.
+ # Files in localization/<language>/replace/ win over vanilla keys without a duplicate-key error.
+
+ # Government names
+ country_flavor_parliament_council: "Council"
+
+ # Government power: legitimacy is used by vault_government as "Overseer Authority"
+ # (no other monarchies exist in the mod)
+ legitimacy: "Overseer Authority"
+ game_concept_legitimacy: "Overseer Authority"
+ game_concept_legitimacy_desc: "Overseer Authority measures how firmly the Overseer controls the Vault. Dwellers and estates obey an Overseer with high authority, while a weak Overseer faces dissent, sabotage and open defiance. It suffers when the Vault runs short of water or energy."
+ MODIFIER_TYPE_NAME_monthly_legitimacy: "Monthly Overseer Authority"
+ MODIFIER_TYPE_DESC_monthly_legitimacy: "This impacts how much [legitimacy|e] a [country|e] gets each month."
+ MODIFIER_TYPE_NAME_global_estate_satisfaction_from_legitimacy: "Estates Satisfaction Equilibrium from Overseer Authority"
+
+ # Main menu (player_profiling_l_english)
+ PLAYER_PROFILING_STAGE3_TITLE: "Recommended Countries in 2078"
+
+ # Country names (vanilla tags reused by the mod)
+ USA: "Yangtze Command"
+ USA_ADJ: "American"
+ SHI: "Shih-huang-ti"
+ SHI_ADJ: "Chinese"
+ ICH: "Mandate of Ashes"
+ ICH_ADJ: "Chinese"
+ CCP: "Chairmans Vanguard"
+ CCP_ADJ: "Chinese"
+
+ # Cultures
+ american_culture: "American"
+ southern_florida_culture: "Southern Florida"
+ southern_florida_culture_desc: "The $north_american_group$ $group_text$ $english_language$ language."
+
+ # Goods
+ wheat: "Razorgrain"
+ wheat_desc: "A mutated, extremely hardy grain variety that thrives even in the irradiated soil of the Wasteland. Its razor-sharp husks make harvesting a painful endeavor, yet the coarse flour derived from it remains an essential staple for survival in the post-apocalypse."
+
+ # Country history (customizable_localization/country_history.txt)
+ country_history_america: "Once a continent defined by vast nations, sprawling cities, and unmatched industrial might, North America now stands fractured in the wake of devastation. Endless plains, mountain ranges, and shattered coasts shelter scattered survivors—tribes, enclaves, warlords, and fledgling nations rising from the remnants of the old world. The continent’s great pre-War arteries of trade and travel lie silent, yet their ruins remain rich with salvage, forgotten technology, and lingering dangers.\n\nPower is fragmented and unstable. Some regions cling to scraps of old-world order, organizing around fortified settlements or preserved government bunkers. Others descend into chaos, ruled by militias, raiders, or charismatic leaders promising safety—or conquest. Nature slowly reclaims the land, but the scars of catastrophe run deep: abandoned cities glow faintly at night, mutated wildlife stalks the frontier, and strange phenomena linger where the bombs fell hardest.\n\nYet North America is still a land of opportunity. Its people, diverse and resilient, look to rebuild their own destinies amid the wasteland. Whether guided by idealism, ambition, or simple survival, new powers rise each year, seeking to unify, dominate, or protect the continent. In the ruins of the old world, the future is unwritten—and every faction believes it can shape the new one."
+
+ # Ages (advances_l_english)
+ age_1_traditions: "Survival"
+ age_1_traditions_desc: "The world lies in ruins. Factions crawl from the ashes — starving, scattered, afraid. In the silence after the bombs, survival is the only law."
+ age_2_renaissance: "Reclamation"
+ age_2_renaissance_desc: "Humanity begins to rebuild. Farms return to dead soil, settlements rise among the ruins, and the first flickers of order pierce the wasteland’s chaos."
+ age_3_discovery: "Rediscovery"
+ age_3_discovery_desc: "Old-world machines awaken once more. Lost knowledge resurfaces, science rekindles, and those who master forgotten technologies gain the power to shape the future."
+ age_4_reformation: "Expansion"
+ age_4_reformation_desc: "Ambitious states push outward, carving borders across the wasteland. Armies march, ideologies clash, and the struggle to define the new world begins."
+ age_5_absolutism: "Unification"
+ age_5_absolutism_desc: "Superpowers rise from the dust. Roads, trade, and diplomacy reconnect the continent as great nations vie to unite — or dominate — North America."
+ age_6_revolutions: "Ascendance"
+ age_6_revolutions_desc: "Civilization surpasses the old. With advanced science, restored cities, and post-human innovation, the world stands on the brink of a new era of power and possibility."

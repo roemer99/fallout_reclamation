@@ -6,9 +6,9 @@ locations={
 	pemetic = { rank = town 		town_setup = vault_town }	#Vault 118
 	nih_iitkotousi_l = { rank = town 		town_setup = vault_town }	#Vault 29
 	pio_gwut = { rank = town 		town_setup = vault_town }	#Vault 70
-	tubatulabam = { rank = town 		town_setup = vault_town }	#Vault 15
+	tubatulabam = { rank = town 		town_setup = vault_town }	#Vault 13
 	yaanga = { rank = town 		town_setup = vault_town }	#Vault 33
-	mutsisoone_yohe = { rank = town 		town_setup = vault_town }	#Vault 0
+	mutsisooni_yohe = { rank = town 		town_setup = vault_town }	#Vault 0
 	manassas = { rank = town 		town_setup = vault_town }	#Vault 101
 	assabet = { rank = town 		town_setup = vault_town }	#Vault 111
 	klikitat = { rank = town 		town_setup = vault_town }	#Vault 6

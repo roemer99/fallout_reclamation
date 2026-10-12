@@ -1,0 +1,46 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault definition
+# =============================================================================
+# This is the ONE place that defines what counts as a Vault.
+# Use "is_vault_country = yes" everywhere (laws, events, expeditions, ...)
+# instead of checking culture, so non-vault countries that later adopt
+# vaultian_culture are not treated as Vaults.
+#
+# The check is wrapped in a custom_tooltip, so tooltips only show one line
+# ("Is a Vault") instead of the full tag list.
+#
+# Tag scheme: Vault N -> V + base-26 letters (Vault 0 = VAA, 1 = VAB, ...,
+# 25 = VAZ, 26 = VBA, ...). Add new vaults to the list below.
+# =============================================================================
+
+# Country scope
+is_vault_country = {
+	custom_tooltip = {
+		text = is_vault_country_tt
+		OR = {
+			tag = VAA	# Vault 0
+			tag = VAG	# Vault 6
+			tag = VAI	# Vault 8
+			tag = VAL	# Vault 11
+			tag = VAN	# Vault 13
+			tag = VAP	# Vault 15
+			tag = VAV	# Vault 21
+			tag = VBD	# Vault 29
+			tag = VBH	# Vault 33
+			tag = VCS	# Vault 70
+			tag = VCY	# Vault 76
+			tag = VDD	# Vault 81
+			tag = VDR	# Vault 95
+			tag = VDX	# Vault 101
+			tag = VEH	# Vault 111
+			tag = VEK	# Vault 114
+			tag = VEO	# Vault 118
+		}
+	}
+}
+
+# Country scope: Vault that is still sealed (Isolation Policy = Isolationism)
+is_sealed_vault = {
+	is_vault_country = yes
+	has_policy = isolation_isolationism
+}

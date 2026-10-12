@@ -8,7 +8,17 @@
 	"relationships":	[],
 	"game_custom_data":	{
 		"replace_paths" : [
-			"setup/countries"
+			"setup/countries",
+			"common/situations",
+			"common/disasters",
+			"common/diseases",
+			"common/laws",
+			"common/building_types",
+			"common/town_setups",
+			"common/parliament_issues",
+			"common/movements",
+			"events/situations",
+			"events/disaster"
 		]
 	}
 }

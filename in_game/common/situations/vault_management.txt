@@ -1,0 +1,80 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault Management (situation)
+# =============================================================================
+# Every Vault sees this situation on its own (like the Black Death: everyone
+# has it, but nobody interacts through it).
+# Panel: in_game/gui/panels/situation/vault_management.gui
+# The panel shows the PLAYER's own values (Overseer Authority, Water, Energy,
+# Fusion Cores) via script_values/fallout_vault_resource_values.txt.
+# Activated in fallout_on_game_start (on_action/fallout_on_actions.txt).
+# =============================================================================
+
+vault_management = {
+	monthly_spawn_chance = { value = 1 }
+
+	can_start = {
+		any_country = {
+			is_vault_country = yes
+		}
+	}
+
+	outcome = {
+		name = "vault_management_never_ends"
+		trigger = {
+			custom_tooltip = {
+				text = vault_management_never_ends_tt
+				always = no
+			}
+		}
+	}
+
+	# root = country
+	visible = {
+		is_vault_country = yes
+	}
+
+	on_start = {
+		debug_log = "FALLOUT DEBUG: vault_management on_start"
+	}
+
+	on_monthly = {
+	}
+
+	on_ended = {
+		debug_log = "FALLOUT DEBUG: vault_management ENDED"
+	}
+
+	is_data_map = yes
+
+	# root = location: Vault locations coloured by their Vault's water reserves
+	map_color = {
+		if = {
+			limit = {
+				owner ?= {
+					is_vault_country = yes
+					has_variable = vault_water
+				}
+			}
+			lerp = {
+				min_color = define:NMapColors|MAP_COLOR_LOW
+				max_color = define:NMapColors|MAP_COLOR_HIGH
+				factor = {
+					value = owner.var:vault_water
+					divide = 100
+				}
+			}
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+
+	legend_key = {
+		desc = "VAULT_MGMT_LEGEND_WATER_HIGH"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
+	legend_key = {
+		desc = "VAULT_MGMT_LEGEND_WATER_LOW"
+		color = define:NMapColors|MAP_COLOR_LOW
+	}
+}

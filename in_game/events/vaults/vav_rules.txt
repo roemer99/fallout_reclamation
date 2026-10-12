@@ -1,0 +1,66 @@
+﻿namespace = vav_rules
+
+# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: rules of the casino games
+# =============================================================================
+# Opened by the "?" buttons in the Vault Management panel (Vault 21 window)
+# via scripted_guis/fallout_vav_blackjack.txt (vav_rules_blackjack / _roulette / _caravan).
+#   .1 Blackjack   .2 Roulette   .3 Caravan
+# =============================================================================
+
+vav_rules.1 = {
+	type = country_event
+	title = vav_rules.1.title
+	desc = vav_rules.1.desc
+	hide_portraits = yes
+
+	trigger = { tag = VAV }
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_rules.ok
+		historical_option = no
+	}
+}
+
+vav_rules.2 = {
+	type = country_event
+	title = vav_rules.2.title
+	desc = vav_rules.2.desc
+	hide_portraits = yes
+
+	trigger = { tag = VAV }
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_rules.ok
+		historical_option = no
+	}
+}
+
+vav_rules.3 = {
+	type = country_event
+	title = vav_rules.3.title
+	desc = vav_rules.3.desc
+	hide_portraits = yes
+
+	trigger = { tag = VAV }
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_rules.ok
+		historical_option = no
+	}
+}

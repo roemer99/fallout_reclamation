@@ -1,0 +1,161 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Caravan table values (country scope = player)
+# =============================================================================
+# Used by the Caravan window gui/fallout_caravan_window.gui
+# Short names on purpose (they are repeated ~500 times in the GUI).
+# =============================================================================
+
+# Number of available card backs (decks). Card back N is
+# main_menu/gfx/interface/fallout/caravan/backs/back_N.dds
+# To add a card back: put back_2.dds (back_3.dds, ...) there and raise this value
+# (the window supports up to 5 card backs).
+fallout_vav_cv_deck_count = { value = 1 }
+
+# Chosen card back (1 = default)
+vcv_deck = { value = 1 if = { limit = { has_variable = vav_cv_deck } value = var:vav_cv_deck } }
+
+# 1 while a game is running (opens the Caravan window)
+vcv_active = { value = 0 if = { limit = { has_variable = vav_cv_active } value = 1 } }
+
+# 1 after the last turn: the board stays open until "See result"
+vcv_over = { value = 0 if = { limit = { has_variable = vav_cv_over } value = 1 } }
+
+# Hand card
+vcv_hand = { value = 0 if = { limit = { has_variable = vav_cv_card } value = var:vav_cv_card } }
+
+# Current turn (1-9): every turn has its own animation container in the GUI
+vcv_turn = { value = 0 if = { limit = { has_variable = vav_cv_turn } value = var:vav_cv_turn } }
+
+# Face cards of the last move (table animation, see fallout_vav_cv_clear_fx_effect)
+# f1 = player's face card, f2 = opponent's face card (11-14, 0 = none)
+# f1t / f2t = target: 1-3 player's caravan I-III, 4-6 opponent's caravan I-III
+vcv_f1 = { value = 0 if = { limit = { has_variable = vav_cv_f1 } value = var:vav_cv_f1 } }
+vcv_f1t = { value = 0 if = { limit = { has_variable = vav_cv_f1t } value = var:vav_cv_f1t } }
+vcv_f2 = { value = 0 if = { limit = { has_variable = vav_cv_f2 } value = var:vav_cv_f2 } }
+vcv_f2t = { value = 0 if = { limit = { has_variable = vav_cv_f2t } value = var:vav_cv_f2t } }
+
+# Move log (gui/fallout_caravan_log.gui): 1 while the log is open
+vcv_showlog = { value = 0 if = { limit = { has_variable = vav_cv_show_log } value = 1 } }
+# Per turn t and player (p / o): card (vcv_lpc1), side (vcv_lps1: 0 discarded, 1 player's caravan,
+# 2 opponent's caravan), caravan (vcv_lpl1). See scripted_effects/fallout_vav_caravan_log_effects.txt
+vcv_lpc1 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_1 } value = var:vav_cv_lg_p_c_1 } }
+vcv_lps1 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_1 } value = var:vav_cv_lg_p_s_1 } }
+vcv_lpl1 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_1 } value = var:vav_cv_lg_p_l_1 } }
+vcv_lpc2 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_2 } value = var:vav_cv_lg_p_c_2 } }
+vcv_lps2 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_2 } value = var:vav_cv_lg_p_s_2 } }
+vcv_lpl2 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_2 } value = var:vav_cv_lg_p_l_2 } }
+vcv_lpc3 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_3 } value = var:vav_cv_lg_p_c_3 } }
+vcv_lps3 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_3 } value = var:vav_cv_lg_p_s_3 } }
+vcv_lpl3 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_3 } value = var:vav_cv_lg_p_l_3 } }
+vcv_lpc4 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_4 } value = var:vav_cv_lg_p_c_4 } }
+vcv_lps4 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_4 } value = var:vav_cv_lg_p_s_4 } }
+vcv_lpl4 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_4 } value = var:vav_cv_lg_p_l_4 } }
+vcv_lpc5 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_5 } value = var:vav_cv_lg_p_c_5 } }
+vcv_lps5 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_5 } value = var:vav_cv_lg_p_s_5 } }
+vcv_lpl5 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_5 } value = var:vav_cv_lg_p_l_5 } }
+vcv_lpc6 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_6 } value = var:vav_cv_lg_p_c_6 } }
+vcv_lps6 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_6 } value = var:vav_cv_lg_p_s_6 } }
+vcv_lpl6 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_6 } value = var:vav_cv_lg_p_l_6 } }
+vcv_lpc7 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_7 } value = var:vav_cv_lg_p_c_7 } }
+vcv_lps7 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_7 } value = var:vav_cv_lg_p_s_7 } }
+vcv_lpl7 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_7 } value = var:vav_cv_lg_p_l_7 } }
+vcv_lpc8 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_8 } value = var:vav_cv_lg_p_c_8 } }
+vcv_lps8 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_8 } value = var:vav_cv_lg_p_s_8 } }
+vcv_lpl8 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_8 } value = var:vav_cv_lg_p_l_8 } }
+vcv_lpc9 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_c_9 } value = var:vav_cv_lg_p_c_9 } }
+vcv_lps9 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_s_9 } value = var:vav_cv_lg_p_s_9 } }
+vcv_lpl9 = { value = 0 if = { limit = { has_variable = vav_cv_lg_p_l_9 } value = var:vav_cv_lg_p_l_9 } }
+vcv_loc1 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_1 } value = var:vav_cv_lg_o_c_1 } }
+vcv_los1 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_1 } value = var:vav_cv_lg_o_s_1 } }
+vcv_lol1 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_1 } value = var:vav_cv_lg_o_l_1 } }
+vcv_loc2 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_2 } value = var:vav_cv_lg_o_c_2 } }
+vcv_los2 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_2 } value = var:vav_cv_lg_o_s_2 } }
+vcv_lol2 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_2 } value = var:vav_cv_lg_o_l_2 } }
+vcv_loc3 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_3 } value = var:vav_cv_lg_o_c_3 } }
+vcv_los3 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_3 } value = var:vav_cv_lg_o_s_3 } }
+vcv_lol3 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_3 } value = var:vav_cv_lg_o_l_3 } }
+vcv_loc4 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_4 } value = var:vav_cv_lg_o_c_4 } }
+vcv_los4 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_4 } value = var:vav_cv_lg_o_s_4 } }
+vcv_lol4 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_4 } value = var:vav_cv_lg_o_l_4 } }
+vcv_loc5 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_5 } value = var:vav_cv_lg_o_c_5 } }
+vcv_los5 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_5 } value = var:vav_cv_lg_o_s_5 } }
+vcv_lol5 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_5 } value = var:vav_cv_lg_o_l_5 } }
+vcv_loc6 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_6 } value = var:vav_cv_lg_o_c_6 } }
+vcv_los6 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_6 } value = var:vav_cv_lg_o_s_6 } }
+vcv_lol6 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_6 } value = var:vav_cv_lg_o_l_6 } }
+vcv_loc7 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_7 } value = var:vav_cv_lg_o_c_7 } }
+vcv_los7 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_7 } value = var:vav_cv_lg_o_s_7 } }
+vcv_lol7 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_7 } value = var:vav_cv_lg_o_l_7 } }
+vcv_loc8 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_8 } value = var:vav_cv_lg_o_c_8 } }
+vcv_los8 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_8 } value = var:vav_cv_lg_o_s_8 } }
+vcv_lol8 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_8 } value = var:vav_cv_lg_o_l_8 } }
+vcv_loc9 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_c_9 } value = var:vav_cv_lg_o_c_9 } }
+vcv_los9 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_s_9 } value = var:vav_cv_lg_o_s_9 } }
+vcv_lol9 = { value = 0 if = { limit = { has_variable = vav_cv_lg_o_l_9 } value = var:vav_cv_lg_o_l_9 } }
+
+# Cards per caravan (vcv_p1n ...) and the card values (vcv_p1c1 ... vcv_o3c9)
+vcv_p1n = { value = 0 if = { limit = { has_variable = vav_cv_p1_n } value = var:vav_cv_p1_n } }
+vcv_p1c1 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c1 } value = var:vav_cv_p1_c1 } }
+vcv_p1c2 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c2 } value = var:vav_cv_p1_c2 } }
+vcv_p1c3 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c3 } value = var:vav_cv_p1_c3 } }
+vcv_p1c4 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c4 } value = var:vav_cv_p1_c4 } }
+vcv_p1c5 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c5 } value = var:vav_cv_p1_c5 } }
+vcv_p1c6 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c6 } value = var:vav_cv_p1_c6 } }
+vcv_p1c7 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c7 } value = var:vav_cv_p1_c7 } }
+vcv_p1c8 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c8 } value = var:vav_cv_p1_c8 } }
+vcv_p1c9 = { value = 0 if = { limit = { has_variable = vav_cv_p1_c9 } value = var:vav_cv_p1_c9 } }
+
+vcv_p2n = { value = 0 if = { limit = { has_variable = vav_cv_p2_n } value = var:vav_cv_p2_n } }
+vcv_p2c1 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c1 } value = var:vav_cv_p2_c1 } }
+vcv_p2c2 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c2 } value = var:vav_cv_p2_c2 } }
+vcv_p2c3 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c3 } value = var:vav_cv_p2_c3 } }
+vcv_p2c4 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c4 } value = var:vav_cv_p2_c4 } }
+vcv_p2c5 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c5 } value = var:vav_cv_p2_c5 } }
+vcv_p2c6 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c6 } value = var:vav_cv_p2_c6 } }
+vcv_p2c7 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c7 } value = var:vav_cv_p2_c7 } }
+vcv_p2c8 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c8 } value = var:vav_cv_p2_c8 } }
+vcv_p2c9 = { value = 0 if = { limit = { has_variable = vav_cv_p2_c9 } value = var:vav_cv_p2_c9 } }
+
+vcv_p3n = { value = 0 if = { limit = { has_variable = vav_cv_p3_n } value = var:vav_cv_p3_n } }
+vcv_p3c1 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c1 } value = var:vav_cv_p3_c1 } }
+vcv_p3c2 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c2 } value = var:vav_cv_p3_c2 } }
+vcv_p3c3 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c3 } value = var:vav_cv_p3_c3 } }
+vcv_p3c4 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c4 } value = var:vav_cv_p3_c4 } }
+vcv_p3c5 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c5 } value = var:vav_cv_p3_c5 } }
+vcv_p3c6 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c6 } value = var:vav_cv_p3_c6 } }
+vcv_p3c7 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c7 } value = var:vav_cv_p3_c7 } }
+vcv_p3c8 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c8 } value = var:vav_cv_p3_c8 } }
+vcv_p3c9 = { value = 0 if = { limit = { has_variable = vav_cv_p3_c9 } value = var:vav_cv_p3_c9 } }
+
+vcv_o1n = { value = 0 if = { limit = { has_variable = vav_cv_o1_n } value = var:vav_cv_o1_n } }
+vcv_o1c1 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c1 } value = var:vav_cv_o1_c1 } }
+vcv_o1c2 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c2 } value = var:vav_cv_o1_c2 } }
+vcv_o1c3 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c3 } value = var:vav_cv_o1_c3 } }
+vcv_o1c4 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c4 } value = var:vav_cv_o1_c4 } }
+vcv_o1c5 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c5 } value = var:vav_cv_o1_c5 } }
+vcv_o1c6 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c6 } value = var:vav_cv_o1_c6 } }
+vcv_o1c7 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c7 } value = var:vav_cv_o1_c7 } }
+vcv_o1c8 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c8 } value = var:vav_cv_o1_c8 } }
+vcv_o1c9 = { value = 0 if = { limit = { has_variable = vav_cv_o1_c9 } value = var:vav_cv_o1_c9 } }
+
+vcv_o2n = { value = 0 if = { limit = { has_variable = vav_cv_o2_n } value = var:vav_cv_o2_n } }
+vcv_o2c1 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c1 } value = var:vav_cv_o2_c1 } }
+vcv_o2c2 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c2 } value = var:vav_cv_o2_c2 } }
+vcv_o2c3 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c3 } value = var:vav_cv_o2_c3 } }
+vcv_o2c4 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c4 } value = var:vav_cv_o2_c4 } }
+vcv_o2c5 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c5 } value = var:vav_cv_o2_c5 } }
+vcv_o2c6 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c6 } value = var:vav_cv_o2_c6 } }
+vcv_o2c7 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c7 } value = var:vav_cv_o2_c7 } }
+vcv_o2c8 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c8 } value = var:vav_cv_o2_c8 } }
+vcv_o2c9 = { value = 0 if = { limit = { has_variable = vav_cv_o2_c9 } value = var:vav_cv_o2_c9 } }
+
+vcv_o3n = { value = 0 if = { limit = { has_variable = vav_cv_o3_n } value = var:vav_cv_o3_n } }
+vcv_o3c1 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c1 } value = var:vav_cv_o3_c1 } }
+vcv_o3c2 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c2 } value = var:vav_cv_o3_c2 } }
+vcv_o3c3 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c3 } value = var:vav_cv_o3_c3 } }
+vcv_o3c4 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c4 } value = var:vav_cv_o3_c4 } }
+vcv_o3c5 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c5 } value = var:vav_cv_o3_c5 } }
+vcv_o3c6 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c6 } value = var:vav_cv_o3_c6 } }
+vcv_o3c7 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c7 } value = var:vav_cv_o3_c7 } }
+vcv_o3c8 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c8 } value = var:vav_cv_o3_c8 } }
+vcv_o3c9 = { value = 0 if = { limit = { has_variable = vav_cv_o3_c9 } value = var:vav_cv_o3_c9 } }

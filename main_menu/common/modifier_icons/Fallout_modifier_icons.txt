@@ -1,0 +1,22 @@
+﻿# FALLOUT RECLAMATION - icons for our modifier types
+# (A static modifier is shown with the icon of its first modifier type.)
+
+local_radiation_hotspot = {
+	positive = "gfx/interface/icons/disease/radiation_sickness.dds"
+}
+
+local_radiation_sickness_impact_modifier = {
+	positive = "gfx/interface/icons/disease/radiation_sickness.dds"
+}
+national_radiation_sickness_resistance_modifier = {
+	positive = "gfx/interface/icons/disease/radiation_sickness.dds"
+}
+local_radiation_sickness_resistance_modifier = {
+	positive = "gfx/interface/icons/disease/radiation_sickness.dds"
+}
+national_radiation_sickness_growth_modifier = {
+	positive = "gfx/interface/icons/disease/radiation_sickness.dds"
+}
+local_radiation_sickness_growth_modifier = {
+	positive = "gfx/interface/icons/disease/radiation_sickness.dds"
+}

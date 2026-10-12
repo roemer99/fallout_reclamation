@@ -1,0 +1,162 @@
+﻿#####################################################################
+## FALLOUT RECLAMATION - Vault 21: Caravan pop-up window
+## Opens automatically while a game is running (vcv_active = 1) and
+## closes when the game ends. Started from the Vault Management panel.
+## Building blocks: gui/fallout_caravan_cards.gui,
+##   gui/fallout_caravan_lanes_opponent.gui, gui/fallout_caravan_lanes_player.gui
+## Logic:   common/scripted_effects/fallout_vav_caravan_effects.txt
+## Buttons: common/scripted_guis/fallout_vav_blackjack.txt
+## Placed in the full-screen situation view (in_game/gui/situation_view.gui,
+## override) as vcv_caravan_window = {}, because EU5 does not create root
+## windows from new GUI files on its own.
+#####################################################################
+
+types FalloutCaravanWindow
+{
+type vcv_caravan_window = widget {
+	name = "fallout_caravan_window"
+	size = { 1100 800 }
+	# The situation view root is only as wide as the Vault Management panel and the
+	# panel is drawn on top of it. So the window's LEFT edge is put on the root's
+	# RIGHT edge: the window opens right next to the panel instead of underneath.
+	# parentanchor = point of the parent, widgetanchor = point of this window.
+	parentanchor = right|vcenter
+	widgetanchor = left|vcenter
+	position = { 10 0 }
+	# The window takes the mouse: clicks on it must not fall through to the map.
+	# (The parent situation_view has allow_outside = yes, see situation_view.gui.)
+	alwaystransparent = no
+	filter_mouse = all
+	visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_active'), '(CFixedPoint)1')]"
+
+	# Table surface
+	icon = {
+		size = { 100% 100% }
+		texture = "gfx/interface/fallout/caravan/table/table_1.dds"
+	}
+
+	# Vanilla frame: the gold metal card frame of the expeditions window
+	# (template bg_expeditions_card_frame_texture, main_menu/gui/shared/backgrounds.gui)
+	widget = {
+		size = { 100% 100% }
+		alwaystransparent = yes
+		background = {
+			using = bg_expeditions_card_frame_texture
+		}
+	}
+
+	# Semi-transparent shade on the right (deck, hand card, buttons and "Turn x of 9"):
+	# makes the text readable on the table. Full height of the window.
+	icon = {
+		size = { 300 100% }
+		parentanchor = right|top
+		widgetanchor = right|top
+		position = { 0 0 }
+		texture = "gfx/interface/fallout/caravan/table/shade.dds"
+		alpha = 0.55
+		alwaystransparent = yes
+	}
+
+	vbox = {
+		size = { 100% 100% }
+		margin = { 30 22 }
+		spacing = 8
+
+		# --- title bar ---
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			text_single = { text = "VAV_CV_TITLE" using = Font_Size_Big }
+			expand = {}
+			text_single = { text = "VAV_CV_TURN" visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_over'), '(CFixedPoint)1')]" }
+			text_single = { text = "VAV_CV_GAME_OVER" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_over'), '(CFixedPoint)1')]" }
+		}
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			spacing = 40
+
+			# --- caravans ---
+			vbox = {
+				spacing = 6
+
+				text_single = { text = "VAV_CV_OPPONENT" }
+				hbox = {
+					spacing = 40
+					vbox = { spacing = 2 text_single = { text = "VAV_CV_LANE_O1" } vcv_lane_o1 = {} }
+					vbox = { spacing = 2 text_single = { text = "VAV_CV_LANE_O2" } vcv_lane_o2 = {} }
+					vbox = { spacing = 2 text_single = { text = "VAV_CV_LANE_O3" } vcv_lane_o3 = {} }
+				}
+
+				text_single = { text = "VAV_CV_YOU" }
+				hbox = {
+					spacing = 40
+					vbox = {
+						spacing = 2
+						text_single = { text = "VAV_CV_LANE_P1" }
+						vcv_lane_p1 = {}
+						button_regular = { size = { 100 30 } text = "VAV_CV_PLAY" tooltip = "VAV_CV_PLAY_TT" enabled = "[GetScriptedGui('vav_cv_play_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" onclick = "[GetScriptedGui('vav_cv_play_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					}
+					vbox = {
+						spacing = 2
+						text_single = { text = "VAV_CV_LANE_P2" }
+						vcv_lane_p2 = {}
+						button_regular = { size = { 100 30 } text = "VAV_CV_PLAY" tooltip = "VAV_CV_PLAY_TT" enabled = "[GetScriptedGui('vav_cv_play_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" onclick = "[GetScriptedGui('vav_cv_play_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					}
+					vbox = {
+						spacing = 2
+						text_single = { text = "VAV_CV_LANE_P3" }
+						vcv_lane_p3 = {}
+						button_regular = { size = { 100 30 } text = "VAV_CV_PLAY" tooltip = "VAV_CV_PLAY_TT" enabled = "[GetScriptedGui('vav_cv_play_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" onclick = "[GetScriptedGui('vav_cv_play_3').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					}
+				}
+			}
+
+			expand = {}
+
+			# --- deck, hand card, actions ---
+			vbox = {
+				spacing = 8
+				text_single = { text = "VAV_CV_DECK" }
+				vcv_card_back = { tooltip = "VAV_CV_DECK_TT" }
+				button_regular = { size = { 160 30 } text = "VAV_CV_NEXT_DECK" tooltip = "VAV_CV_NEXT_DECK_TT" onclick = "[GetScriptedGui('vav_cv_next_deck').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+				# Move log on / off (gui/fallout_caravan_log.gui)
+				button_regular = { size = { 160 30 } text = "VAV_CV_LOG_BUTTON" tooltip = "VAV_CV_LOG_BUTTON_TT" onclick = "[GetScriptedGui('vav_cv_toggle_log').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+				text_single = { text = "VAV_CV_HAND" }
+				vcv_hand_card = { tooltip = "VAV_CV_HAND_TT" }
+				vcv_hand_hint = {}
+				button_regular = { size = { 160 32 } text = "VAV_CV_DISCARD" tooltip = "VAV_CV_DISCARD_TT" enabled = "[GetScriptedGui('vav_cv_discard').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" onclick = "[GetScriptedGui('vav_cv_discard').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+				button_regular = { size = { 160 32 } text = "VAV_CV_FORFEIT" tooltip = "VAV_CV_FORFEIT_TT" enabled = "[GetScriptedGui('vav_cv_forfeit').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" onclick = "[GetScriptedGui('vav_cv_forfeit').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+				# After the last turn: appears once the last moves have been played back
+				button_regular = {
+					size = { 160 40 }
+					text = "VAV_CV_SEE_RESULT"
+					tooltip = "VAV_CV_SEE_RESULT_TT"
+					visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_over'), '(CFixedPoint)1')]"
+					onclick = "[GetScriptedGui('vav_cv_finish').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					alpha = 0
+					state = { name = _show delay = 2.5 duration = 0.4 alpha = 1 }
+				}
+				expand = {}
+			}
+		}
+	}
+
+	# Move log (gui/fallout_caravan_log.gui): over the caravans, opened with "Log"
+	vcv_log_panel = {
+		position = { 30 70 }
+	}
+
+	# Input blocker (gui/fallout_caravan_fx.gui): one per turn, so it starts again at every
+	# turn change and blocks all clicks on the table while the move is being played back.
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)2')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" vcv_input_blocker = {} } }
+	widget = { size = { 0 0 } allow_outside = yes visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" widget = { size = { 0 0 } allow_outside = yes visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)11')]" vcv_input_blocker = {} } }	# last turn
+}
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+ vault_wasteland_scouting_expedition: "Wasteland Scouting Party"
+ vault_wasteland_scouting_expedition_desc: "Send a small, well-armed party through the blast door to scout the lands surrounding our Vault and report back on what remains of the world above."
+ vault_wasteland_scouting_expedition_outcome_overview: "$BULLET$Reveals the locations bordering our Vault and may bring some prestige."
+ vault_wasteland_scouting_cooldown: "Wasteland Scouting Party"

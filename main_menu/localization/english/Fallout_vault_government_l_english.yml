@@ -1,0 +1,22 @@
+﻿l_english:
+ # Government type (common/government_types/Fallout_government_types.txt)
+ vault_government: "Vault Overseership"
+ vault_government_desc: "The Vault is ruled by an Overseer, who holds near-absolute authority over every dweller for life. The office is not inherited: when an Overseer dies, the most capable dweller is appointed as successor. The Overseer's power rests on #Y Overseer Authority#!."
+
+ # Heir selection (common/heir_selections/Fallout_heir_selections.txt)
+ overseer_appointment: "Overseer Appointment"
+ overseer_appointment_desc: "The Overseer rules for life. Upon their death, the most capable dweller of the Vault is appointed as the new Overseer, regardless of family or descent."
+
+ # Static modifiers (main_menu/common/static_modifiers/Fallout_vault_modifiers.txt)
+ STATIC_MODIFIER_NAME_vault_water_shortage: "Water Shortage"
+ STATIC_MODIFIER_DESC_vault_water_shortage: "The Vault's water reserves are exhausted. Dwellers ration every drop, sickness spreads and trust in the Overseer crumbles."
+ STATIC_MODIFIER_NAME_vault_energy_shortage: "Energy Shortage"
+ STATIC_MODIFIER_DESC_vault_energy_shortage: "The Vault's power reserves are depleted. Lights flicker, machines fall silent and research grinds to a halt."
+ STATIC_MODIFIER_NAME_vault_food_shortage: "Famine"
+ STATIC_MODIFIER_DESC_vault_food_shortage: "The Vault's food reserves are exhausted. Dwellers starve, and the Overseer's authority collapses."
+
+ # Vault resources (for the Vault Management tab)
+ vault_water: "Water"
+ vault_water_desc: "The Vault's water reserves. Produced by the Water Purification Plant and consumed by the dwellers and the hydroponic farms."
+ vault_energy: "Energy"
+ vault_energy_desc: "The Vault's power reserves. Produced by the Power Plant and consumed by life support, pumps and grow lights."

@@ -1,0 +1,167 @@
+﻿namespace = vav_blackjack
+
+# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Blackjack
+# =============================================================================
+# Opened by the scripted GUI vav_blackjack_open (button in the Vault Management
+# panel). Logic: common/scripted_effects/fallout_vav_blackjack_effects.txt
+#   .1 player's turn (Hit / Stand)
+#   .2 win   (+10 fortune)
+#   .3 lose  (-10 fortune)
+#   .4 push  (no change)
+#   .5 natural blackjack (+15 fortune)
+# =============================================================================
+
+# Player's turn
+vav_blackjack.1 = {
+	type = country_event
+	title = vav_blackjack.1.title
+	desc = vav_blackjack.1.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	# Hit: draw a card
+	option = {
+		name = vav_blackjack.1.a
+		historical_option = no
+		fallout_vav_bj_draw_effect = { WHO = player }
+		if = {
+			limit = { var:vav_bj_player > 21 }
+			trigger_event_non_silently = vav_blackjack.3	# bust
+		}
+		else = {
+			trigger_event_non_silently = vav_blackjack.1	# next turn
+		}
+	}
+
+	# Stand: the dealer plays, then compare
+	option = {
+		name = vav_blackjack.1.b
+		historical_option = no
+		fallout_vav_bj_dealer_play_effect = yes
+		if = {
+			limit = {
+				OR = {
+					var:vav_bj_dealer > 21
+					var:vav_bj_player > var:vav_bj_dealer
+				}
+			}
+			trigger_event_non_silently = vav_blackjack.2	# win
+		}
+		else_if = {
+			limit = { var:vav_bj_player < var:vav_bj_dealer }
+			trigger_event_non_silently = vav_blackjack.3	# lose
+		}
+		else = {
+			trigger_event_non_silently = vav_blackjack.4	# push
+		}
+	}
+}
+
+# Win
+vav_blackjack.2 = {
+	type = country_event
+	title = vav_blackjack.2.title
+	desc = vav_blackjack.2.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		fallout_vav_bj_fortune_effect = { AMOUNT = 10 }
+	}
+
+	option = {
+		name = vav_blackjack.2.a
+		historical_option = no
+	}
+}
+
+# Lose (bust or lower than the dealer)
+vav_blackjack.3 = {
+	type = country_event
+	title = vav_blackjack.3.title
+	desc = vav_blackjack.3.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		fallout_vav_bj_fortune_effect = { AMOUNT = -10 }
+	}
+
+	option = {
+		name = vav_blackjack.3.a
+		historical_option = no
+	}
+}
+
+# Push (draw)
+vav_blackjack.4 = {
+	type = country_event
+	title = vav_blackjack.4.title
+	desc = vav_blackjack.4.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_blackjack.4.a
+		historical_option = no
+	}
+}
+
+# Natural blackjack (21 with the first two cards)
+vav_blackjack.5 = {
+	type = country_event
+	title = vav_blackjack.5.title
+	desc = vav_blackjack.5.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		fallout_vav_bj_fortune_effect = { AMOUNT = 15 }
+	}
+
+	option = {
+		name = vav_blackjack.5.a
+		historical_option = no
+	}
+}

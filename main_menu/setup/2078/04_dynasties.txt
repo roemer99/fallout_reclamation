@@ -2,20 +2,7 @@ dynasty_manager = {
 
 	calculator_dynasty = {
 		name = { name = calculator_dynasty }
-		home = mutssooni_yohe
-		dynasty_name_type = location
-		male_names = {
-			name_calculator
-		}
-		female_names = {
-			name_calculator
-		}
-	}
-
-	# VAULT 15
-	calculator_dynasty = {
-		name = { name = calculator_dynasty }
-		home = mutssooni_yohe
+		home = mutsisooni_yohe
 		dynasty_name_type = location
 		male_names = {
 			name_calculator

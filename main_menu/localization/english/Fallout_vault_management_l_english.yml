@@ -1,0 +1,93 @@
+﻿l_english:
+ ### Situation: Vault Management (common/situations/vault_management.txt)
+ vault_management: "Vault Management"
+ vault_management_desc: "Overview of the Vault's vital systems: the Overseer's authority, the water and energy reserves, and the fusion cores that keep the power plant running."
+ vault_management_never_ends: "The Vault endures"
+ vault_management_never_ends_tt: "Vault Management never ends."
+ VAULT_MGMT_LEGEND_WATER_HIGH: "Full water reserves"
+ VAULT_MGMT_LEGEND_WATER_LOW: "Empty water reserves"
+
+ # Panel (gui/panels/situation/vault_management.gui)
+ VAULT_MGMT_TAB: "Vault Management"
+ VAULT_MGMT_AUTHORITY_TITLE: "#T Overseer Authority#!"
+ VAULT_MGMT_AUTHORITY_DESC: "How firmly the Overseer controls the Vault."
+
+ # Windows (dropdown cards)
+ VAULT_MGMT_SECTION_RESOURCES: "Resource Management"
+ VAULT_MGMT_SECTION_STORAGE: "Vault Storage"
+ VAULT_MGMT_STORAGE_DESC: "#weak Supplies for the maintenance of the Vault's buildings, stored for 200 years.#!"
+ VAULT_MGMT_STOCK_TOOLS: "Tools: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_tools_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_tools_years')|0] years)"
+ VAULT_MGMT_STOCK_GLASS: "Glass: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_glass_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_glass_years')|0] years)"
+ VAULT_MGMT_STOCK_PAPER: "Paper: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_paper_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_paper_years')|0] years)"
+ VAULT_MGMT_STOCK_BOOKS: "Books: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_books_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_books_years')|0] years)"
+ VAULT_MGMT_STOCK_CLOTH: "Cloth: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_cloth_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_cloth_years')|0] years)"
+ VAULT_MGMT_STOCK_FINE_CLOTH: "Fine Cloth: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_fine_cloth_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_fine_cloth_years')|0] years)"
+ VAULT_MGMT_STOCK_FURNITURE: "Furniture: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_furniture_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_furniture_years')|0] years)"
+ VAULT_MGMT_STOCK_MEDICAMENTS: "Medicaments: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_medicaments_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_medicaments_years')|0] years)"
+ VAULT_MGMT_STOCK_FIREARMS: "Firearms: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_firearms_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_firearms_years')|0] years)"
+ VAULT_MGMT_STOCK_WEAPONRY: "Weaponry: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_weaponry_display')|1]#!  (~[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_stock_weaponry_years')|0] years)"
+ VAULT_MGMT_STOCK_SPARE_CORES: "Spare Fusion Cores: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_spare_fusion_cores_display')|0]#!"
+ VAULT_MGMT_STOCK_SPARE_CHIPS: "Spare Water Chips: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_spare_water_chips_display')|0]#!"
+ STATIC_MODIFIER_NAME_vault_maintenance_shortage: "Disrepair"
+ STATIC_MODIFIER_DESC_vault_maintenance_shortage: "The Vault storage has run out of maintenance supplies. Broken parts can no longer be replaced, and the Vault slowly falls into disrepair."
+ VAULT_MGMT_SECTION_VAULT: "[GetPlayer.GetName]"
+ VAULT_MGMT_SECTION_VAULT_EMPTY: "#weak Nothing to report yet.#!"
+
+ # Vault 76: Preparation for Reclamation Day
+ VAULT_MGMT_VCY_TITLE: "#T Preparation for Reclamation Day#!"
+ VAULT_MGMT_VCY_PCT: "#bold [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vcy_reclamation_progress')|0]%#!"
+ VAULT_MGMT_VCY_COUNTDOWN: "Reclamation Day in: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vcy_reclamation_years_left')|1] years#! (23 October 2102)"
+ VAULT_MGMT_VCY_DESC: "Vault 76 was built to house America's best and brightest, and it was always meant to open again. On Reclamation Day, twenty-five years after the bombs, its dwellers will step out to rebuild the nation. Until then every day is spent on training, planning and preparing the C.A.M.P. technology they will need out there."
+
+ # Vault 21: Gambling
+ VAULT_MGMT_VAV_TITLE: "#T The House Always Wins#!"
+ VAULT_MGMT_VAV_PCT: "#bold Fortune: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_fortune')|0]%#!"
+ VAULT_MGMT_VAV_DESC: "In Vault 21 every dispute, every law and every distribution of resources is settled by a game of chance. The Vault's fortune rises and falls with every game at the tables, and slowly returns to even when nobody plays."
+ VAULT_MGMT_AUTHORITY_VALUE: "[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_authority_display')|0] / 100"
+ VAULT_MGMT_WATER_TITLE: "#T Water#!"
+ VAULT_MGMT_WATER_VALUE: "Reserves: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_display')|1] / 100"
+ VAULT_MGMT_WATER_FLOW: "Production: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_production')|1]  Consumption: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_consumption')|1]  Monthly: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_balance')|1+=]"
+ VAULT_MGMT_ENERGY_TITLE: "#T Energy#!"
+ VAULT_MGMT_ENERGY_VALUE: "Reserves: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_display')|1] / 100"
+ VAULT_MGMT_ENERGY_FLOW: "Production: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_production')|1]  Consumption: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_consumption')|1]  Monthly: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_balance')|1+=]"
+ VAULT_MGMT_CORES_TITLE: "#T Fusion Cores#!"
+ VAULT_MGMT_CORES_VALUE: "Owned: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_fusion_cores_display')|0]  Power plants running: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_powered_plants')|0]"
+
+ # Bars: supply coverage
+ VAULT_MGMT_AUTHORITY_PCT: "#bold [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_authority_display')|0]%#!"
+ VAULT_MGMT_WATER_PCT: "#bold [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_coverage')|0]%#!"
+ VAULT_MGMT_ENERGY_PCT: "#bold [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_coverage')|0]%#!"
+ VAULT_MGMT_FOOD_PCT: "#bold [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_fill')|0]%#!"
+ VAULT_MGMT_WATER_COVERAGE: "Supply: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_coverage')|0]%"
+ VAULT_MGMT_ENERGY_COVERAGE: "Supply: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_coverage')|0]%"
+
+ # Food
+ VAULT_MGMT_FOOD_TITLE: "#T Food Reserves#!"
+ VAULT_MGMT_FOOD_VALUE: "Stored: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_display')|1] / [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_capacity')|0]  Consumption: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_consumption')|3] per month"
+ VAULT_MGMT_FOOD_ESTIMATE: "Estimated to last: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_years_left')|0] years#!"
+ VAULT_MGMT_FOOD_STABLE: "Food production covers the Vault's needs."
+
+ # Key components (clickable buttons -> show where they are installed)
+ VAULT_MGMT_COMPONENTS_TITLE: "#T Key Components#!"
+ VAULT_MGMT_CORES_BUTTON: "Fusion Cores: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_fusion_cores_display')|0]  (Power plants running: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_powered_plants')|0])"
+ VAULT_MGMT_CORES_TT: "Each Power Plant needs one Fusion Core permanently installed to run. The core is not used up.\n\nClick to show where it is installed."
+ VAULT_MGMT_CHIPS_BUTTON: "Water Chips: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_chips_display')|0]  (Water plants running: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_powered_water_plants')|0])"
+ VAULT_MGMT_CHIPS_TT: "Each Water Purification Plant needs one Water Chip permanently installed to run. The chip is not used up.\n\nClick to show where it is installed."
+
+ ### Disaster: Radiation Contamination (common/disasters/radiation_contamination.txt)
+ radiation_contamination: "Radiation Contamination"
+ radiation_contamination_desc: "Our capital lies in contaminated land. Fallout poisons the soil, the water and the people, and production suffers. The disaster ends once the radiation has decayed far enough."
+
+ ### Situation: Radiation (removed, now a disaster)
+ nuclear_fallout: "Radiation"
+ nuclear_fallout_desc: "The fallout of the Great War still lingers over the world. Background radiation poisons every land, while the places where the bombs fell remain deadly for years to come."
+ nuclear_fallout_never_ends: "The world is clean again"
+ nuclear_fallout_never_ends_tt: "The radiation of the Great War will never fully disappear."
+
+ # Panel (gui/panels/situation/nuclear_fallout.gui)
+ FALLOUT_RAD_CAPITAL_TITLE: "#T Radiation in our capital#!"
+ FALLOUT_RAD_CAPITAL_VALUE: "[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_capital_radiation_display')|1] (Ground zero at game start: 100)"
+ FALLOUT_RAD_BACKGROUND_TITLE: "#T Background radiation#!"
+ FALLOUT_RAD_BACKGROUND_VALUE: "[GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_rad_background_display')|1] everywhere in the world"
+ FALLOUT_RAD_DECAY_TITLE: "#T Decay#!"
+ FALLOUT_RAD_DECAY_DESC: "Radiation around the strike sites decays with real half-lives: Iodine-131 (8 days), Caesium-134 (2.1 years) and Caesium-137 (30 years). Ground zero slowly spreads contaminated dust into the surrounding lands. Background radiation does not decay on its own."

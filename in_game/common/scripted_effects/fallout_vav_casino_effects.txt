@@ -1,0 +1,104 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Roulette
+# =============================================================================
+# Started by buttons in the Vault Management panel (Vault 21 window)
+# -> scripted_guis/fallout_vav_blackjack.txt -> events/vaults/vav_roulette.txt
+# (Caravan: fallout_vav_caravan_effects.txt)
+# Stake: the Vault's fortune (fallout_vav_bj_fortune_effect).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# ROULETTE (European wheel 0-36)
+# vav_rl_number 0-36, vav_rl_color 0 = green / 1 = red / 2 = black,
+# vav_rl_parity 0 = zero / 1 = odd / 2 = even
+# vav_rl_bet 1 = red, 2 = black, 3 = odd, 4 = even, 5 = zero
+# -----------------------------------------------------------------------------
+
+# Root = country. Spins the wheel.
+fallout_vav_rl_spin_effect = {
+	random_list = {
+		1 = { set_variable = { name = vav_rl_number value = 0 } set_variable = { name = vav_rl_color value = 0 } set_variable = { name = vav_rl_parity value = 0 } }
+		1 = { set_variable = { name = vav_rl_number value = 1 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 2 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 3 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 4 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 5 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 6 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 7 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 8 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 9 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 10 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 11 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 12 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 13 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 14 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 15 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 16 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 17 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 18 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 19 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 20 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 21 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 22 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 23 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 24 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 25 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 26 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 27 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 28 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 29 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 30 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 31 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 32 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 33 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 34 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+		1 = { set_variable = { name = vav_rl_number value = 35 } set_variable = { name = vav_rl_color value = 2 } set_variable = { name = vav_rl_parity value = 1 } }
+		1 = { set_variable = { name = vav_rl_number value = 36 } set_variable = { name = vav_rl_color value = 1 } set_variable = { name = vav_rl_parity value = 2 } }
+	}
+}
+
+# Root = country. Place bet BET (1-5), spin, pay out and show the result.
+# Result events (one per colour, so the text can name it):
+#   .2 win on red, .5 win on black, .4 zero hit,
+#   .3 lose on red, .6 lose on black, .7 lose on green (zero)
+fallout_vav_rl_play_effect = {
+	set_variable = { name = vav_rl_bet value = $BET$ }
+	fallout_vav_rl_spin_effect = yes
+	if = {
+		limit = {
+			OR = {
+				AND = { var:vav_rl_bet = 1 var:vav_rl_color = 1 }
+				AND = { var:vav_rl_bet = 2 var:vav_rl_color = 2 }
+				AND = { var:vav_rl_bet = 3 var:vav_rl_parity = 1 }
+				AND = { var:vav_rl_bet = 4 var:vav_rl_parity = 2 }
+			}
+		}
+		fallout_vav_bj_fortune_effect = { AMOUNT = 10 }
+		if = {
+			limit = { var:vav_rl_color = 1 }
+			trigger_event_non_silently = vav_roulette.2	# win, red
+		}
+		else = {
+			trigger_event_non_silently = vav_roulette.5	# win, black
+		}
+	}
+	else_if = {
+		limit = { var:vav_rl_bet = 5 var:vav_rl_number = 0 }
+		fallout_vav_bj_fortune_effect = { AMOUNT = 35 }
+		trigger_event_non_silently = vav_roulette.4	# zero hit
+	}
+	else = {
+		fallout_vav_bj_fortune_effect = { AMOUNT = -10 }
+		if = {
+			limit = { var:vav_rl_color = 1 }
+			trigger_event_non_silently = vav_roulette.3	# lose, red
+		}
+		else_if = {
+			limit = { var:vav_rl_color = 2 }
+			trigger_event_non_silently = vav_roulette.6	# lose, black
+		}
+		else = {
+			trigger_event_non_silently = vav_roulette.7	# lose, green
+		}
+	}
+}

@@ -1,0 +1,30 @@
+﻿# FALLOUT RECLAMATION: overrides the vanilla file.
+# The vanilla movement depends on situation:reformation, which no longer exists
+# (replace_paths common/situations) and spammed thousands of runtime errors.
+# The movement is kept as a database entry but can never become active.
+lutheranism_movement = {
+	religion = lutheran
+
+	potential = {
+		always = no
+	}
+
+	monthly_spawn_chance = { value = 0 }
+	spawn = { }
+
+	environmental_infection = { value = 0 }
+
+	r0 = { value = 0 }
+
+	calc_interval_days = { 20 40 }
+
+	required_religions = {
+		catholic
+	}
+
+	location_spread_threshold = { value = 1 }
+
+	map_color = {
+		value = define:NMapColors|MAP_COLOR_NULL
+	}
+}

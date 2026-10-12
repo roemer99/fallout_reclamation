@@ -1,14 +1,51 @@
-﻿vault_isolation_law = {
+﻿vault_censorship_law = {
     law_category = administrative
 
     potential = {
-        culture = culture:vaultian_culture
+        is_vault_country = yes
+    }
+
+    vault_tec_override = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    clearance_level_access = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    open_mainframe = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+}
+
+vault_isolation_law = {
+    law_category = administrative
+
+    potential = {
+        is_vault_country = yes
     }
 
     isolation_isolationism = {
         country_modifier = {
-            stability_cost = -0.1
+            stability_cost_efficiency = 0.1
             monthly_towards_traditionalist = societal_value_monthly_move
+            national_radiation_sickness_resistance_modifier = 1
+            # Sealed Vault: no trade with the outside world
+            trade_isolation = yes
+            global_merchant_capacity_modifier = -1
         }
         estate_preferences = {
             clergy_estate
@@ -35,6 +72,365 @@
         }
         estate_preferences = {
             crown_estate
+        }
+        years = 2
+    }
+}
+
+vault_administrative_law = {
+    law_category = administrative
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    zax_mainframe_automation = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+
+    administrative_department = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+
+    executive_overseer = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+}
+
+vault_legal_code_law = {
+    law_category = administrative
+
+    potential = {
+        is_vault_country = yes
+    }
+    vault_tec_regulations = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    mandatory_rehabilitation = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+    surface_banishment = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    capital_punishment = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            military
+        }
+        years = 2
+    }
+}
+
+vault_religious_law = {
+    law_category = religious
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    strict_secularism = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    sanctioned_pre_war_chapels = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            clergy_estate
+        }
+        years = 2
+    }
+    cult_of_overseer = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    techno_worship = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+}
+
+vault_marriage_law = {
+    law_category = estates
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    regulated_breeding = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    closed_vault_endogamy = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    surface_integration = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+}
+
+vault_cultural_law = {
+    law_category = estates
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    vault_supremacy = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    pre_war_preservation = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    utilitarian_survivalism = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+}
+
+vault_education_law = {
+    law_category = estates
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    goat_standardization = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+    overseer_indoctrination = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    generational_apprenticeship = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+}
+
+vault_ressources_law = {
+    law_category = socioeconomic
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    # How much of the maintenance goods in the Vault market the dwellers may use
+    # (stocked for 200 years of building maintenance at game start,
+    # scripted_effects/fallout_vault_storage_effects.txt)
+
+    # All maintenance goods are reserved for the Vault buildings
+    strict_rationing = {
+        country_modifier = {
+            global_glass_pop_demand = -1
+            global_paper_pop_demand = -1
+            global_fine_cloth_pop_demand = -1
+            global_cloth_pop_demand = -1
+            global_tools_pop_demand = -1
+            global_furniture_pop_demand = -1
+            global_books_pop_demand = -1
+            global_medicaments_pop_demand = -1
+            global_firearms_pop_demand = -1
+            global_weaponry_pop_demand = -1
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    # Dwellers receive half of their usual share
+    merit_based = {
+        country_modifier = {
+            global_glass_pop_demand = -0.5
+            global_paper_pop_demand = -0.5
+            global_fine_cloth_pop_demand = -0.5
+            global_cloth_pop_demand = -0.5
+            global_tools_pop_demand = -0.5
+            global_furniture_pop_demand = -0.5
+            global_books_pop_demand = -0.5
+            global_medicaments_pop_demand = -0.5
+            global_firearms_pop_demand = -0.5
+            global_weaponry_pop_demand = -0.5
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    # No rationing: the reserves shrink much faster
+    utopian_abundance = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+}
+
+vault_science_law = {
+    law_category = socioeconomic
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    medical_focus = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    engineering_focus = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+    agricultural_focus = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+            burghers_estate
+        }
+        years = 2
+    }
+    unrestricted_experimentation = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            nobles_estate
+        }
+        years = 2
+    }
+}
+
+vault_security_law = {
+    law_category = military
+
+    potential = {
+        is_vault_country = yes
+    }
+
+    total_surveillance = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            crown_estate
+        }
+        years = 2
+    }
+    perimeter_lockdown = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+            nobles_estate
+        }
+        years = 2
+    }
+    civilian_militia = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
+        }
+        years = 2
+    }
+    minimized_presence = {
+        country_modifier = {
+        }
+        estate_preferences = {
+            burghers_estate
         }
         years = 2
     }

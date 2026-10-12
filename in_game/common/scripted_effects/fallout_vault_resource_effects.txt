@@ -1,0 +1,144 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault resources: Water & Energy
+# =============================================================================
+# Country variables: vault_water, vault_energy (0-100)
+# Production / consumption: script_values/fallout_vault_resource_values.txt
+# Shortage modifiers: main_menu/common/static_modifiers/Fallout_vault_modifiers.txt
+# =============================================================================
+
+# Country scope (Vault). Called once at game start.
+fallout_vault_resources_init_effect = {
+	set_variable = { name = vault_water value = 50 }	# = fallout_vault_resource_start
+	set_variable = { name = vault_energy value = 50 }	# = fallout_vault_resource_start
+	set_variable = { name = vault_fusion_cores value = 1 }	# installed in the power plant (spare core: real good in the Vault market)
+	set_variable = { name = vault_water_chips value = 1 }	# installed in the water plant (spare chip: real good in the Vault market)
+	# Food storage starts full: 4 x vault_storage = 200 (~200 years of reserves)
+	set_variable = { name = vault_food_capacity value = 200 }
+	set_variable = { name = vault_food value = 200 }
+	# Maintenance goods for 200 years, put into the Vault market (scripted_effects/fallout_vault_storage_effects.txt)
+	fallout_vault_storage_init_effect = yes
+}
+
+# Country scope (Vault). Called monthly from fallout_vault_monthly_pulse.
+fallout_vault_resources_monthly_effect = {
+	if = {
+		limit = { NOT = { has_variable = vault_water } }
+		fallout_vault_resources_init_effect = yes
+	}
+
+	# --- Months since game start (used e.g. for Vault 76's Reclamation Day countdown) ---
+	if = {
+		limit = { NOT = { has_variable = vault_months_since_start } }
+		set_variable = { name = vault_months_since_start value = 0 }
+	}
+	change_variable = { name = vault_months_since_start add = 1 }
+
+	# --- Vault 21: fortune slowly drifts back towards 50 (1 point per month). ---
+	# Big swings only come from the casino games (Blackjack, Roulette, Caravan).
+	if = {
+		limit = { tag = VAV }
+		if = {
+			limit = { NOT = { has_variable = vav_fortune } }
+			set_variable = { name = vav_fortune value = 50 }
+		}
+		if = {
+			limit = { var:vav_fortune > 50 }
+			change_variable = { name = vav_fortune add = -1 }
+		}
+		else_if = {
+			limit = { var:vav_fortune < 50 }
+			change_variable = { name = vav_fortune add = 1 }
+		}
+	}
+
+	# --- Water ---
+	change_variable = { name = vault_water add = fallout_vault_water_balance }
+	if = {
+		limit = { var:vault_water > 100 }	# = fallout_vault_resource_cap
+		set_variable = { name = vault_water value = 100 }
+	}
+	if = {
+		limit = { var:vault_water < 0 }
+		set_variable = { name = vault_water value = 0 }
+	}
+
+	# --- Energy ---
+	change_variable = { name = vault_energy add = fallout_vault_energy_balance }
+	if = {
+		limit = { var:vault_energy > 100 }
+		set_variable = { name = vault_energy value = 100 }
+	}
+	if = {
+		limit = { var:vault_energy < 0 }
+		set_variable = { name = vault_energy value = 0 }
+	}
+
+	# --- Food (reserves, capped by vault_storage) ---
+	if = {
+		limit = { NOT = { has_variable = vault_food } }
+		set_variable = { name = vault_food value = 200 }
+	}
+	if = {
+		limit = { NOT = { has_variable = vault_food_capacity } }
+		set_variable = { name = vault_food_capacity value = 200 }
+	}
+	change_variable = { name = vault_food add = fallout_vault_food_balance }
+	if = {
+		limit = { var:vault_food > fallout_vault_food_capacity }
+		set_variable = { name = vault_food value = fallout_vault_food_capacity }
+	}
+	if = {
+		limit = { var:vault_food < 0 }
+		set_variable = { name = vault_food value = 0 }
+	}
+
+	# --- Shortages ---
+	if = {
+		limit = { var:vault_water <= 0 }
+		if = {
+			limit = { NOT = { has_country_modifier = vault_water_shortage } }
+			add_country_modifier = { modifier = vault_water_shortage days = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = vault_water_shortage }
+		remove_country_modifier = vault_water_shortage
+	}
+
+	if = {
+		limit = { var:vault_energy <= 0 }
+		if = {
+			limit = { NOT = { has_country_modifier = vault_energy_shortage } }
+			add_country_modifier = { modifier = vault_energy_shortage days = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = vault_energy_shortage }
+		remove_country_modifier = vault_energy_shortage
+	}
+
+	if = {
+		limit = { var:vault_food <= 0 }
+		if = {
+			limit = { NOT = { has_country_modifier = vault_food_shortage } }
+			add_country_modifier = { modifier = vault_food_shortage days = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = vault_food_shortage }
+		remove_country_modifier = vault_food_shortage
+	}
+
+	# --- Outcome: everything has gone wrong ---
+	# Water, energy AND food all empty -> the Vault collapses (once per Vault)
+	if = {
+		limit = {
+			NOT = { has_variable = vault_collapsed }
+			var:vault_water <= 0
+			var:vault_energy <= 0
+			var:vault_food <= 0
+		}
+		set_variable = vault_collapsed
+		trigger_event_non_silently = flavor_vaults.3
+	}
+}

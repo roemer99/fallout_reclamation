@@ -1,0 +1,116 @@
+﻿namespace = vav_caravan
+
+# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Caravan (simplified Fallout: New Vegas rules)
+# =============================================================================
+# Opened by the scripted GUI vav_caravan_open. Logic:
+# common/scripted_effects/fallout_vav_casino_effects.txt
+#   .1 your turn: put the card on caravan I / II / III or discard
+#   .2 win   (+15 fortune)
+#   .3 lose  (-15 fortune)
+#   .4 draw  (no change)
+# =============================================================================
+
+# Your turn
+vav_caravan.1 = {
+	type = country_event
+	title = vav_caravan.1.title
+	desc = vav_caravan.1.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {	# Caravan I
+		name = vav_caravan.1.a
+		historical_option = no
+		fallout_vav_cv_player_move_effect = { LANE = 1 }
+	}
+	option = {	# Caravan II
+		name = vav_caravan.1.b
+		historical_option = no
+		fallout_vav_cv_player_move_effect = { LANE = 2 }
+	}
+	option = {	# Caravan III
+		name = vav_caravan.1.c
+		historical_option = no
+		fallout_vav_cv_player_move_effect = { LANE = 3 }
+	}
+	option = {	# Discard
+		name = vav_caravan.1.d
+		historical_option = no
+		fallout_vav_cv_end_turn_effect = yes
+	}
+}
+
+# Win
+vav_caravan.2 = {
+	type = country_event
+	title = vav_caravan.2.title
+	desc = vav_caravan.2.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_caravan.2.a
+		historical_option = no
+	}
+}
+
+# Lose
+vav_caravan.3 = {
+	type = country_event
+	title = vav_caravan.3.title
+	desc = vav_caravan.3.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_caravan.3.a
+		historical_option = no
+	}
+}
+
+# Draw
+vav_caravan.4 = {
+	type = country_event
+	title = vav_caravan.4.title
+	desc = vav_caravan.4.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_caravan.4.a
+		historical_option = no
+	}
+}

@@ -1,0 +1,58 @@
+﻿# FALLOUT RECLAMATION - modifier types
+# Required per disease (see in_game/common/diseases readme in vanilla).
+
+local_radiation_sickness_impact_modifier={
+	color=bad
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+national_radiation_sickness_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+local_radiation_sickness_resistance_modifier={
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+national_radiation_sickness_growth_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+local_radiation_sickness_growth_modifier={
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+# Marker for radiation hotspots (ground zero). Comes first in the static
+# modifier radiation_hotspot, so that modifier shows the radiation icon
+# (main_menu/common/modifier_icons/Fallout_modifier_icons.txt).
+local_radiation_hotspot={
+	color=bad
+	decimals=0
+	game_data={
+		category=location
+	}
+}
+
+# Food storage capacity of a Vault, given by vault_storage (+50 per level)
+local_vault_food_storage={
+	color=good
+	decimals=0
+	game_data={
+		category=location
+	}
+}

@@ -272,7 +272,6 @@
  surruque.english_language: "Cocoa Beach"
  acuera.english_language: "Orlando"
  jororo.english_language: "Daytona Beach"
- mayaca.english_language: "St. Augustine"
  timucua.english_language: "Jacksonville"
  okeechobee.english_language: "Clewiston"
  uriparacoxi.english_language: "Sebring"
@@ -306,3 +305,9 @@
  tsalagi.english_language: "Chapmanville"
  pocatalico.english_language: "Spencer"
  pemetic.english_language: "Mount Desert Island"
+
+ # Current vanilla entries (kept so this full-file override does not drop them)
+ rodos.english_language: "Rhodes"
+ scatacook.english_language: "Torrington"
+ sur.english_language: "Tyre"
+ weshacum.english_language: "Leominster"

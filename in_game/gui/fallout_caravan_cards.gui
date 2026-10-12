@@ -1,0 +1,107 @@
+﻿#####################################################################
+## FALLOUT RECLAMATION - Vault 21: Caravan card building blocks (GUI types)
+## Graphics: main_menu/gfx/interface/fallout/caravan/
+##   cards/card_1.dds ... card_10.dds  card faces (1 = Ace)
+##   cards/card_slot.dds               empty caravan
+##   backs/back_1.dds ... back_5.dds   card backs (deck chosen by vav_cv_deck)
+## Texture paths cannot contain data in EU5, so a card is drawn by stacking
+## all faces and only showing the ones up to its value (the top one wins).
+#####################################################################
+
+types FalloutCaravanCards
+{
+	# --- "thinking" delay for the opponent: a newly placed opponent card is
+	# invisible at first and fades in after a short pause (_show fires as soon
+	# as the card slot becomes visible). 0.9 s: after the player's face card
+	# (gui/fallout_caravan_fx.gui). Used in gui/fallout_caravan_lanes_opponent.gui
+	type vcv_opponent_card_reveal = widget {
+		alpha = 0
+		state = {
+			name = _show
+			delay = 0.9
+			duration = 0.35
+			bezier = { 0.25 0.1 0.25 1 }
+			alpha = 1
+		}
+		state = {
+			name = _hide
+			duration = 0
+			alpha = 0
+		}
+	}
+	# --- one type per card face (fills its parent) ---
+	type vcv_card_1 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_1.dds" }
+	type vcv_card_2 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_2.dds" }
+	type vcv_card_3 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_3.dds" }
+	type vcv_card_4 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_4.dds" }
+	type vcv_card_5 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_5.dds" }
+	type vcv_card_6 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_6.dds" }
+	type vcv_card_7 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_7.dds" }
+	type vcv_card_8 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_8.dds" }
+	type vcv_card_9 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_9.dds" }
+	type vcv_card_10 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_10.dds" }
+	# face cards (only ever in the hand: they act and are not placed on a caravan)
+	type vcv_card_11 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_11.dds" }	# Jack
+	type vcv_card_12 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_12.dds" }	# Queen
+	type vcv_card_13 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_13.dds" }	# King
+	type vcv_card_14 = icon { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/cards/card_14.dds" }	# Joker
+
+	# --- empty caravan ---
+	type vcv_card_slot = icon { size = { 90 135 } texture = "gfx/interface/fallout/caravan/cards/card_slot.dds" }
+
+	# --- the card in the player's hand (large) ---
+	type vcv_hand_card = widget {
+		size = { 120 180 }
+		vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)1')]" }
+		vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)2')]" }
+		vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)3')]" }
+		vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)4')]" }
+		vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)5')]" }
+		vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)6')]" }
+		vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)7')]" }
+		vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)8')]" }
+		vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)9')]" }
+		vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)10')]" }
+		vcv_card_11 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)11')]" }
+		vcv_card_12 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)12')]" }
+		vcv_card_13 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)13')]" }
+		vcv_card_14 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)14')]" }
+	}
+
+	# --- what the face card in the hand does (one line, nested so that exactly
+	# --- one text is visible: >= value AND < value + 1) ---
+	type vcv_hand_hint = widget {
+		size = { 170 60 }
+		widget = { size = { 100% 100% } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)11')]"
+			widget = { size = { 100% 100% } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)12')]"
+				text_multi = { size = { 170 60 } text = "VAV_CV_HINT_JACK" }
+			}
+		}
+		widget = { size = { 100% 100% } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)12')]"
+			widget = { size = { 100% 100% } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)13')]"
+				text_multi = { size = { 170 60 } text = "VAV_CV_HINT_QUEEN" }
+			}
+		}
+		widget = { size = { 100% 100% } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)13')]"
+			widget = { size = { 100% 100% } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)14')]"
+				text_multi = { size = { 170 60 } text = "VAV_CV_HINT_KING" }
+			}
+		}
+		widget = { size = { 100% 100% } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_hand'), '(CFixedPoint)14')]"
+			text_multi = { size = { 170 60 } text = "VAV_CV_HINT_JOKER" }
+		}
+	}
+
+	# --- card back of the chosen deck (vav_cv_deck, max 5 decks) ---
+	# To add a deck: put backs/back_N.dds in place and raise
+	# fallout_vav_cv_deck_count (common/script_values/fallout_vav_caravan_values.txt).
+	type vcv_card_back = widget {
+		size = { 120 180 }
+		icon = { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/backs/back_1.dds" }
+		# Decks 2-5: uncomment a line once its back_N.dds exists
+		#icon = { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/backs/back_2.dds" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_deck'), '(CFixedPoint)2')]" }
+		#icon = { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/backs/back_3.dds" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_deck'), '(CFixedPoint)3')]" }
+		#icon = { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/backs/back_4.dds" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_deck'), '(CFixedPoint)4')]" }
+		#icon = { size = { 100% 100% } texture = "gfx/interface/fallout/caravan/backs/back_5.dds" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_deck'), '(CFixedPoint)5')]" }
+	}
+}

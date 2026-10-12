@@ -1,0 +1,188 @@
+﻿namespace = vav_roulette
+
+# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Roulette (European wheel 0-36)
+# =============================================================================
+# Opened by the scripted GUI vav_roulette_open. Logic:
+# common/scripted_effects/fallout_vav_casino_effects.txt
+#   .1 place your bet (red / black / odd / even / zero)
+#   .2 win on red, .5 win on black
+#   .3 lose on red, .6 lose on black, .7 lose on green (zero)
+#   .4 zero hit  (+35 fortune)
+# win +10 fortune, lose -10 fortune
+# =============================================================================
+
+# Place your bet
+vav_roulette.1 = {
+	type = country_event
+	title = vav_roulette.1.title
+	desc = vav_roulette.1.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {	# Red
+		name = vav_roulette.1.a
+		historical_option = no
+		fallout_vav_rl_play_effect = { BET = 1 }
+	}
+	option = {	# Black
+		name = vav_roulette.1.b
+		historical_option = no
+		fallout_vav_rl_play_effect = { BET = 2 }
+	}
+	option = {	# Odd
+		name = vav_roulette.1.c
+		historical_option = no
+		fallout_vav_rl_play_effect = { BET = 3 }
+	}
+	option = {	# Even
+		name = vav_roulette.1.d
+		historical_option = no
+		fallout_vav_rl_play_effect = { BET = 4 }
+	}
+	option = {	# Zero
+		name = vav_roulette.1.e
+		historical_option = no
+		fallout_vav_rl_play_effect = { BET = 5 }
+	}
+}
+
+# Win
+vav_roulette.2 = {
+	type = country_event
+	title = vav_roulette.2.title
+	desc = vav_roulette.2.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_roulette.2.a
+		historical_option = no
+	}
+}
+
+# Lose
+vav_roulette.3 = {
+	type = country_event
+	title = vav_roulette.3.title
+	desc = vav_roulette.3.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_roulette.3.a
+		historical_option = no
+	}
+}
+
+# Zero hit
+vav_roulette.4 = {
+	type = country_event
+	title = vav_roulette.4.title
+	desc = vav_roulette.4.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_roulette.4.a
+		historical_option = no
+	}
+}
+
+# Win, black
+vav_roulette.5 = {
+	type = country_event
+	title = vav_roulette.2.title
+	desc = vav_roulette.5.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_roulette.2.a
+		historical_option = no
+	}
+}
+
+# Lose, black
+vav_roulette.6 = {
+	type = country_event
+	title = vav_roulette.3.title
+	desc = vav_roulette.6.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_roulette.3.a
+		historical_option = no
+	}
+}
+
+# Lose, green (zero)
+vav_roulette.7 = {
+	type = country_event
+	title = vav_roulette.3.title
+	desc = vav_roulette.7.desc
+	hide_portraits = yes
+
+	trigger = {
+		tag = VAV
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	option = {
+		name = vav_roulette.3.a
+		historical_option = no
+	}
+}

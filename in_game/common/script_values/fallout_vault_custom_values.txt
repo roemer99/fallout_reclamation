@@ -1,0 +1,94 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault-specific panel content (values)
+# =============================================================================
+# Country scope = player. Used by the top window of the Vault Management panel
+# (gui/panels/situation/vault_management.gui). The window is only shown when
+# fallout_vault_has_custom_panel > 0. To add a Vault:
+#   1. add fallout_vault_panel_<tag> below and add it to fallout_vault_has_custom_panel
+#   2. add a content block in the GUI (visible on fallout_vault_panel_<tag>)
+#
+# Months since game start: country variable vault_months_since_start
+# (counted in fallout_vault_resources_monthly_effect).
+# =============================================================================
+
+# --- Which Vaults have their own content -------------------------------------
+fallout_vault_panel_vcy = {	# Vault 76: Reclamation Day
+	value = 0
+	if = {
+		limit = { tag = VCY }
+		value = 1
+	}
+}
+
+fallout_vault_panel_vav = {	# Vault 21: Gambling
+	value = 0
+	if = {
+		limit = { tag = VAV }
+		value = 1
+	}
+}
+
+fallout_vault_has_custom_panel = {
+	value = fallout_vault_panel_vcy
+	add = fallout_vault_panel_vav
+}
+
+# --- Vault 76: Reclamation Day -----------------------------------------------
+# Reclamation Day: 2102.10.23 (25 years after the bombs).
+# Game start 2078.1.1 -> 24 years x 12 + 9 months = 297 months.
+fallout_vcy_months_elapsed = {
+	value = 0
+	if = {
+		limit = { has_variable = vault_months_since_start }
+		value = var:vault_months_since_start
+	}
+}
+
+fallout_vcy_reclamation_progress = {	# 0-100 for the bar
+	value = fallout_vcy_months_elapsed
+	divide = 297
+	multiply = 100
+	max = 100
+}
+
+fallout_vcy_reclamation_years_left = {
+	value = 297
+	subtract = fallout_vcy_months_elapsed
+	divide = 12
+	min = 0
+}
+
+# --- Vault 21: Gambling -------------------------------------------------------
+# Country variable vav_fortune (0-100, starts at 50), changes randomly every month.
+fallout_vav_fortune = {
+	value = 50
+	if = {
+		limit = { has_variable = vav_fortune }
+		value = var:vav_fortune
+	}
+}
+
+# --- Vault 21: Blackjack (events/vaults/vav_blackjack.txt) --------------------
+fallout_vav_bj_player_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_bj_player }
+		value = var:vav_bj_player
+	}
+}
+
+fallout_vav_bj_dealer_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_bj_dealer }
+		value = var:vav_bj_dealer
+	}
+}
+
+fallout_vav_bj_card_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_bj_card }
+		value = var:vav_bj_card
+	}
+}

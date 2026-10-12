@@ -1,0 +1,457 @@
+﻿#####################################################################
+## FALLOUT RECLAMATION - Vault Management panel
+## Situation: common/situations/vault_management.txt
+## Values: script_values/fallout_vault_resource_values.txt (player scope)
+## Texts (incl. data functions): localization/english/Fallout_vault_management_l_english.yml
+##
+## Each section is a vanilla dropdown card (situation_card_expandable from
+## gui/shared/cards.gui). Open by default; state kept in LateralView.Vars.
+## Bars expect a float 0-100 -> FixedPointToFloat(ScriptValue).
+#####################################################################
+
+types VaultManagementTypes
+{
+	# Row: icon left, bar with the percentage written inside
+	type vault_mgmt_bar_row = hbox {
+		spacing = 8
+		layoutpolicy_horizontal = expanding
+
+		icon = {
+			size = { 30 30 }
+			block "bar_icon" {}
+		}
+
+		widget = {
+			size = { 360 20 }
+
+			progressbar = {
+				size = { 100% 100% }
+				using = morale_progressbar_bar
+				block "bar_value" {}
+			}
+
+			text_single = {
+				parentanchor = center
+				align = center|nobaseline
+				block "bar_text" {}
+			}
+		}
+	}
+
+	# Storage row: goods icon + "Glass: 40.0 (200 years)"
+	type vault_mgmt_stock_row = hbox {
+		spacing = 8
+		layoutpolicy_horizontal = expanding
+
+		icon = {
+			size = { 22 22 }
+			block "stock_icon" {}
+		}
+		text_single = {
+			block "stock_text" {}
+		}
+		expand = {}
+	}
+
+	# Clickable key component (fusion core / water chip): icon + text inside the button
+	type vault_mgmt_component_button = button_regular {
+		size = { 400 32 }
+		block "component_onclick" {}
+		block "component_tooltip" {}
+
+		hbox = {
+			size = { 100% 100% }
+			margin_left = 8
+			spacing = 8
+
+			icon = {
+				size = { 24 24 }
+				block "component_icon" {}
+			}
+			text_single = {
+				block "component_text" {}
+			}
+			expand = {}
+		}
+	}
+}
+
+situation_panel = {
+
+	blockoverride "situation_subheader_content" {}
+
+	blockoverride "situation_panel_main_content" {
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 5 5 }
+			spacing = 8
+
+			############################################################
+			##### WINDOW 0: VAULT-SPECIFIC CONTENT (always on top)
+			##### Only shown if the player's Vault has own content
+			##### (script_values/fallout_vault_custom_values.txt)
+			############################################################
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_has_custom_panel'), '(CFixedPoint)1')]"
+
+				situation_card_expandable = {
+					blockoverride "header_icon" {
+						texture = "gfx/interface/icons/buildings/vault_command_center.dds"
+					}
+					blockoverride "header_text" {
+						text = "VAULT_MGMT_SECTION_VAULT"
+					}
+					blockoverride "header_button_onclick" {
+						onclick = "[LateralView.Vars.Toggle( 'vm_vault_closed' )]"
+					}
+					blockoverride "icon_replace_visible_yes" {
+						visible = "[Not(LateralView.Vars.Exists( 'vm_vault_closed' ))]"
+					}
+					blockoverride "icon_replace_visible_not" {
+						visible = "[LateralView.Vars.Exists( 'vm_vault_closed' )]"
+					}
+					blockoverride "bottom_content_onclick" {
+						visible = "[Not(LateralView.Vars.Exists( 'vm_vault_closed' ))]"
+					}
+					blockoverride "bottom_content" {
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							margin = { 10 8 }
+							spacing = 4
+
+							##### VAULT 76: PREPARATION FOR RECLAMATION DAY #####
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 3
+								visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_panel_vcy'), '(CFixedPoint)1')]"
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "VAULT_MGMT_VCY_TITLE"
+								}
+								vault_mgmt_bar_row = {
+									blockoverride "bar_icon" { texture = "gfx/interface/icons/buildings/vault_blast_door.dds" }
+									blockoverride "bar_value" { value = "[FixedPointToFloat(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vcy_reclamation_progress'))]" }
+									blockoverride "bar_text" { text = "VAULT_MGMT_VCY_PCT" }
+								}
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "VAULT_MGMT_VCY_COUNTDOWN"
+								}
+								text_multi = {
+									layoutpolicy_horizontal = expanding
+									autoresize = yes
+									max_width = 410
+									text = "VAULT_MGMT_VCY_DESC"
+								}
+							}
+
+							##### VAULT 21: GAMBLING #####
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 3
+								visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_panel_vav'), '(CFixedPoint)1')]"
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "VAULT_MGMT_VAV_TITLE"
+								}
+								vault_mgmt_bar_row = {
+									blockoverride "bar_icon" { texture = "gfx/interface/icons/buildings/vault_common_area.dds" }
+									blockoverride "bar_value" { value = "[FixedPointToFloat(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_fortune'))]" }
+									blockoverride "bar_text" { text = "VAULT_MGMT_VAV_PCT" }
+								}
+								text_multi = {
+									layoutpolicy_horizontal = expanding
+									autoresize = yes
+									max_width = 410
+									text = "VAULT_MGMT_VAV_DESC"
+								}
+								# Casino games: main button + square "?" button (rules, always available)
+								# Blackjack table (scripted_guis/fallout_vav_blackjack.txt, once per month)
+								hbox = {
+									spacing = 6
+									button_regular = {
+										size = { 362 32 }
+										text = "VAULT_MGMT_VAV_BLACKJACK"
+										enabled = "[GetScriptedGui('vav_blackjack_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										onclick = "[GetScriptedGui('vav_blackjack_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "VAULT_MGMT_VAV_BLACKJACK_TT"
+									}
+									button_regular = {
+										size = { 32 32 }
+										text = "VAV_RULES_BUTTON"
+										onclick = "[GetScriptedGui('vav_rules_blackjack').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "VAV_RULES_BUTTON_TT"
+									}
+								}
+								# Roulette (once per month)
+								hbox = {
+									spacing = 6
+									button_regular = {
+										size = { 362 32 }
+										text = "VAULT_MGMT_VAV_ROULETTE"
+										enabled = "[GetScriptedGui('vav_roulette_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										onclick = "[GetScriptedGui('vav_roulette_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "VAULT_MGMT_VAV_ROULETTE_TT"
+									}
+									button_regular = {
+										size = { 32 32 }
+										text = "VAV_RULES_BUTTON"
+										onclick = "[GetScriptedGui('vav_rules_roulette').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "VAV_RULES_BUTTON_TT"
+									}
+								}
+								# Caravan (once per month): opens the Caravan pop-up window (gui/fallout_caravan_window.gui)
+								hbox = {
+									spacing = 6
+									button_regular = {
+										size = { 362 32 }
+										text = "VAULT_MGMT_VAV_CARAVAN"
+										visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_active'), '(CFixedPoint)1')]"
+										enabled = "[GetScriptedGui('vav_caravan_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										onclick = "[GetScriptedGui('vav_caravan_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "VAULT_MGMT_VAV_CARAVAN_TT"
+									}
+									button_regular = {
+										size = { 32 32 }
+										text = "VAV_RULES_BUTTON"
+										onclick = "[GetScriptedGui('vav_rules_caravan').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "VAV_RULES_BUTTON_TT"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			############################################################
+			##### WINDOW 1: RESOURCE MANAGEMENT
+			############################################################
+			situation_card_expandable = {
+				blockoverride "header_icon" {
+					texture = "gfx/interface/icons/government_types/vault_government.dds"
+				}
+				blockoverride "header_text" {
+					text = "VAULT_MGMT_SECTION_RESOURCES"
+				}
+				blockoverride "header_button_onclick" {
+					onclick = "[LateralView.Vars.Toggle( 'vm_resources_closed' )]"
+				}
+				blockoverride "icon_replace_visible_yes" {
+					visible = "[Not(LateralView.Vars.Exists( 'vm_resources_closed' ))]"
+				}
+				blockoverride "icon_replace_visible_not" {
+					visible = "[LateralView.Vars.Exists( 'vm_resources_closed' )]"
+				}
+				blockoverride "bottom_content_onclick" {
+					visible = "[Not(LateralView.Vars.Exists( 'vm_resources_closed' ))]"
+				}
+				blockoverride "bottom_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						margin = { 10 8 }
+						spacing = 10
+
+						##### OVERSEER AUTHORITY #####
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 3
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_AUTHORITY_TITLE"
+							}
+							vault_mgmt_bar_row = {
+								blockoverride "bar_icon" { texture = "gfx/interface/icons/government_types/vault_government.dds" }
+								blockoverride "bar_value" { value = "[FixedPointToFloat(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_authority_display'))]" }
+								blockoverride "bar_text" { text = "VAULT_MGMT_AUTHORITY_PCT" }
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_AUTHORITY_DESC"
+							}
+						}
+
+						##### WATER (+ water chip) #####
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 3
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_WATER_TITLE"
+							}
+							vault_mgmt_bar_row = {
+								blockoverride "bar_icon" { texture = "gfx/interface/icons/buildings/vault_water_plant.dds" }
+								blockoverride "bar_value" { value = "[FixedPointToFloat(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_water_coverage'))]" }
+								blockoverride "bar_text" { text = "VAULT_MGMT_WATER_PCT" }
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_WATER_VALUE"
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_WATER_FLOW"
+							}
+							vault_mgmt_component_button = {
+								blockoverride "component_onclick" { onclick = "[ShowLocation(GetPlayer.GetCapital)]" }
+								blockoverride "component_tooltip" { tooltip = "VAULT_MGMT_CHIPS_TT" }
+								# Water chip icon (same naming scheme as the goods icons)
+								blockoverride "component_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_water_chip.dds" }
+								blockoverride "component_text" { text = "VAULT_MGMT_CHIPS_BUTTON" }
+							}
+						}
+
+						##### ENERGY (+ fusion core) #####
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 3
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_ENERGY_TITLE"
+							}
+							vault_mgmt_bar_row = {
+								blockoverride "bar_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_energy.dds" }
+								blockoverride "bar_value" { value = "[FixedPointToFloat(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_energy_coverage'))]" }
+								blockoverride "bar_text" { text = "VAULT_MGMT_ENERGY_PCT" }
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_ENERGY_VALUE"
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_ENERGY_FLOW"
+							}
+							vault_mgmt_component_button = {
+								blockoverride "component_onclick" { onclick = "[ShowLocation(GetPlayer.GetCapital)]" }
+								blockoverride "component_tooltip" { tooltip = "VAULT_MGMT_CORES_TT" }
+								blockoverride "component_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_fusion_core.dds" }
+								blockoverride "component_text" { text = "VAULT_MGMT_CORES_BUTTON" }
+							}
+						}
+
+						##### FOOD #####
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 3
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_FOOD_TITLE"
+							}
+							vault_mgmt_bar_row = {
+								blockoverride "bar_icon" { texture = "gfx/interface/icons/location_icons/food.dds" }
+								blockoverride "bar_value" { value = "[FixedPointToFloat(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_fill'))]" }
+								blockoverride "bar_text" { text = "VAULT_MGMT_FOOD_PCT" }
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "VAULT_MGMT_FOOD_VALUE"
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_years_left'), '(CFixedPoint)0')]"
+								text = "VAULT_MGMT_FOOD_ESTIMATE"
+							}
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vault_food_years_left'), '(CFixedPoint)0')]"
+								text = "VAULT_MGMT_FOOD_STABLE"
+							}
+						}
+					}
+				}
+			}
+
+			############################################################
+			##### WINDOW 2: VAULT STORAGE (maintenance goods for 200 years)
+			############################################################
+			situation_card_expandable = {
+				blockoverride "header_icon" {
+					texture = "gfx/interface/icons/buildings/vault_storage.dds"
+				}
+				blockoverride "header_text" {
+					text = "VAULT_MGMT_SECTION_STORAGE"
+				}
+				blockoverride "header_button_onclick" {
+					onclick = "[LateralView.Vars.Toggle( 'vm_storage_closed' )]"
+				}
+				blockoverride "icon_replace_visible_yes" {
+					visible = "[Not(LateralView.Vars.Exists( 'vm_storage_closed' ))]"
+				}
+				blockoverride "icon_replace_visible_not" {
+					visible = "[LateralView.Vars.Exists( 'vm_storage_closed' )]"
+				}
+				blockoverride "bottom_content_onclick" {
+					visible = "[Not(LateralView.Vars.Exists( 'vm_storage_closed' ))]"
+				}
+				blockoverride "bottom_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						margin = { 10 8 }
+						spacing = 3
+
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = "VAULT_MGMT_STORAGE_DESC"
+						}
+
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_tools.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_TOOLS" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_glass.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_GLASS" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_paper.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_PAPER" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_books.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_BOOKS" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_cloth.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_CLOTH" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_fine_cloth.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_FINE_CLOTH" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_furniture.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_FURNITURE" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_medicaments.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_MEDICAMENTS" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_firearms.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_FIREARMS" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_weaponry.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_WEAPONRY" }
+						}
+
+						# Spare parts
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_fusion_core.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_SPARE_CORES" }
+						}
+						vault_mgmt_stock_row = {
+							blockoverride "stock_icon" { texture = "gfx/interface/icons/trade_goods/icon_goods_water_chip.dds" }
+							blockoverride "stock_text" { text = "VAULT_MGMT_STOCK_SPARE_CHIPS" }
+						}
+					}
+				}
+			}
+		}
+	}
+}

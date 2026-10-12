@@ -1,0 +1,104 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault 21 casino: display values
+# =============================================================================
+# Country scope = player. Used in the event texts of
+# events/vaults/vav_roulette.txt and events/vaults/vav_caravan.txt
+# =============================================================================
+
+# --- Roulette ---
+fallout_vav_rl_number_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_rl_number }
+		value = var:vav_rl_number
+	}
+}
+
+# --- Caravan ---
+fallout_vav_cv_card_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_card }
+		value = var:vav_cv_card
+	}
+}
+
+fallout_vav_cv_ocard_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_ocard }
+		value = var:vav_cv_ocard
+	}
+}
+
+fallout_vav_cv_turn_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_turn }
+		value = var:vav_cv_turn
+	}
+}
+
+fallout_vav_cv_p1_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_p1 }
+		value = var:vav_cv_p1
+	}
+}
+
+fallout_vav_cv_p2_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_p2 }
+		value = var:vav_cv_p2
+	}
+}
+
+fallout_vav_cv_p3_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_p3 }
+		value = var:vav_cv_p3
+	}
+}
+
+fallout_vav_cv_o1_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_o1 }
+		value = var:vav_cv_o1
+	}
+}
+
+fallout_vav_cv_o2_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_o2 }
+		value = var:vav_cv_o2
+	}
+}
+
+fallout_vav_cv_o3_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_o3 }
+		value = var:vav_cv_o3
+	}
+}
+
+fallout_vav_cv_pwins_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_pwins }
+		value = var:vav_cv_pwins
+	}
+}
+
+fallout_vav_cv_owins_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vav_cv_owins }
+		value = var:vav_cv_owins
+	}
+}

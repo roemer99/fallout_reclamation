@@ -1,0 +1,104 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault expeditions (framework)
+# =============================================================================
+# Basic skeleton for Vault-only expeditions, modelled on vanilla
+# mining_survey / cartographic_survey. See vanilla
+# common/expedition_types/readme.txt for all available fields.
+#
+# Flow:
+#   1. Departure from the Vault (capital)
+#   2. Scouting party visits the land locations bordering the Vault
+#   3. Returns to the Vault, expedition ends
+#
+# TODO: events per waypoint, real rewards/risks (radiation, raiders, scavenging)
+# =============================================================================
+
+vault_wasteland_scouting_expedition = {
+
+	unique = yes
+	repeatable = yes
+	travel_speed = 0.75
+	travel_mode = land
+	dynamic_first_waypoint = yes
+	origin = none
+	category = exploration
+
+	potential = {
+		is_vault_country = yes
+	}
+
+	can_start = {
+		is_vault_country = yes
+		NOT = { has_policy = isolation_isolationism }
+		at_war = no
+		NOT = { has_cooldown = vault_wasteland_scouting_cooldown }
+	}
+
+	leader = {
+		is_adult = yes
+		is_expedition_leader = no
+		has_exploration = no
+	}
+
+	on_start = {
+		add_cooldown = {
+			type = vault_wasteland_scouting_cooldown
+			years = 2
+		}
+		set_variable = { name = vault_locations_scouted value = 0 }
+
+		# First waypoint = departure point (the Vault itself)
+		scope:expedition = { add_new_waypoint = root.capital }
+
+		# Visit every land location bordering the Vault
+		root.capital = {
+			every_neighbor_location = {
+				limit = {
+					is_land = yes
+					NOT = { owner ?= root }
+				}
+				scope:expedition = { add_new_waypoint = prev }
+			}
+		}
+
+		# Final waypoint = back home
+		scope:expedition = { add_new_waypoint = root.capital }
+	}
+
+	on_arrive_to_new_location = {
+		scope:location = {
+			discover_location = root
+		}
+	}
+
+	on_arrive_to_waypoint = {
+		if = {
+			limit = {
+				NOT = { scope:location = root.capital }
+			}
+			change_variable = { name = vault_locations_scouted add = 1 }
+			# TODO: trigger_event_non_silently = vault_expedition_events.X
+		}
+	}
+
+	on_end = {
+		# TODO: real rewards
+		if = {
+			limit = { var:vault_locations_scouted >= 1 }
+			add_prestige = prestige_weak_bonus
+		}
+		remove_variable = vault_locations_scouted
+	}
+
+	on_fail = {
+		remove_variable = vault_locations_scouted
+	}
+
+	ai_chance_to_check = {
+		value = define:NAI|EXPEDITION_DEFAULT_CHANCE_TO_CHECK
+	}
+
+	utility = {
+		value = 3
+	}
+}

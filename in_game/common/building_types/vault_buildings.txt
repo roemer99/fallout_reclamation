@@ -1,4 +1,14 @@
-﻿# Crown
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault buildings
+# =============================================================================
+# Vault buildings take their maintenance goods from the Vault's own market, which
+# is stocked with 200 years of supplies at game start
+# (scripted_effects/fallout_vault_storage_effects.txt).
+# Power is handled by the Vault energy system (0.3 energy per building per month):
+# script_values/fallout_vault_resource_values.txt
+# =============================================================================
+
+# Crown
 vault_command_center = {
 	is_special = yes
 	is_foreign = no
@@ -8,7 +18,7 @@ vault_command_center = {
 	category = government_category
 	forbidden_for_estates = yes
 	
-	employment_size = 0.015
+	employment_size = 0.025
 	
 	town = yes
 	city = yes
@@ -22,7 +32,7 @@ vault_command_center = {
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	
 	remove_if = {
@@ -35,16 +45,15 @@ vault_command_center = {
 		monthly_towards_absolutism = societal_value_tiny_monthly_move
 	}
 	
+	# Maintenance: real goods from the Vault market (200 years stocked at game start,
+	# scripted_effects/fallout_vault_storage_effects.txt). Per month.
 	unique_production_methods = {
-		royal_court_maintenance = {
-			furniture = 0.15
-			tools = 0.05
-			glass = 0.1
-			fine_cloth = 0.2
-			books = 0.1
-			goods_gold = 0.1
-			marble = 0.1
-				
+		vault_command_center_maintenance = {
+			glass = 0.00833
+			fine_cloth = 0.01667
+			tools = 0.00417
+			furniture = 0.0125
+			books = 0.00833
 			category = building_maintenance
 		}
 	}
@@ -60,7 +69,7 @@ vault_medical_bay = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	employment_size = 0.01
+	employment_size = 0.03
 
 	category = infrastructure_category
 
@@ -73,19 +82,21 @@ vault_medical_bay = {
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 
 	expensive = yes
 
 	build_time = generic_town_build_time
 
-
-	possible_production_methods = {
-		hospital_maintenance
+	# Maintenance: real goods from the Vault market. Per month.
+	unique_production_methods = {
+		vault_medical_bay_maintenance = {
+			medicaments = 0.01667
+			category = building_maintenance
+		}
 	}
 	graphical_tags = { medium_religious }
-
 
 	construction_demand = town_building_construction
 
@@ -94,12 +105,13 @@ vault_medical_bay = {
 		local_life_expectancy = 5
 	}
 }
+
 vault_power_plant = {
 	is_special = yes
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	employment_size = 0.035
+	employment_size = 0.045
 
 	category = infrastructure_category
 
@@ -112,18 +124,20 @@ vault_power_plant = {
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 
 	expensive = yes
 
 	build_time = generic_town_build_time
 
+	# Fusion cores are NOT consumed here: one core is permanently assigned to the
+	# plant (country variable vault_fusion_cores, see fallout_vault_resource_values.txt).
+	# Without an assigned core the plant adds no Energy to the Vault stockpile.
+	# Tools for maintenance: real goods from the Vault market (per month).
 	unique_production_methods = {
 		fusion_core_requirements = {
-			fusion_core = 0.0001
-			tools = 0.15
-			
+			tools = 0.0125
 			produced = energy
 			output = 1
 			
@@ -131,7 +145,7 @@ vault_power_plant = {
 		}
 		coal_requirements = {
 			coal = 0.15
-			tools = 0.15
+			tools = 0.0125
 			
 			produced = energy
 			output = 1
@@ -151,12 +165,12 @@ vault_storage = {
 	is_special = yes
 	is_foreign = no
 	pop_type = laborers
-	max_levels = 1
+	max_levels = 4	# 4 levels x 50 = 200 food = ~200 years of reserves at game start
 	
 	category = trade_category
 	forbidden_for_estates = yes
 	
-	employment_size = 0.4
+	employment_size = 0.05
 	
 	town = yes
 	city = yes
@@ -170,7 +184,7 @@ vault_storage = {
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	
 	remove_if = {
@@ -178,6 +192,7 @@ vault_storage = {
 	}
 	
 	modifier = {
+		local_vault_food_storage = 50	# per level, read by script_values/fallout_vault_resource_values.txt
 		local_merchant_capacity = 0.1
 		local_merchant_power = 0.1
 		local_trades_per_burgher = 0.1
@@ -187,8 +202,11 @@ vault_storage = {
 		maximum_stockpile_capacity = 200
 	}
 	
-	possible_production_methods = {
-		warehouse_maintenance
+	# Maintenance comes from the Vault storage, not from the market
+	unique_production_methods = {
+		vault_storage_maintenance = {
+			category = building_maintenance
+		}
 	}
 
 	construction_demand = warehouse_construction
@@ -201,19 +219,23 @@ vault_water_plant = {
 	pop_type = laborers
 	category = infrastructure_category
 	forbidden_for_estates = yes
-	employment_size = 0.025
+	employment_size = 0.08
 	rural_settlement = yes
 	town = yes
 	city = yes
 	build_time = small_fort_building
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	location_potential = {
 		is_capital = yes
 	}
-	possible_production_methods = {
-		oma_falaj_maintenance
+	# Only needs power (0.3 energy per month via the Vault energy system)
+	# and its installed water chip. No goods.
+	unique_production_methods = {
+		vault_water_plant_maintenance = {
+			category = building_maintenance
+		}
 	}
 	construction_demand = granary_construction
 	modifier = {
@@ -229,20 +251,20 @@ vault_hydro_agriculture_farm = {
 	pop_type = laborers
 	category = infrastructure_category
 	forbidden_for_estates = yes
-	employment_size = 0.05
+	employment_size = 0.1
 	rural_settlement = yes
 	town = yes
 	city = yes
 	build_time = small_fort_building
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	location_potential = {
 		is_capital = yes
 	}
+	# Maintenance comes from the Vault storage, not from the market
 	unique_production_methods = {
-		hydro_agriculture_farm_maintenance = {
-			energy = 0.1
+		vault_hydro_agriculture_farm_maintenance = {
 			category = building_maintenance
 		}
 	}
@@ -260,7 +282,7 @@ vault_common_area = {
 	pop_type = peasants
 	category = consumer_goods_category
 	forbidden_for_estates = yes
-	employment_size = 0.01
+	employment_size = 0.08
 
 	rural_settlement = yes
 	town = yes
@@ -268,19 +290,23 @@ vault_common_area = {
 
 	build_time = small_fort_building
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	location_potential = {
 		is_capital = yes
 	}
-	possible_production_methods = {
-		estate_building_input
+	# Maintenance comes from the Vault storage, not from the market
+	unique_production_methods = {
+		vault_common_area_maintenance = {
+			category = building_maintenance
+		}
 	}
 	construction_demand = granary_construction
 	modifier = {
 		local_peasant_enfranchisment = 0.015
 	}
 }
+
 vault_living_quarters = {
 	is_special = yes
 	is_foreign = no
@@ -288,7 +314,7 @@ vault_living_quarters = {
 	pop_type = peasants
 	category = consumer_goods_category
 	forbidden_for_estates = yes
-	employment_size = 0.01
+	employment_size = 0.1
 
 	rural_settlement = yes
 	town = yes
@@ -296,19 +322,23 @@ vault_living_quarters = {
 
 	build_time = small_fort_building
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	location_potential = {
 		is_capital = yes
 	}
-	possible_production_methods = {
-		estate_building_input
+	# Maintenance comes from the Vault storage, not from the market
+	unique_production_methods = {
+		vault_living_quarters_maintenance = {
+			category = building_maintenance
+		}
 	}
 	construction_demand = granary_construction
 	modifier = {
 		local_peasant_enfranchisment = 0.015
 	}
 }
+
 vault_classroom = {
 	is_special = yes
 	is_foreign = no
@@ -317,7 +347,7 @@ vault_classroom = {
 	
 	category = cultural_category
 	forbidden_for_estates = yes
-	employment_size = 0.01
+	employment_size = 0.07
 	
 	rural_settlement = yes
 	town = yes
@@ -325,12 +355,15 @@ vault_classroom = {
 	
 	build_time = estate_build_time
 
-	possible_production_methods = {
-		confucian_school_maintenance
+	# Maintenance comes from the Vault storage, not from the market
+	unique_production_methods = {
+		vault_classroom_maintenance = {
+			category = building_maintenance
+		}
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	location_potential = {
 		is_capital = yes
@@ -355,7 +388,7 @@ vault_blast_door = {
 	category = defense_category
 	forbidden_for_estates = yes
 	
-	employment_size = 0.015
+	employment_size = 0.02
 	
 	town = yes
 	city = yes
@@ -368,7 +401,7 @@ vault_blast_door = {
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	
 	remove_if = {
@@ -381,16 +414,14 @@ vault_blast_door = {
 		local_nobles_estate_power = 0.5
 	}
 	
+	# Maintenance: real goods from the Vault market. Per month.
 	unique_production_methods = {
-		royal_court_maintenance = {
-			furniture = 0.15
-			tools = 0.05
-			glass = 0.1
-			fine_cloth = 0.2
-			books = 0.1
-			goods_gold = 0.1
-			marble = 0.1
-				
+		vault_blast_door_maintenance = {
+			glass = 0.00833
+			fine_cloth = 0.01667
+			tools = 0.00417
+			furniture = 0.0125
+			books = 0.00833
 			category = building_maintenance
 		}
 	}
@@ -409,7 +440,7 @@ vault_armory = {
 	category = military_category
 	forbidden_for_estates = yes
 
-	employment_size = 0.025
+	employment_size = 0.04
 	
 	town = yes
 	city = yes
@@ -421,7 +452,7 @@ vault_armory = {
 	}
 
 	country_potential = {
-		culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 	remove_if = {
 		is_no_longer_capital = yes
@@ -432,14 +463,13 @@ vault_armory = {
 		can_recruit_regiment_in_this_location = yes
 	}
 	
-		
+	# Maintenance: real goods from the Vault market. Per month.
 	unique_production_methods = {
-		armory_maintenance = {
-			firearms = 0.5
-			leather = 0.5
-			cloth = 0.10
-			paper = 0.20
-			weaponry = 0.5
+		vault_armory_maintenance = {
+			paper = 0.01667
+			cloth = 0.00833
+			firearms = 0.04167
+			weaponry = 0.04167
 			category = building_maintenance
 		}
 	}

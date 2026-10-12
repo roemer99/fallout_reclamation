@@ -1,0 +1,26 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault template
+# =============================================================================
+# Shared setup for every Vault. Used in main_menu/setup/2078/10_countries.txt via
+#     include = "vault_template"
+# The country block itself only adds what differs per Vault: core location,
+# capital, ruler (government = { ruler = ... }) and dynasty.
+#
+# Other per-Vault defaults live in:
+#   - setup/countries/north_america.txt  : culture (vaultian) + religion (lutheran)
+#   - common/town_setups/Fallout_default.txt : buildings (vault_town)
+#   - scripted_effects/fallout_vault_resource_effects.txt : water/energy/food/cores/chips
+# =============================================================================
+
+starting_technology_level = 2
+country_rank = rank_duchy
+
+government = {
+	type = vault_government
+	heir_selection = overseer_appointment
+
+	laws = {
+		vault_isolation_law = isolation_isolationism
+		vault_ressources_law = strict_rationing	# maintenance goods reserved for the buildings
+	}
+}

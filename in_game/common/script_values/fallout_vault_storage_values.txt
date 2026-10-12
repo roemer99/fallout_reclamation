@@ -1,0 +1,144 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault storage: display values (REAL market stockpile)
+# =============================================================================
+# Country scope = player. Reads the stockpile of the Vault market
+# (capital.market, link with data: "capital.market.stockpile_in_market(goods:<goods>)",
+# same function-style syntax as vanilla "goods_supply_in_market(goods:silver)").
+# Years left = stock / yearly need of the Vault buildings.
+# =============================================================================
+
+fallout_vault_stock_glass_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:glass)"
+	}
+}
+fallout_vault_stock_glass_years = {
+	value = fallout_vault_stock_glass_display
+	divide = 0.2	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_paper_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:paper)"
+	}
+}
+fallout_vault_stock_paper_years = {
+	value = fallout_vault_stock_paper_display
+	divide = 0.2	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_fine_cloth_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:fine_cloth)"
+	}
+}
+fallout_vault_stock_fine_cloth_years = {
+	value = fallout_vault_stock_fine_cloth_display
+	divide = 0.4	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_cloth_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:cloth)"
+	}
+}
+fallout_vault_stock_cloth_years = {
+	value = fallout_vault_stock_cloth_display
+	divide = 0.1	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_tools_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:tools)"
+	}
+}
+fallout_vault_stock_tools_years = {
+	value = fallout_vault_stock_tools_display
+	divide = 0.25	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_furniture_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:furniture)"
+	}
+}
+fallout_vault_stock_furniture_years = {
+	value = fallout_vault_stock_furniture_display
+	divide = 0.3	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_books_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:books)"
+	}
+}
+fallout_vault_stock_books_years = {
+	value = fallout_vault_stock_books_display
+	divide = 0.2	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_medicaments_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:medicaments)"
+	}
+}
+fallout_vault_stock_medicaments_years = {
+	value = fallout_vault_stock_medicaments_display
+	divide = 0.2	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_firearms_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:firearms)"
+	}
+}
+fallout_vault_stock_firearms_years = {
+	value = fallout_vault_stock_firearms_display
+	divide = 0.5	# yearly need of the Vault buildings
+}
+
+fallout_vault_stock_weaponry_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:weaponry)"
+	}
+}
+fallout_vault_stock_weaponry_years = {
+	value = fallout_vault_stock_weaponry_display
+	divide = 0.5	# yearly need of the Vault buildings
+}
+
+# Spare parts: real goods in the Vault market (the installed ones are country variables)
+fallout_vault_spare_fusion_cores_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:fusion_core)"
+	}
+}
+fallout_vault_spare_water_chips_display = {
+	value = 0
+	if = {
+		limit = { exists = capital.market }
+		value = "capital.market.stockpile_in_market(goods:water_chip)"
+	}
+}

@@ -1,0 +1,271 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault resources: Water & Energy
+# =============================================================================
+# Every Vault keeps a stockpile of Water and Energy (country variables
+# vault_water / vault_energy, 0 - 100).
+# Each month: stockpile += production - consumption
+# (see scripted_effects/fallout_vault_resource_effects.txt).
+#
+# Key components (country variables, NOT consumed, assigned 1:1):
+#   vault_fusion_cores : 1 per power plant  -> plant produces energy
+#   vault_water_chips  : 1 per water plant  -> plant produces water
+#
+# Balance at game start (10 single Vault buildings + hydro farm, ~1k pops):
+#   Energy: +4.5 production / ~3.5 consumption -> ~ +1 per month
+#   Water : +3.5 production / ~2.5 consumption -> ~ +1 per month
+# All values below are game-balance values, per month.
+# =============================================================================
+
+fallout_vault_resource_cap = 100
+fallout_vault_resource_start = 50
+
+# -----------------------------------------------------------------------------
+# KEY COMPONENTS (country scope)
+# -----------------------------------------------------------------------------
+# Power plants currently running (Vaults have max. 1 plant)
+fallout_vault_powered_plants = {
+	value = 0
+	if = {
+		limit = {
+			capital ?= { has_building_with_at_least_one_level = vault_power_plant }
+			has_variable = vault_fusion_cores
+			var:vault_fusion_cores >= 1
+		}
+		value = 1
+	}
+}
+
+# Water plants currently running (Vaults have max. 1 plant)
+fallout_vault_powered_water_plants = {
+	value = 0
+	if = {
+		limit = {
+			capital ?= { has_building_with_at_least_one_level = vault_water_plant }
+			has_variable = vault_water_chips
+			var:vault_water_chips >= 1
+		}
+		value = 1
+	}
+}
+
+# -----------------------------------------------------------------------------
+# WATER (country scope)
+# -----------------------------------------------------------------------------
+fallout_vault_water_production = {
+	value = 0.5		# condensation / emergency reserves
+	# The water plant only runs with a water chip assigned to it (1:1, not consumed)
+	if = {
+		limit = { fallout_vault_powered_water_plants >= 1 }
+		add = 3
+	}
+}
+
+fallout_vault_water_consumption = {
+	value = 0
+	if = {
+		limit = { exists = capital }
+		add = capital.population	# population in thousands
+		multiply = 2
+	}
+	if = {
+		limit = { capital ?= { has_building_with_at_least_one_level = vault_hydro_agriculture_farm } }
+		add = 0.5
+	}
+}
+
+fallout_vault_water_balance = {
+	value = fallout_vault_water_production
+	subtract = fallout_vault_water_consumption
+}
+
+# -----------------------------------------------------------------------------
+# ENERGY (country scope)
+# -----------------------------------------------------------------------------
+fallout_vault_energy_production = {
+	value = 0.5		# backup generators
+	# The power plant only runs with a fusion core assigned to it (1:1, not consumed)
+	if = {
+		limit = { fallout_vault_powered_plants >= 1 }
+		add = 4
+	}
+}
+
+# Every Vault building (except the power plant itself) needs power: 0.3 each.
+# Resource buildings (RGO / villages) do not.
+fallout_vault_building_energy_demand = {
+	value = 0
+	if = {
+		limit = { exists = capital }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_command_center } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_medical_bay } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_storage } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_water_plant } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_hydro_agriculture_farm } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_common_area } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_living_quarters } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_classroom } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_blast_door } } add = 0.3 }
+		if = { limit = { capital = { has_building_with_at_least_one_level = vault_armory } } add = 0.3 }
+	}
+}
+
+fallout_vault_energy_consumption = {
+	value = fallout_vault_building_energy_demand
+	if = {
+		limit = { exists = capital }
+		add = {
+			value = capital.population	# population in thousands
+			multiply = 0.5
+		}
+	}
+}
+
+fallout_vault_energy_balance = {
+	value = fallout_vault_energy_production
+	subtract = fallout_vault_energy_consumption
+}
+
+# -----------------------------------------------------------------------------
+# FOOD (country scope) - country variable vault_food
+# Storage: vault_storage gives local_vault_food_storage = 50 per level
+# (4 levels at game start = 200). Consumption 0.08333 per 1k pops per month,
+# so a Vault of 1000 dwellers lives exactly 200 years on its reserves
+# (200 / (200 years x 12 months) = 0.08333).
+# -----------------------------------------------------------------------------
+fallout_vault_food_capacity = {
+	# Country variable vault_food_capacity (set at game start: 4 x vault_storage x 50 = 200).
+	# Reading the building modifier (capital.modifier:local_vault_food_storage) returned 0,
+	# so the capacity is kept as a variable; raise it via effect when storage grows.
+	value = 0
+	if = {
+		limit = { has_variable = vault_food_capacity }
+		value = var:vault_food_capacity
+	}
+}
+
+fallout_vault_food_production = {
+	value = 0	# TODO: hydroponic farms / expeditions
+}
+
+fallout_vault_food_consumption = {
+	value = 0
+	if = {
+		limit = { exists = capital }
+		add = capital.population	# population in thousands
+		multiply = 0.08333
+	}
+}
+
+fallout_vault_food_balance = {
+	value = fallout_vault_food_production
+	subtract = fallout_vault_food_consumption
+}
+
+fallout_vault_food_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vault_food }
+		value = var:vault_food
+	}
+}
+
+# Fill level of the food storage for the bar (0-100)
+fallout_vault_food_fill = {
+	value = 0
+	if = {
+		limit = { fallout_vault_food_capacity > 0 }
+		value = fallout_vault_food_display
+		divide = fallout_vault_food_capacity
+		multiply = 100
+		max = 100
+	}
+}
+
+# Estimate: years until the food runs out (-1 = not running out)
+fallout_vault_food_years_left = {
+	value = -1
+	if = {
+		limit = { fallout_vault_food_balance < 0 }
+		value = fallout_vault_food_display
+		divide = {
+			value = fallout_vault_food_balance
+			multiply = -12
+		}
+	}
+}
+
+# -----------------------------------------------------------------------------
+# DISPLAY values for the Vault Management panel (country scope = player)
+# -----------------------------------------------------------------------------
+fallout_vault_authority_display = {
+	value = government_power
+}
+
+fallout_vault_water_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vault_water }
+		value = var:vault_water
+	}
+}
+
+fallout_vault_energy_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vault_energy }
+		value = var:vault_energy
+	}
+}
+
+fallout_vault_fusion_cores_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vault_fusion_cores }
+		value = var:vault_fusion_cores
+	}
+}
+
+fallout_vault_water_chips_display = {
+	value = 0
+	if = {
+		limit = { has_variable = vault_water_chips }
+		value = var:vault_water_chips
+	}
+}
+
+# Supply coverage for the bars (0-100):
+# 100 = production covers all consumption (or reserves are still left),
+# otherwise the share of the demand that can be met.
+fallout_vault_water_coverage = {
+	value = 100
+	if = {
+		limit = {
+			fallout_vault_water_consumption > 0
+			fallout_vault_water_production < fallout_vault_water_consumption
+		}
+		value = fallout_vault_water_production
+		divide = fallout_vault_water_consumption
+		multiply = 100
+		if = {
+			limit = { fallout_vault_water_display > 0 }
+			value = 100	# reserves bridge the gap for now
+		}
+	}
+}
+
+fallout_vault_energy_coverage = {
+	value = 100
+	if = {
+		limit = {
+			fallout_vault_energy_consumption > 0
+			fallout_vault_energy_production < fallout_vault_energy_consumption
+		}
+		value = fallout_vault_energy_production
+		divide = fallout_vault_energy_consumption
+		multiply = 100
+		if = {
+			limit = { fallout_vault_energy_display > 0 }
+			value = 100	# reserves bridge the gap for now
+		}
+	}
+}

@@ -1,0 +1,26 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault effects
+# =============================================================================
+
+# Country scope (a Vault).
+# Reveals the Vault's own province plus every province bordering it.
+# Used at game start, since all Vaults start sealed (Isolationism).
+fallout_vault_reveal_surroundings_effect = {
+	save_scope_as = vault_reveal_country
+	capital ?= {
+		province_definition ?= {
+			# Own province
+			every_location_in_province_definition = {
+				discover_location = scope:vault_reveal_country
+				# Every province touching our province
+				every_neighbor_location = {
+					province_definition ?= {
+						every_location_in_province_definition = {
+							discover_location = scope:vault_reveal_country
+						}
+					}
+				}
+			}
+		}
+	}
+}

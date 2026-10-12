@@ -1,0 +1,53 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault static modifiers
+# =============================================================================
+# Applied / removed monthly by fallout_vault_resources_monthly_effect.
+
+# Water stockpile empty: people get sick and lose faith in the Overseer
+vault_water_shortage = {
+	game_data = {
+		category = country
+	}
+	global_population_growth = -0.5
+	monthly_legitimacy = -0.5		# Overseer Authority
+	global_monthly_food_modifier = -0.25
+}
+
+# Energy stockpile empty: machines stop, research and production suffer
+vault_energy_shortage = {
+	game_data = {
+		category = country
+	}
+	global_production_efficiency = -0.25
+	research_speed_modifier = -0.25
+	monthly_legitimacy = -0.25		# Overseer Authority
+}
+
+# Food reserves empty: famine inside the Vault
+vault_food_shortage = {
+	game_data = {
+		category = country
+	}
+	global_population_growth = -0.75
+	monthly_legitimacy = -1		# Overseer Authority
+}
+
+# A maintenance good in the Vault storage is used up: the Vault falls into disrepair
+vault_maintenance_shortage = {
+	game_data = {
+		category = country
+	}
+	global_production_efficiency = -0.25
+	monthly_legitimacy = -0.25		# Overseer Authority
+}
+
+# Outcome: water, energy and food all ran out (flavor_vaults.3)
+vault_collapsed = {
+	game_data = {
+		category = country
+	}
+	global_population_growth = -1
+	monthly_legitimacy = -2		# Overseer Authority
+	global_production_efficiency = -0.5
+	research_speed_modifier = -0.5
+}

@@ -1,0 +1,79 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Radiation constants
+# =============================================================================
+# Monthly decay factors: 0.5 ^ (30.44 days / half-life)
+fallout_rad_decay_short = 0.072033	# I-131,  T1/2 = 8.02 days
+fallout_rad_decay_medium = 0.972416	# Cs-134, T1/2 = 2.065 years
+fallout_rad_decay_long = 0.998082	# Cs-137, T1/2 = 30.08 years (Sr-90: 28.79 years -> 0.997996)
+
+# Share of ground zero's medium/long radiation that is carried outwards per month
+# (dust, wind, water). Game-balance value, not a physical constant.
+fallout_rad_transport_rate = 0.005
+
+# Background radiation everywhere in the world (global fallout).
+# Does NOT decay on its own. It is stored in global_var:fallout_rad_background and
+# can later be lowered locally by technologies/buildings through the location
+# variable fallout_rad_background_reduction (0-1, share removed).
+fallout_rad_background_start = 3
+
+# How strongly the radiation level of a location feeds radiation sickness.
+# Radiation 100 -> +5% disease presence per spread interval.
+fallout_rad_infection_factor = 0.0005
+
+# -----------------------------------------------------------------------------
+# Location scope: the radiation level of a location (0-100+).
+# = background (minus local reduction) + strike radiation (rings / ground zero)
+# Use this everywhere (disease, map mode, events) instead of the raw variables.
+# -----------------------------------------------------------------------------
+fallout_location_radiation = {
+	value = 0
+	if = {
+		limit = { has_global_variable = fallout_rad_background }
+		add = global_var:fallout_rad_background
+		if = {
+			limit = { has_variable = fallout_rad_background_reduction }
+			multiply = {
+				value = 1
+				subtract = var:fallout_rad_background_reduction
+				min = 0
+			}
+		}
+	}
+	if = {
+		limit = { has_variable = fallout_rad_total }
+		add = var:fallout_rad_total
+	}
+	min = 0
+}
+
+# -----------------------------------------------------------------------------
+# DISPLAY values for the Radiation situation panel (country scope = player)
+# -----------------------------------------------------------------------------
+fallout_rad_background_display = {
+	value = 0
+	if = {
+		limit = { has_global_variable = fallout_rad_background }
+		value = global_var:fallout_rad_background
+	}
+}
+
+# Radiation in the capital: background (minus local reduction) + strike radiation
+fallout_capital_radiation_display = {
+	value = 0
+	if = {
+		limit = { exists = capital }
+		add = fallout_rad_background_display
+		if = {
+			limit = { capital = { has_variable = fallout_rad_background_reduction } }
+			multiply = {
+				value = 1
+				subtract = capital.var:fallout_rad_background_reduction
+				min = 0
+			}
+		}
+		if = {
+			limit = { capital = { has_variable = fallout_rad_total } }
+			add = capital.var:fallout_rad_total
+		}
+	}
+}

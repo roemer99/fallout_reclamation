@@ -1,0 +1,81 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Blackjack
+# =============================================================================
+# Started by the button in the Vault Management panel (Vault 21 window)
+# -> scripted_guis/fallout_vav_blackjack.txt -> events/vaults/vav_blackjack.txt
+#
+# Country variables (root = Vault 21):
+#   vav_bj_player / vav_bj_dealer           hand totals
+#   vav_bj_player_aces / vav_bj_dealer_aces aces currently counted as 11
+#   vav_bj_card                             value of the last card drawn
+#   vav_bj_cooldown                         one game per month (days = 30)
+# Stake: the Vault's fortune (var vav_fortune, 0-100).
+# =============================================================================
+
+# Root = country. New game: reset hands, deal 2 cards to the player, 1 to the dealer.
+fallout_vav_bj_new_game_effect = {
+	set_variable = { name = vav_bj_cooldown value = 1 days = 30 }
+	set_variable = { name = vav_bj_player value = 0 }
+	set_variable = { name = vav_bj_player_aces value = 0 }
+	set_variable = { name = vav_bj_dealer value = 0 }
+	set_variable = { name = vav_bj_dealer_aces value = 0 }
+	set_variable = { name = vav_bj_card value = 0 }
+	fallout_vav_bj_draw_effect = { WHO = player }
+	fallout_vav_bj_draw_effect = { WHO = player }
+	fallout_vav_bj_draw_effect = { WHO = dealer }
+}
+
+# Root = country. Draws one card for WHO (player / dealer).
+# Deck odds: 2-9 = 4/52 each, ten-value cards (10/J/Q/K) = 16/52, ace = 4/52.
+# An ace counts 11, or 1 if 11 would bust the hand.
+fallout_vav_bj_draw_effect = {
+	random_list = {
+		4 = { set_variable = { name = vav_bj_card value = 2 } }
+		4 = { set_variable = { name = vav_bj_card value = 3 } }
+		4 = { set_variable = { name = vav_bj_card value = 4 } }
+		4 = { set_variable = { name = vav_bj_card value = 5 } }
+		4 = { set_variable = { name = vav_bj_card value = 6 } }
+		4 = { set_variable = { name = vav_bj_card value = 7 } }
+		4 = { set_variable = { name = vav_bj_card value = 8 } }
+		4 = { set_variable = { name = vav_bj_card value = 9 } }
+		16 = { set_variable = { name = vav_bj_card value = 10 } }
+		4 = {
+			set_variable = { name = vav_bj_card value = 11 }
+			change_variable = { name = vav_bj_$WHO$_aces add = 1 }
+		}
+	}
+	change_variable = { name = vav_bj_$WHO$ add = var:vav_bj_card }
+	# Soft hand: count an ace as 1 instead of 11 if the hand would bust
+	if = {
+		limit = {
+			var:vav_bj_$WHO$ > 21
+			var:vav_bj_$WHO$_aces >= 1
+		}
+		change_variable = { name = vav_bj_$WHO$ add = -10 }
+		change_variable = { name = vav_bj_$WHO$_aces add = -1 }
+	}
+}
+
+# Root = country. The dealer draws until reaching 17 or more.
+# (Script has no while-loop: 8 checks are more than enough for any hand.)
+fallout_vav_bj_dealer_play_effect = {
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+	if = { limit = { var:vav_bj_dealer < 17 } fallout_vav_bj_draw_effect = { WHO = dealer } }
+}
+
+# Root = country. Change the Vault's fortune by AMOUNT (clamped 0-100).
+fallout_vav_bj_fortune_effect = {
+	if = {
+		limit = { NOT = { has_variable = vav_fortune } }
+		set_variable = { name = vav_fortune value = 50 }
+	}
+	change_variable = { name = vav_fortune add = $AMOUNT$ }
+	if = { limit = { var:vav_fortune > 100 } set_variable = { name = vav_fortune value = 100 } }
+	if = { limit = { var:vav_fortune < 0 } set_variable = { name = vav_fortune value = 0 } }
+}

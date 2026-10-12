@@ -1,28 +1,22 @@
 ﻿namespace = flavor_vaults
-flavor_vaults.1 = { #Anniversary
+
+# Anniversary of the Great War (one year after the bombs, 2078.10.23)
+# Fired once per Vault via fallout_on_game_start
+# (in_game/common/on_action/fallout_on_actions.txt).
+flavor_vaults.1 = {
 	type = country_event
 	title = flavor_vaults.1.title
 	desc = flavor_vaults.1.desc
 	hide_portraits = yes
-	fire_only_once = no
-	
+	fire_only_once = no	# must stay "no": fire_only_once would block every other Vault after the first
+
 	trigger = {
-		has_culture_group = vaultian
-		from = 2078.1.1
-		to = 2078.3.1
-		monthly_chance = 100
-		has_primary_or_accepted_culture = culture:vaultian_culture
+		is_vault_country = yes
 	}
 
 	illustration_tags = {
 		10 = regular
 		10 = exterior
-	}
-	
-	#immediate = {
-	#	event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-	#}
-	trigger = {
 	}
 
 	option = {
@@ -31,6 +25,70 @@ flavor_vaults.1 = { #Anniversary
 	}
 	option = {
 		name = flavor_vaults.1.b
+		historical_option = no
+	}
+}
+
+# First birth in the Vault
+# Checked monthly via fallout_vault_monthly_pulse. Fires once per Vault, the
+# first time the Vault's population grows above its starting population.
+flavor_vaults.2 = {
+	type = country_event
+	title = flavor_vaults.2.title
+	desc = flavor_vaults.2.desc
+	hide_portraits = yes
+	fire_only_once = no	# once per Vault is handled by the variable below
+
+	trigger = {
+		is_vault_country = yes
+		NOT = { has_variable = vault_first_birth_happened }
+		has_variable = vault_start_population
+		capital = {
+			population > root.var:vault_start_population
+		}
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		set_variable = vault_first_birth_happened
+	}
+
+	option = {
+		name = flavor_vaults.2.a
+		historical_option = no
+		# TODO: reward (e.g. stability / small growth modifier)
+	}
+}
+
+# Outcome: the Vault has failed
+# Fired once per Vault by fallout_vault_resources_monthly_effect when water,
+# energy AND food are all empty at the same time.
+flavor_vaults.3 = {
+	type = country_event
+	title = flavor_vaults.3.title
+	desc = flavor_vaults.3.desc
+	hide_portraits = yes
+	fire_only_once = no	# once per Vault is handled by the variable vault_collapsed
+
+	trigger = {
+		is_vault_country = yes
+	}
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		add_country_modifier = { modifier = vault_collapsed days = -1 }
+	}
+
+	option = {
+		name = flavor_vaults.3.a
 		historical_option = no
 	}
 }

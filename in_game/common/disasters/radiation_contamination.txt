@@ -1,0 +1,48 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Radiation Contamination (disaster)
+# =============================================================================
+# A country whose capital lies in contaminated land suffers this disaster.
+# It ends when radiation in the capital has decayed below the threshold.
+# Sealed Vaults (Isolationism) are protected and never get it.
+# Radiation values: script_values/fallout_radiation_values.txt
+#
+# NOTE: "map_mode = fallout_radiation" crashed the game at load (the disaster
+# database is read before the map modes in gfx/). Do not add it back.
+# Panel (in_game/gui/panels/disaster/radiation_contamination.gui) is re-added
+# once this definition is confirmed to load.
+# =============================================================================
+
+radiation_contamination = {
+	# root = country
+	monthly_spawn_chance = { value = 1 }
+
+	can_start = {
+		NOT = { is_sealed_vault = yes }
+		fallout_capital_radiation_display >= 10
+	}
+
+	can_end = {
+		OR = {
+			is_sealed_vault = yes
+			fallout_capital_radiation_display < 5
+		}
+	}
+
+	fire_only_once = no
+
+	modifier = {
+		global_population_growth = -0.25
+		global_production_efficiency = -0.1
+		monthly_legitimacy = -0.1
+	}
+
+	on_start = {
+		debug_log = "FALLOUT DEBUG: radiation_contamination started"
+	}
+
+	on_monthly = {
+	}
+
+	on_end = {
+	}
+}

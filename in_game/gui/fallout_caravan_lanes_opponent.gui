@@ -1,0 +1,310 @@
+﻿#####################################################################
+## FALLOUT RECLAMATION - Vault 21: Caravan lanes of the opponent (GUI types)
+## vcv_lane_o1 ... vcv_lane_o3, used in gui/fallout_caravan_window.gui
+## Each card slot stacks the 10 card faces; only the faces up to the card value
+## are visible, so the top one is the right card (texture paths cannot contain
+## data in EU5). Up to 7 cards are shown per caravan, more cards show "+N".
+## Card types (vcv_card_1 ... vcv_card_10): gui/fallout_caravan_cards.gui
+## Values: common/script_values/fallout_vav_caravan_values.txt
+#####################################################################
+
+types FalloutCaravanLanes_o
+{
+	type vcv_lane_o1 = widget {
+		size = { 100 270 }
+		vcv_card_slot = { position = { 5 0 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)1')]" }
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 0 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)1')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c1'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 22 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)2')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c2'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 44 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)3')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c3'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 66 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)4')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c4'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 88 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)5')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c5'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 110 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)6')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c6'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 132 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)7')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1c7'), '(CFixedPoint)10')]" }
+		}
+		# face cards played on this caravan: one container per turn (re-starts the animation)
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)2')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" vcv_fx_4 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)11')]" vcv_fx_4 = { position = { 5 40 } } } }	# last turn (game over, before "See result")
+		text_single = { position = { 70 0 } text = "VAV_CV_MORE_O1" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o1n'), '(CFixedPoint)8')]" }
+	}
+	type vcv_lane_o2 = widget {
+		size = { 100 270 }
+		vcv_card_slot = { position = { 5 0 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)1')]" }
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 0 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)1')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c1'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 22 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)2')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c2'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 44 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)3')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c3'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 66 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)4')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c4'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 88 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)5')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c5'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 110 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)6')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c6'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 132 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)7')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2c7'), '(CFixedPoint)10')]" }
+		}
+		# face cards played on this caravan: one container per turn (re-starts the animation)
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)2')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" vcv_fx_5 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)11')]" vcv_fx_5 = { position = { 5 40 } } } }	# last turn (game over, before "See result")
+		text_single = { position = { 70 0 } text = "VAV_CV_MORE_O2" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o2n'), '(CFixedPoint)8')]" }
+	}
+	type vcv_lane_o3 = widget {
+		size = { 100 270 }
+		vcv_card_slot = { position = { 5 0 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)1')]" }
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 0 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)1')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c1'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 22 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)2')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c2'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 44 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)3')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c3'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 66 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)4')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c4'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 88 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)5')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c5'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 110 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)6')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c6'), '(CFixedPoint)10')]" }
+		}
+		vcv_opponent_card_reveal = { size = { 90 135 } position = { 5 132 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)7')]"
+			vcv_card_1 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)1')]" }
+			vcv_card_2 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)2')]" }
+			vcv_card_3 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)3')]" }
+			vcv_card_4 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)4')]" }
+			vcv_card_5 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)5')]" }
+			vcv_card_6 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)6')]" }
+			vcv_card_7 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)7')]" }
+			vcv_card_8 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)8')]" }
+			vcv_card_9 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)9')]" }
+			vcv_card_10 = { visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3c7'), '(CFixedPoint)10')]" }
+		}
+		# face cards played on this caravan: one container per turn (re-starts the animation)
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)2')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)3')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)4')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)5')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)6')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)7')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)8')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)9')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" vcv_fx_6 = { position = { 5 40 } } } }
+		widget = { size = { 100 270 } visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)10')]" widget = { size = { 100 270 } visible = "[LessThan_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_turn'), '(CFixedPoint)11')]" vcv_fx_6 = { position = { 5 40 } } } }	# last turn (game over, before "See result")
+		text_single = { position = { 70 0 } text = "VAV_CV_MORE_O3" visible = "[GreaterThanOrEqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('vcv_o3n'), '(CFixedPoint)8')]" }
+	}
+}

@@ -1,0 +1,119 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Radiation map mode
+# =============================================================================
+# Colours every location by var:fallout_rad_total (0-100, set by
+# common/scripted_effects/fallout_radiation_effects.txt).
+# Note: @variables from vanilla map_modes.txt are file-local, so their
+# resolved values are written out here.
+# Icon: gfx/interface/icons/map_modes/fallout_radiation.dds (main_menu)
+# =============================================================================
+
+fallout_radiation = {
+	map_color = {
+		if = {
+			limit = {
+				fallout_location_radiation >= 0.5
+			}
+			if = {
+				limit = { fallout_location_radiation >= 25 }
+				# 25-100: orange -> deep red
+				lerp = {
+					min_color = rgb { 230 140 30 }
+					max_color = rgb { 150 10 10 }
+					factor = {
+						value = fallout_location_radiation
+						subtract = 25
+						divide = 75
+						max = 1
+					}
+				}
+			}
+			else = {
+				# 0.5-25: pale yellow-green (background) -> orange
+				lerp = {
+					min_color = rgb { 215 230 120 }
+					max_color = rgb { 230 140 30 }
+					factor = {
+						value = fallout_location_radiation
+						divide = 25
+					}
+				}
+			}
+		}
+		else = {
+			value = define:NMapColors|MAP_COLOR_NULL
+		}
+	}
+
+	legend_key = {
+		desc = "LEGEND_KEY_FALLOUT_RADIATION_NONE"
+		color = define:NMapColors|MAP_COLOR_NULL
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_FALLOUT_RADIATION_LOW"
+		color = rgb { 215 230 120 }
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_FALLOUT_RADIATION_MID"
+		color = rgb { 230 140 30 }
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_FALLOUT_RADIATION_HIGH"
+		color = rgb { 150 10 10 }
+	}
+
+	small_map_names = location
+	medium_map_names = country
+	large_map_names = country
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = no
+	flatmap_behaviour = Always
+	force_brown_in_flatmap = only_in_rg_colorblind_mode
+	use_fow = no
+
+	category = geopolitics
+	index = 3
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+	}
+
+	gradient_parameters = {
+		zoom_step = 2
+
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = 0.875
+		gradient_color_mult = 0.9
+		edge_width = 0
+		edge_sharpness = 0
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = 0.5
+		after_lighting_blend = 0.5
+	}
+
+	flatmap_gradient_parameters = {
+		zoom_step = 12
+
+		gradient_alpha_inside = 0.75
+		gradient_alpha_outside = 1
+		gradient_width = 0.25
+		gradient_color_mult = 0.9
+		edge_width = 0.03
+		edge_sharpness = 0
+		edge_alpha = 1
+		edge_color_mult = 0.7
+		before_lighting_blend = 0.5
+		after_lighting_blend = 0.5
+	}
+
+	refresh_colors_on_selection_change = no
+	color_refresh_counters = { Month }
+}

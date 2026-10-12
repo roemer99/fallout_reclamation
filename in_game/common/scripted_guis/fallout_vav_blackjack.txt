@@ -1,0 +1,172 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Blackjack table (scripted GUI)
+# =============================================================================
+# Button in gui/panels/situation/vault_management.gui (Vault 21 window):
+#   onclick = "[GetScriptedGui('vav_blackjack_open').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+# Deals a new hand and opens the Blackjack event (events/vaults/vav_blackjack.txt).
+# =============================================================================
+
+vav_blackjack_open = {
+	scope = country
+
+	is_shown = {
+		tag = VAV
+	}
+
+	is_valid = {
+		tag = VAV
+		custom_tooltip = {
+			text = vav_blackjack_cooldown_tt
+			NOT = { has_variable = vav_bj_cooldown }
+		}
+	}
+
+	effect = {
+		root = {
+			fallout_vav_bj_new_game_effect = yes
+			# Natural blackjack (21 with the first two cards) wins at once
+			if = {
+				limit = { var:vav_bj_player = 21 }
+				trigger_event_non_silently = vav_blackjack.5
+			}
+			else = {
+				trigger_event_non_silently = vav_blackjack.1
+			}
+		}
+	}
+}
+
+# Roulette: place a bet in event vav_roulette.1 (events/vaults/vav_roulette.txt)
+vav_roulette_open = {
+	scope = country
+
+	is_shown = {
+		tag = VAV
+	}
+
+	is_valid = {
+		tag = VAV
+		custom_tooltip = {
+			text = vav_roulette_cooldown_tt
+			NOT = { has_variable = vav_rl_cooldown }
+		}
+	}
+
+	effect = {
+		root = {
+			set_variable = { name = vav_rl_cooldown value = 1 days = 30 }
+			trigger_event_non_silently = vav_roulette.1
+		}
+	}
+}
+
+# Caravan: starts a new game on the card table (Vault Management panel, Vault 21 window).
+# Logic: scripted_effects/fallout_vav_caravan_effects.txt
+vav_caravan_open = {
+	scope = country
+
+	is_shown = {
+		tag = VAV
+	}
+
+	is_valid = {
+		tag = VAV
+		NOT = { has_variable = vav_cv_active }
+		custom_tooltip = {
+			text = vav_caravan_cooldown_tt
+			NOT = { has_variable = vav_cv_cooldown }
+		}
+	}
+
+	effect = {
+		root = {
+			fallout_vav_cv_new_game_effect = yes
+		}
+	}
+}
+
+# Caravan table: put the hand card on caravan I / II / III
+vav_cv_play_1 = {
+	scope = country
+	is_shown = { tag = VAV }
+	is_valid = { has_variable = vav_cv_active NOT = { has_variable = vav_cv_over } }
+	effect = { root = { fallout_vav_cv_player_move_effect = { LANE = 1 } } }
+}
+vav_cv_play_2 = {
+	scope = country
+	is_shown = { tag = VAV }
+	is_valid = { has_variable = vav_cv_active NOT = { has_variable = vav_cv_over } }
+	effect = { root = { fallout_vav_cv_player_move_effect = { LANE = 2 } } }
+}
+vav_cv_play_3 = {
+	scope = country
+	is_shown = { tag = VAV }
+	is_valid = { has_variable = vav_cv_active NOT = { has_variable = vav_cv_over } }
+	effect = { root = { fallout_vav_cv_player_move_effect = { LANE = 3 } } }
+}
+
+# Caravan table: discard the hand card
+vav_cv_discard = {
+	scope = country
+	is_shown = { tag = VAV }
+	is_valid = { has_variable = vav_cv_active NOT = { has_variable = vav_cv_over } }
+	effect = { root = { fallout_vav_cv_discard_effect = yes } }
+}
+
+# Caravan table: after the last turn - compare the caravans and show the result event
+vav_cv_finish = {
+	scope = country
+	is_shown = { tag = VAV }
+	is_valid = { has_variable = vav_cv_over }
+	effect = { root = { fallout_vav_cv_end_game_effect = yes } }
+}
+
+# Caravan table: show / hide the move log (gui/fallout_caravan_log.gui)
+vav_cv_toggle_log = {
+	scope = country
+	is_shown = { tag = VAV }
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = vav_cv_show_log }
+				remove_variable = vav_cv_show_log
+			}
+			else = {
+				set_variable = vav_cv_show_log
+			}
+		}
+	}
+}
+
+# Caravan table: give up (counts as a loss)
+vav_cv_forfeit = {
+	scope = country
+	is_shown = { tag = VAV }
+	is_valid = { has_variable = vav_cv_active NOT = { has_variable = vav_cv_over } }
+	effect = { root = { fallout_vav_cv_forfeit_effect = yes } }
+}
+
+# Caravan table: switch to the next card back (decks: fallout_vav_cv_deck_count)
+vav_cv_next_deck = {
+	scope = country
+	is_shown = { tag = VAV }
+	effect = { root = { fallout_vav_cv_next_deck_effect = yes } }
+}
+
+# "?" buttons next to the casino games: explain the rules (events/vaults/vav_rules.txt).
+# Always available, no cooldown, no stake.
+vav_rules_blackjack = {
+	scope = country
+	is_shown = { tag = VAV }
+	effect = { root = { trigger_event_non_silently = vav_rules.1 } }
+}
+vav_rules_roulette = {
+	scope = country
+	is_shown = { tag = VAV }
+	effect = { root = { trigger_event_non_silently = vav_rules.2 } }
+}
+vav_rules_caravan = {
+	scope = country
+	is_shown = { tag = VAV }
+	effect = { root = { trigger_event_non_silently = vav_rules.3 } }
+}

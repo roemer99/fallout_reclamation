@@ -1,4 +1,4 @@
-﻿ scope is country, this is done for ALL active countries when a new nation is picked.
+﻿# scope is country, this is done for ALL active countries when a new nation is picked.
 on_new_age = {
 	events = {
 		ages_of_eu.1
@@ -84,16 +84,7 @@ on_civil_war_start = {
 				change_control = control_radical_bonus
 			}
 		}
-		if = {
-			limit = {
-				any_active_disaster = {
-					disaster_type = disaster_type:revolution_disaster
-				}
-				has_variable = revolution_rebel_var
-				scope:rebel = var:revolution_rebel_var
-			}
-			trigger_event_non_silently = revolution_disaster.2
-		}
+		# FALLOUT: revolution_disaster follow-up removed (disasters are replaced)
 	}
 }
 
@@ -144,32 +135,7 @@ on_civil_war_lost = {
 				trigger_event_non_silently = english_civil_war.252 
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					is_human = no
-					#Weird mp shenanigans here...
-					AND = {
-						is_human = yes
-						scope:loser = { is_human = yes }
-					}
-				}
-				OR = {
-					scope:winner = { any_active_disaster = { disaster_type = disaster_type:revolution_disaster } }
-					scope:loser = { any_active_disaster = { disaster_type = disaster_type:revolution_disaster } }
-				}
-			}
-			scope:winner = { 
-				if = {
-					limit = { exists = root.ruler_or_heir_if_regent }
-					set_variable = {
-						name = rev_former_ruler
-						value = root.ruler_or_heir_if_regent
-					}
-				}
-				trigger_event_silently = revolution_disaster.4
-			}
-		}
+		# FALLOUT: revolution_disaster follow-up removed (disasters are replaced)
 	}
 }
 
@@ -295,25 +261,7 @@ on_war_declared = {
 				}
 			}
 		}
-		#War of Religions
-		if = {
-			limit = {
-				is_situation_active = situation:war_of_religions
-				scope:war = {
-					is_no_cb_war = no
-					casus_belli ?= casus_belli:cb_religious_superiority
-				}
-			}
-			scope:war = {
-				every_war_participant = { add_to_global_variable_list = { name = war_of_religions_wants_war_list target = this } }
-			}
-			situation:war_of_religions = {
-				set_variable = {
-					name = war_of_religion_current_war
-					value = scope:war
-				}
-			}
-		}
+		# FALLOUT: War of Religions handling removed (situations are replaced)
 	}
 }
 

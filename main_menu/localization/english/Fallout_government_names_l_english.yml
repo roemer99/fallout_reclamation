@@ -5,4 +5,4 @@
  rank_duchy_vaultian_abbreviation: "Vault"
  rank_duchy_vaultian_ruler_female: "Overseer"
 
- country_flavor_parliament_council: "Council"
+ # country_flavor_parliament_council overrides a vanilla key -> see replace/Fallout_replace_l_english.yml

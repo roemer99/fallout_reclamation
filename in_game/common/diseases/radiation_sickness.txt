@@ -1,0 +1,107 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Radiation Sickness
+# =============================================================================
+# The only disease in the mod (vanilla diseases are removed via replace_paths).
+# Present everywhere from game start (setup/2078/19_diseases.txt) and driven by
+# the radiation level of each location (script value fallout_location_radiation):
+#   - background radiation everywhere (does not decay, later only lowered by tech)
+#   - much higher values around nuclear strikes (decay with real half-lives)
+#
+# Sealed Vaults (Isolation Policy = Isolationism) are protected:
+#   - it never spawns in a sealed Vault
+#   - no spread and no environmental exposure inside a sealed Vault
+#   - isolation_isolationism gives national_radiation_sickness_resistance_modifier = 1
+# Modifier types: main_menu/common/modifier_type_definitions/fallout_modifier_types.txt
+# =============================================================================
+
+radiation_sickness = {
+
+	monthly_spawn_chance = {
+		value = 0.5
+	}
+
+	# New outbreaks anywhere with people, except sealed Vaults
+	spawn = {
+		random_ownable_location = {
+			limit = {
+				population > 0
+				NOT = { owner ?= { is_sealed_vault = yes } }
+			}
+			spawn_disease = {
+				disease = scope:disease
+				value = 0.1
+				save_scope_as = outbreak_scope
+			}
+		}
+	}
+
+	# Not contagious; "spread" stands for people moving through contaminated
+	# land, so it scales with the local radiation.
+	r0 = {
+		value = 0.8
+		multiply = {
+			value = fallout_location_radiation
+			divide = 50
+			add = 1
+		}
+		if = {
+			limit = { owner ?= { is_sealed_vault = yes } }
+			multiply = 0
+		}
+	}
+
+	# Exposure from the environment itself, independent of other sick pops
+	environmental_infection = {
+		value = 0
+		if = {
+			limit = {
+				NOT = { owner ?= { is_sealed_vault = yes } }
+			}
+			value = fallout_location_radiation
+			multiply = fallout_rad_infection_factor
+		}
+	}
+
+	calc_interval_days = { 10 20 }
+
+	location_stagnation_chance = {
+		value = 0.05
+	}
+
+	percentage_to_meet_their_fate_on_calc = {
+		value = 0.2
+	}
+
+	location_modifier = {
+		# TODO: e.g. lower local_pop_growth
+	}
+
+	monthly_resistance_reduction = 0.001
+
+	mortality_rate = {
+		value = 0.05
+	}
+
+	character_mortality_chance = {
+		value = 0.02
+		multiply = "disease_presence(scope:disease)"
+	}
+
+	# Toxic green
+	map_color = {
+		lerp = {
+			min_color = rgb { 170 200 120 }
+			max_color = rgb { 60 140 20 }
+			factor = "disease_presence(scope:disease)"
+		}
+	}
+
+	secondary_map_color = {
+		if = {
+			limit = {
+				disease_affects_pops_here = scope:disease
+			}
+			value = rgb { 200 220 40 }
+		}
+	}
+}

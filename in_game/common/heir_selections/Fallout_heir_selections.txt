@@ -1,0 +1,59 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Heir selections
+# =============================================================================
+
+# Vault Overseer: rules for life, the successor is appointed from the whole
+# Vault population (no family tree, no dynasty). Ability matters more than age.
+overseer_appointment = {
+	traverse_family_tree = no
+	include_ruler_siblings = no
+	all_in_country = yes
+	allow_female = yes
+	allow_male = yes
+	ignore_ruler = yes
+	allow_foreign_ruler = no
+	cached = yes
+
+	potential = {
+		is_vault_country = yes
+	}
+
+	calc = {
+		if = {
+			limit = {
+				exists = root
+			}
+			add = {
+				desc = "HEIR_SELECTION_TOTAL_ABILITIES"
+				value = total_abilities
+				multiply = 2
+			}
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = character_age
+			}
+			if = {
+				limit = { modifier:blocked_from_being_ruler = yes }
+				add = {
+					desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+					value = -1000
+				}
+			}
+		}
+		# Description for the general tooltip
+		if = {
+			limit = {
+				not = { exists = root }
+			}
+			add = {
+				desc = "HEIR_SELECTION_TOTAL_ABILITIES"
+				value = 1
+				multiply = 2
+			}
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = 1
+			}
+		}
+	}
+}

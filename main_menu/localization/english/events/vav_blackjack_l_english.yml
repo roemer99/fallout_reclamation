@@ -1,0 +1,27 @@
+﻿l_english:
+ # Panel button (gui/panels/situation/vault_management.gui)
+ VAULT_MGMT_VAV_BLACKJACK: "Play Blackjack"
+ VAULT_MGMT_VAV_BLACKJACK_TT: "Take a seat at the Blackjack table. The Vault's fortune is the stake:\n#P Win: +10 Fortune#!\n#P Blackjack: +15 Fortune#!\n#N Lose: -10 Fortune#!\n\nThe table opens once per month."
+ vav_blackjack_cooldown_tt: "The Blackjack table has already been played this month."
+
+ # Events (events/vaults/vav_blackjack.txt)
+ vav_blackjack.1.title: "Blackjack"
+ vav_blackjack.1.desc: "The dealer slides the cards across the worn felt of the Vault 21 casino table. The dwellers lean in: tonight the Vault's fortune is on the line.\n\nYour hand: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_player_display')|0]#!  (last card: [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_card_display')|0])\nDealer shows: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_dealer_display')|0]#!\n\nGet as close to 21 as you can without going over. The dealer must draw until reaching 17."
+ vav_blackjack.1.a: "Hit me."
+ vav_blackjack.1.b: "Stand."
+
+ vav_blackjack.2.title: "Winner!"
+ vav_blackjack.2.desc: "Your hand: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_player_display')|0]#!\nDealer: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_dealer_display')|0]#!\n\nThe dealer pushes the chips across the table and the casino erupts in cheers. Luck is with Vault 21 tonight."
+ vav_blackjack.2.a: "The house doesn't always win."
+
+ vav_blackjack.3.title: "The House Wins"
+ vav_blackjack.3.desc: "Your hand: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_player_display')|0]#!\nDealer: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_dealer_display')|0]#!\n\nThe dealer sweeps the chips away without a word. A disappointed murmur runs through the crowd."
+ vav_blackjack.3.a: "Next time."
+
+ vav_blackjack.4.title: "Push"
+ vav_blackjack.4.desc: "Your hand: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_player_display')|0]#!\nDealer: #T [GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('fallout_vav_bj_dealer_display')|0]#!\n\nA tie. The chips stay where they are, and the dwellers argue for hours about whether that counts as luck."
+ vav_blackjack.4.a: "Nobody wins, nobody loses."
+
+ vav_blackjack.5.title: "Blackjack!"
+ vav_blackjack.5.desc: "An ace and a ten - twenty-one with the very first two cards! The casino falls silent for a heartbeat, then the whole Vault seems to cheer at once. Stories of this hand will be told in the corridors for years."
+ vav_blackjack.5.a: "Lady Luck smiles on Vault 21!"

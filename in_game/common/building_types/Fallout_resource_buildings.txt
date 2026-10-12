@@ -1,0 +1,853 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Resource buildings (RGO)
+# =============================================================================
+# The only vanilla buildings kept in the mod: every building with
+# category = rgo_building_category, copied from vanilla 1.4
+# (common_buildings.txt and rural_buildings.txt).
+# All other vanilla buildings are removed via replace_paths common/building_types.
+# Sealed Vaults (Isolationism) cannot build any of them (country_potential).
+# =============================================================================
+
+mercury_patio = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 3
+	is_foreign = no
+	max_levels = mercury_patio_max_level
+	pop_type = laborers
+
+	category = rgo_building_category
+	employment_size = advanced_peasant_building_employment
+	AI_ignore_available_worker_flag = yes
+	ai_forbid_shutdown = yes
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	
+	location_potential = {
+		OR = {
+			raw_material = goods:silver
+			raw_material = goods:goods_gold
+		}
+	}
+	
+	build_time = guild_build_time
+	
+	unique_production_methods = {
+		mercury_patio_maintenance = {
+			icon_type = building_type
+			icon = mercury_patio
+			mercury = 1.0
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = mercury_patio_construction
+
+	modifier = {
+		local_goods_gold_output_modifier = 1.0
+		local_silver_output_modifier = 1.0
+	}
+}
+
+horse_breeders = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+
+	employment_size = rural_peasant_produce_employment
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		market = {
+			is_produced_in_market = goods:horses
+		}
+	}
+	
+	allow = {
+		OR = {
+			climate = mediterranean
+			climate = continental
+			climate = oceanic
+		}
+	}
+	
+	unique_production_methods = {
+		
+		horse_breeders_maintenance = {
+			icon_type = building_type
+			icon = horse_breeders
+			produced = horses
+			output = 1
+			wheat = 1.563
+			horses = 0.313
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = horse_breeders_construction
+}
+
+stone_quarry = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+	
+	employment_size = rural_peasant_produce_employment
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	
+	location_potential = {
+		OR = {
+			topography = mountains
+			topography = plateau
+			topography = hills
+		}
+		NOT = {
+			raw_material = goods:stone
+		}
+	}
+
+	category = rgo_building_category
+	
+	unique_production_methods = {
+	
+		stone_quarry_maintenance = {
+			icon_type = goods
+			icon = stone
+			tools = 0.107
+			lumber = 0.127
+			leather = 0.107
+
+			produced = stone
+			output = 1
+
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+
+		crude_quarry_maintenance = {
+			icon_type = building_type
+			icon = stone_quarry
+			lumber = 0.278
+
+			produced = stone
+			output = 0.5
+
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = basic_construction_needs
+}
+
+lumber_mill = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+	
+	employment_size = rural_peasant_produce_employment
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	
+	location_potential = {
+		OR = {
+			vegetation = woods
+			vegetation = forest
+			vegetation = farmland
+			vegetation = jungle
+		}
+		NOT = {
+			raw_material = goods:lumber
+		}
+	}
+
+	category = rgo_building_category
+	
+	build_time = rural_build_time
+	
+	unique_production_methods = {
+		lumber_mill_maintenance = {
+			icon_type = building_type
+			icon = lumber_mill
+			produced = lumber
+			output = 1
+
+			tools = 0.417
+
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = basic_construction_needs
+}
+
+fiber_crops_farm = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+	
+	employment_size = rural_peasant_produce_employment
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		NOT = {
+			raw_material = goods:fiber_crops
+		}
+		NOT = { climate = arctic }
+	}
+
+	category = rgo_building_category
+	
+	build_time = rural_build_time
+	
+	unique_production_methods = {
+		fiber_crops_farm_maintenance = {
+			icon_type = building_type
+			icon = fiber_crops_farm
+			livestock = 0.494
+			lumber = 0.198
+			tools = 0.099
+			category = building_maintenance
+
+			produced = fiber_crops
+			output = 0.8
+
+			debug_max_profit = rural_profit_margin
+		}
+	}
+
+	construction_demand = farm_constructions
+}
+
+sand_pit = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+	
+	employment_size = rural_peasant_produce_employment
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		NOT = {
+			raw_material = goods:sand
+		}
+	}
+
+	category = rgo_building_category
+	
+	build_time = rural_build_time
+	
+	unique_production_methods = {
+		sand_pit_maintenance = {
+			icon_type = building_type
+			icon = sand_pit
+			tools = 0.058
+			lumber = 0.161
+			category = building_maintenance
+
+			produced = sand
+			output = 1
+
+			debug_max_profit = rural_profit_margin
+		}
+	}
+
+	construction_demand = basic_construction_needs
+}
+
+bog_iron_smelter = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+	
+	employment_size = rural_peasant_produce_employment
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	
+	location_potential = {
+		OR = {
+			is_adjacent_to_lake = yes
+			topography = wetlands
+		}
+		NOT = {
+			raw_material = goods:iron
+		}
+	}
+
+	category = rgo_building_category
+	
+	unique_production_methods = {
+		bog_iron_maintenance = {
+			icon_type = building_type
+			icon = bog_iron_smelter
+			produced = iron
+			output = 0.3
+			coal = 0.375
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	
+	build_time = rural_build_time
+	construction_demand = basic_construction_needs
+}
+
+clay_pit = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+	
+	employment_size = rural_peasant_produce_employment
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+			is_adjacent_to_lake = yes
+		}
+		NOT = {
+			raw_material = goods:clay
+		}
+	}
+
+	category = rgo_building_category
+	
+	unique_production_methods = {
+		clay_pit_maintenance = {
+			icon_type = building_type
+			icon = clay_pit
+			produced = clay
+			output = 1
+			lumber = 0.2778
+			category = building_maintenance
+			debug_max_profit = rural_profit_margin
+		}
+	}
+	
+	build_time = rural_build_time
+	construction_demand = basic_construction_needs
+
+}
+
+salt_collector = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	
+	employment_size = rural_peasant_produce_employment
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		OR = {
+			vegetation = desert
+			is_coastal = yes
+		}
+	}
+
+	unique_production_methods = {
+		
+		salt_collector_maintenance = {
+			icon_type = building_type
+			icon = salt_collector
+			produced = salt
+			output = 0.3
+
+			clay = 2.0
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = farm_constructions
+}
+
+fruit_orchard = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	
+	employment_size = rural_peasant_produce_employment
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		OR = {
+			vegetation = grasslands
+			vegetation = farmland
+			vegetation = woods
+			vegetation = jungle
+		}
+	}
+
+	unique_production_methods = {
+		
+		fruit_orchard_maintenance = {
+			icon_type = building_type
+			icon = fruit_orchard
+			produced = fruit
+			output = 0.3
+
+			lumber = 0.167
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = farm_constructions
+}
+
+charcoal_maker = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	
+	employment_size = rural_peasant_produce_employment
+	
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+	
+	
+
+	build_time = rural_build_time
+	
+	unique_production_methods = {
+		char_coal_maintenance = {
+			icon_type = building_type
+			icon = charcoal_maker
+			produced = coal
+			output = 0.8
+
+			debug_max_profit = rural_profit_margin
+		
+			lumber = 0.8889
+			category = guild_input
+		}
+
+	}
+
+	construction_demand = guild_construction
+}
+
+improved_charcoal_maker = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	
+	employment_size = rural_peasant_produce_employment
+	obsolete = charcoal_maker
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	
+	
+
+	build_time = rural_build_time
+	
+	unique_production_methods = {
+		improved_char_coal_maintenance = {
+			icon_type = building_type
+			icon = improved_charcoal_maker
+			produced = coal
+			output = 1.2
+
+			debug_max_profit = rural_profit_margin
+		
+			lumber = 1.3333
+			category = guild_input
+		}
+
+	}
+
+	construction_demand = guild_construction
+}
+
+elephant_hunting_grounds = {
+	audio_tier = 1
+	is_foreign = no
+	max_levels = {
+		value = rural_building_cap
+		if = {
+			limit = {
+				owner ?= {
+					has_variable = ori_double_elephant_hunting_ground_level_flag
+				}
+			}
+			add = {
+				desc = "INCREASED_MAX_LEVEL_ELEPHANT_HUNTING_GROUND"
+				value = 2
+			}
+		}
+	}
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = peasants
+	
+	category = rgo_building_category
+	employment_size = elephant_hunting_grounds_employment
+	
+	rural_settlement = yes
+	
+	country_potential = {
+		produced_in_country:elephants > 0
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	
+	location_potential = {
+		raw_material = goods:elephants
+	}
+	
+		
+	
+	build_time = rural_build_time
+	
+
+	unique_production_methods = {
+		elephant_hunting_grounds_maintenance = {
+			icon_type = building_type
+			icon = elephant_hunting_grounds
+			produced = ivory
+			output = 1
+
+			tools = 0.208
+			weaponry = 0.208
+			elephants = 0.417
+			debug_max_profit = rural_profit_margin
+			category = guild_input
+		}
+
+	}
+
+	modifier = {
+		local_monthly_food_modifier = monthly_food_productivity_weak_penalty
+	}
+	raw_modifier = {
+		local_nobles_desired_pop = 0.010
+	}
+
+
+	construction_demand = village_construction
+
+}
+
+windmill = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	
+	employment_size = rural_peasant_enhance_employment
+	
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+
+	location_potential = {
+		OR = {
+			raw_material = goods:wheat
+			raw_material = goods:rice
+			raw_material = goods:millet
+		}
+
+	}
+
+	unique_production_methods = {
+		
+		windmill_maintenance = {
+			icon_type = building_type
+			icon = windmill
+			tools  = 0.025
+			lumber = 0.05
+			cloth = 0.05
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+		local_wheat_output_modifier = 0.1
+		local_rice_output_modifier = 0.1
+		local_millet_output_modifier = 0.1
+	}
+
+	
+
+	build_time = rural_build_time
+
+
+	construction_demand = farm_constructions
+}
+
+local_smelters = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	
+	employment_size = rural_peasant_enhance_employment
+	
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+
+	location_potential = {
+		OR = {
+			raw_material = goods:iron
+			raw_material = goods:copper
+			raw_material = goods:tin
+			raw_material = goods:lead
+		}
+
+	}
+
+	unique_production_methods = {
+		
+		local_smelters_maintenance = {
+			icon_type = building_type
+			icon = local_smelters
+			tools  = 0.025
+			lumber = 0.05
+			coal = 0.05
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+		local_iron_output_modifier = 0.1
+		local_copper_output_modifier = 0.1
+		local_tin_output_modifier = 0.1
+		local_lead_output_modifier = 0.1
+	}
+
+	
+
+	build_time = rural_build_time
+
+
+	construction_demand = farm_constructions
+}
+
+sawmill = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	
+	employment_size = rural_peasant_enhance_employment
+	
+	forbidden_for_estates = yes
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+
+	location_potential = {
+		OR = {
+			vegetation = woods
+			vegetation = forest
+			vegetation = farmland
+			vegetation = jungle
+			raw_material = goods:lumber
+		}
+	}
+
+	unique_production_methods = {
+		
+		sawmill_maintenance = {
+			icon_type = building_type
+			icon = sawmill
+			tools  = 0.05
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+		local_lumber_output_modifier = 0.2
+	}
+
+	
+
+	build_time = rural_build_time
+
+
+	construction_demand = farm_constructions
+}
+
+sheep_farms = {
+	country_potential = {
+		NOT = { is_sealed_vault = yes }	# sealed Vaults cannot build resource buildings
+	}
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	
+	employment_size = rural_peasant_produce_employment
+	
+	
+	category = rgo_building_category
+	
+	rural_settlement = yes
+
+	location_potential = {
+		OR = {
+			vegetation = sparse
+			vegetation = farmland
+			vegetation = grasslands
+		}
+	}
+
+	unique_production_methods = {
+		
+		sheep_farm_maintenance = {
+			icon_type = building_type
+			icon = sheep_farms
+			produced = wool
+			output = 0.5
+
+			lumber = 0.496
+			tools = 0.099
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+	}
+
+	
+
+	build_time = rural_build_time
+
+
+	construction_demand = farm_constructions
+}

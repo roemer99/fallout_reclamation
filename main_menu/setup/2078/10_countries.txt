@@ -12,615 +12,235 @@ current_age = age_1_traditions
 # control
 # our_cores_conquered_by_others
 
+# Vaults: shared setup (government, heir selection, laws, tech, rank) comes from
+#   main_menu/setup/templates/vault_template.txt
+# Only core location, capital, ruler and dynasty are set per Vault here.
+# Vaults only see their own + neighbouring provinces (fallout_vault_reveal_surroundings_effect).
+
 countries = {
 	countries = {
 
-	VAP = {	#Vault 0
+		VAA = {	# Vault 0
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				mutsisooni_yohe
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = mutsisooni_yohe
+			dynasty = calculator_dynasty
 
 			government = {
-				type = monarchy
-				heir_selection = cognatic_primogeniture
 				ruler = vaa_calculator
 			}
-
-			country_rank = rank_duchy
-			dynasty = calculator_dynasty
-			capital = mutsisooni_yohe
 		}
 
-			VAA = {	#Vault 0
-			own_control_core = {
-				mutsisooni_yohe
-			}
+		VAP = {	# Vault 15
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
 
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
-
-			government = {
-				type = monarchy
-				heir_selection = cognatic_primogeniture
-				ruler = vaa_calculator
-			}
-
-			country_rank = rank_duchy
-			dynasty = calculator_dynasty
-			capital = mutsisooni_yohe
-		}
-
-		VAP = {	#Vault 15
 			own_control_core = {
 				kawich
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = kawich
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-				
 			}
-
-			country_rank = rank_duchy
-			capital = kawich
 		}
 
-		VBH = {	#Vault 33
+		VBH = {	# Vault 33
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				yaanga
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
-
-			government = {
-				type = republic
-				heir_selection = oligarchic_elective
-				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
-			}
-
-			country_rank = rank_duchy
 			capital = yaanga
 
+			government = {
+				ruler = random
+			}
 		}
 
-		VCY= {	#Vault 76
+		VCY = {	# Vault 76
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				onimgohow
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
-
-			government = {
-				type = republic
-				heir_selection = oligarchic_elective
-				ruler = vcy_barbeau
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
-			}
-
-			country_rank = rank_duchy
 			capital = onimgohow
 			dynasty = barbeau_dynasty
+
+			government = {
+				ruler = vcy_barbeau
+			}
 		}
 
-		VDX = {	#Vault 101
+		VDX = {	# Vault 101
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				manassas
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = manassas
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = manassas
 		}
 
-		
-		#Vault 11
-		VAL = {
+		VAL = {	# Vault 11
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				moapa
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = moapa
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = moapa
 		}
 
-		VEH = {	#Vault 111
+		VEH = {	# Vault 111
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				assabet
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = assabet
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = assabet
 		}
 
-		VEO = {	#Vault 111
+		VEO = {	# Vault 118
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				pemetic
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = pemetic
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = pemetic
 		}
 
-		VBD = {	#Vault 111
+		VBD = {	# Vault 29
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				nih_iitkotousi_l
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = nih_iitkotousi_l
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = nih_iitkotousi_l
 		}
 
-		VCS = {	#Vault 70
+		VCS = {	# Vault 70
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				pio_gwut
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = pio_gwut
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = pio_gwut
 		}
 
-		VAG = {	#Vault 70
+		VAG = {	# Vault 6
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				klikitat
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = klikitat
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = klikitat
 		}
 
-		VAI = {	#Vault 8
+		VAI = {	# Vault 8
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				koop_ticutta
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = koop_ticutta
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = koop_ticutta
 		}
 
-		VAN = {	#Vault 13
+		VAN = {	# Vault 13
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				tubatulabam
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = tubatulabam
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = tubatulabam
 		}
 
-		VAV = {	#Vault 21
+		VAV = {	# Vault 21
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				sebit
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = sebit
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = sebit
 		}
 
-		VDR = {	#Vault 95
+		VDR = {	# Vault 95
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				quinsigamond
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = quinsigamond
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = quinsigamond
 		}
 
-		VEK = {	#Vault 114
+		VEK = {	# Vault 114
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				shawmut
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = shawmut
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = shawmut
 		}
 
-		VDD = {	#Vault 81
+		VDD = {	# Vault 81
+			include = "vault_template"	# main_menu/setup/templates/vault_template.txt
+
 			own_control_core = {
 				naumkeag
 			}
-
-			starting_technology_level = 2
-			#include = "expl_western_europe"
-			#include = "catholic_monarchy_no_coast"
-			#include = "german_principality"
-			
-			discovered_regions = {
-				canada_region
-				east_coast_region
-				great_plains_region
-				west_coast_region
-				alaska_region
-				aridoamerica_region
-			}
+			capital = naumkeag
 
 			government = {
-				type = republic
-				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
-
-			country_rank = rank_duchy
-			capital = naumkeag
 		}
 
 		###############
@@ -648,18 +268,13 @@ countries = {
 				type = republic
 				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
 
 			country_rank = rank_duchy
 			capital = shanghai
 		}
 
-		SHI = {	#US ARMY
+		SHI = {	#SHI
 			own_control_core = {
 				awaswas
 			}
@@ -682,11 +297,6 @@ countries = {
 				type = republic
 				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
 
 			country_rank = rank_duchy
@@ -717,11 +327,6 @@ countries = {
 				type = republic
 				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
 
 			country_rank = rank_duchy
@@ -751,11 +356,6 @@ countries = {
 				type = republic
 				heir_selection = oligarchic_elective
 				ruler = random
-
-				laws = {
-					my_custom_law = traditional_approach
-				}
-
 			}
 
 			country_rank = rank_duchy

@@ -1,0 +1,25 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Government types
+# =============================================================================
+# Vault government: an Overseer rules for life, much like a monarch, but is
+# appointed instead of inheriting the office.
+#
+# government_power is a fixed engine list (legitimacy, republican_tradition,
+# devotion, horde_unity, tribal_cohesion). Vaults use "legitimacy", which is
+# renamed to "Overseer Authority" in
+# localization/english/replace/Fallout_replace_l_english.yml.
+# No other monarchies exist in the mod, so the rename only affects Vaults.
+# =============================================================================
+
+vault_government = {
+	map_color = gov_monarchy
+
+	government_power = legitimacy
+
+	default_character_estate = nobles_estate	# "Scientists" for Vaults
+
+	heir_selection = overseer_appointment
+
+	modifier = {
+	}
+}

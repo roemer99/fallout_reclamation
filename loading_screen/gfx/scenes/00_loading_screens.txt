@@ -1,0 +1,181 @@
+﻿## FALLOUT RECLAMATION - loading screens
+## Overrides the vanilla file on purpose. The engine only knows the 11 vanilla
+## scene names, so they are kept and simply show one of our 3 static images
+## (images: loading_screen/gfx/images/fallout_loading_screens.txt).
+## Single full-screen layer (layer_8) + NON-animated schematic "illustration_override".
+
+loading_screen_scene_rossbach = {	# -> image 1
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_1"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_florence = {	# -> image 2
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_2"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_zheng_he = {	# -> image 3
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_3"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_martin_luther = {	# -> image 1
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_1"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_damascus_ambassadors = {	# -> image 2
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_2"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_deccan = {	# -> image 3
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_3"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_aztec = {	# -> image 1
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_1"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_iroquois_ambush = {	# -> image 2
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_2"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_ashanti = {	# -> image 3
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_3"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_white_mountain = {	# -> image 1
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_1"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}
+
+loading_screen_scene_hansa = {	# -> image 2
+	ecs_illustration_image = {
+		list = "fallout_loading_screen_2"
+		pdxmesh = "layer_8_mesh"
+		name = "illustration_override" #schematic (static)
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	camera = {
+		camera_near_far = {0.11 100000}
+		camera_fov_y_degrees = 37.5
+		camera_position = {0 0 -125}
+		camera_look_at = {0 0 1000}
+	}
+}

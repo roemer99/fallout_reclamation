@@ -1,0 +1,395 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Vault 21: Caravan (played on the card table in the
+# Vault Management panel, simplified Fallout: New Vegas rules)
+# =============================================================================
+# GUI: gui/panels/situation/vault_management.gui (Vault 21 window, Caravan table)
+# Buttons: scripted_guis/fallout_vav_blackjack.txt (vav_caravan_open, vav_cv_play_1-3,
+#          vav_cv_discard, vav_cv_forfeit, vav_cv_next_deck)
+# Results: events/vaults/vav_caravan.txt (.2 win, .3 lose, .4 draw)
+#
+# Country variables (root = Vault 21):
+#   vav_cv_active                 a game is running (shows the table)
+#   vav_cv_p1-3 / vav_cv_o1-3     caravan totals (player / opponent)
+#   vav_cv_p1_n / ..._o3_n        number of cards in a caravan
+#   vav_cv_p1_c1 ... vav_cv_o3_c9 the card values in each caravan (max 9)
+#   vav_cv_card / vav_cv_ocard    player hand card / last opponent card
+#   vav_cv_turn                   1-9
+#   vav_cv_deck                   chosen card back (1 = default)
+# A caravan is sold with 21-26, over 26 it is busted. 9 turns.
+# =============================================================================
+
+# Root = country. New game: reset the table and draw the first card.
+fallout_vav_cv_new_game_effect = {
+	set_variable = { name = vav_cv_cooldown value = 1 days = 30 }
+	set_variable = vav_cv_active
+	if = { limit = { has_variable = vav_cv_over } remove_variable = vav_cv_over }
+	if = {
+		limit = { NOT = { has_variable = vav_cv_deck } }
+		set_variable = { name = vav_cv_deck value = 1 }
+	}
+	fallout_vav_cv_reset_lane_effect = { SIDE = p LANE = 1 }
+	fallout_vav_cv_reset_lane_effect = { SIDE = p LANE = 2 }
+	fallout_vav_cv_reset_lane_effect = { SIDE = p LANE = 3 }
+	fallout_vav_cv_reset_lane_effect = { SIDE = o LANE = 1 }
+	fallout_vav_cv_reset_lane_effect = { SIDE = o LANE = 2 }
+	fallout_vav_cv_reset_lane_effect = { SIDE = o LANE = 3 }
+	set_variable = { name = vav_cv_turn value = 1 }
+	set_variable = { name = vav_cv_ocard value = 0 }
+	fallout_vav_cv_clear_fx_effect = yes
+	fallout_vav_cv_log_reset_effect = yes	# fallout_vav_caravan_log_effects.txt
+	fallout_vav_cv_draw_effect = { VAR = vav_cv_card }
+}
+
+# Root = country. Empties caravan SIDE (p / o) LANE (1-3).
+fallout_vav_cv_reset_lane_effect = {
+	set_variable = { name = vav_cv_$SIDE$$LANE$ value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_n value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c1 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c2 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c3 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c4 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c5 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c6 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c7 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c8 value = 0 }
+	set_variable = { name = vav_cv_$SIDE$$LANE$_c9 value = 0 }
+}
+
+# Root = country. Draws a card into variable VAR from a 54-card deck:
+# 1 (Ace) - 10 four times each, 11 = Jack, 12 = Queen, 13 = King four times each,
+# 14 = Joker twice.
+fallout_vav_cv_draw_effect = {
+	random_list = {
+		4 = { set_variable = { name = $VAR$ value = 1 } }
+		4 = { set_variable = { name = $VAR$ value = 2 } }
+		4 = { set_variable = { name = $VAR$ value = 3 } }
+		4 = { set_variable = { name = $VAR$ value = 4 } }
+		4 = { set_variable = { name = $VAR$ value = 5 } }
+		4 = { set_variable = { name = $VAR$ value = 6 } }
+		4 = { set_variable = { name = $VAR$ value = 7 } }
+		4 = { set_variable = { name = $VAR$ value = 8 } }
+		4 = { set_variable = { name = $VAR$ value = 9 } }
+		4 = { set_variable = { name = $VAR$ value = 10 } }
+		4 = { set_variable = { name = $VAR$ value = 11 } }	# Jack
+		4 = { set_variable = { name = $VAR$ value = 12 } }	# Queen
+		4 = { set_variable = { name = $VAR$ value = 13 } }	# King
+		2 = { set_variable = { name = $VAR$ value = 14 } }	# Joker
+	}
+}
+
+# Root = country. Puts the card in variable VAR onto caravan SIDE (p / o) LANE (1-3):
+# adds it to the total and to the card stack (max 9 cards shown).
+fallout_vav_cv_push_effect = {
+	change_variable = { name = vav_cv_$SIDE$$LANE$ add = var:$VAR$ }
+	change_variable = { name = vav_cv_$SIDE$$LANE$_n add = 1 }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 1 } set_variable = { name = vav_cv_$SIDE$$LANE$_c1 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 2 } set_variable = { name = vav_cv_$SIDE$$LANE$_c2 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 3 } set_variable = { name = vav_cv_$SIDE$$LANE$_c3 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 4 } set_variable = { name = vav_cv_$SIDE$$LANE$_c4 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 5 } set_variable = { name = vav_cv_$SIDE$$LANE$_c5 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 6 } set_variable = { name = vav_cv_$SIDE$$LANE$_c6 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 7 } set_variable = { name = vav_cv_$SIDE$$LANE$_c7 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 8 } set_variable = { name = vav_cv_$SIDE$$LANE$_c8 value = var:$VAR$ } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 9 } set_variable = { name = vav_cv_$SIDE$$LANE$_c9 value = var:$VAR$ } }
+}
+
+# Root = country. Player plays the hand card on caravan LANE (1-3), then the turn ends.
+#   1-10  number card: placed on your caravan LANE
+#   11    Jack:  removes the top card of the OPPONENT's caravan LANE
+#   12    Queen: takes back the top card of YOUR caravan LANE
+#   13    King:  doubles the top card of YOUR caravan LANE (its value counts again)
+#   14    Joker: clears the OPPONENT's caravan LANE completely
+fallout_vav_cv_player_move_effect = {
+	fallout_vav_cv_clear_fx_effect = yes
+	# Face card shown on the table for this move (gui: vcv_fx_<target>):
+	# Jack / Joker land on the opponent's caravan (target 4-6), Queen / King on yours (1-3)
+	if = {
+		limit = { var:vav_cv_card >= 11 }
+		set_variable = { name = vav_cv_f1 value = var:vav_cv_card }
+		set_variable = { name = vav_cv_f1t value = $LANE$ }
+		if = {
+			limit = { OR = { var:vav_cv_card = 11 var:vav_cv_card = 14 } }
+			change_variable = { name = vav_cv_f1t add = 3 }
+		}
+	}
+	if = {
+		limit = { var:vav_cv_card <= 10 }
+		fallout_vav_cv_push_effect = { SIDE = p LANE = $LANE$ VAR = vav_cv_card }
+	}
+	else_if = {
+		limit = { var:vav_cv_card = 11 }
+		fallout_vav_cv_pop_effect = { SIDE = o LANE = $LANE$ }
+	}
+	else_if = {
+		limit = { var:vav_cv_card = 12 }
+		fallout_vav_cv_pop_effect = { SIDE = p LANE = $LANE$ }
+	}
+	else_if = {
+		limit = { var:vav_cv_card = 13 }
+		fallout_vav_cv_king_effect = { SIDE = p LANE = $LANE$ }
+	}
+	else = {
+		fallout_vav_cv_reset_lane_effect = { SIDE = o LANE = $LANE$ }
+	}
+	# Move log: Jack / Joker land on the opponent's caravan, everything else on yours
+	if = {
+		limit = { OR = { var:vav_cv_card = 11 var:vav_cv_card = 14 } }
+		fallout_vav_cv_log_player_effect = { SIDE = 2 LANE = $LANE$ }
+	}
+	else = {
+		fallout_vav_cv_log_player_effect = { SIDE = 1 LANE = $LANE$ }
+	}
+	fallout_vav_cv_end_turn_effect = yes
+}
+
+# Root = country. Discard the hand card (button "Discard").
+fallout_vav_cv_discard_effect = {
+	fallout_vav_cv_clear_fx_effect = yes
+	fallout_vav_cv_log_player_effect = { SIDE = 0 LANE = 0 }
+	fallout_vav_cv_end_turn_effect = yes
+}
+
+# Root = country. Forget the face cards of the last move (table animation).
+#   vav_cv_f1 / vav_cv_f1t : face card (11-14) played by the player / its target
+#   vav_cv_f2 / vav_cv_f2t : face card played by the opponent / its target
+#   target: 1-3 = player's caravan I-III, 4-6 = opponent's caravan I-III, 0 = none
+fallout_vav_cv_clear_fx_effect = {
+	set_variable = { name = vav_cv_f1 value = 0 }
+	set_variable = { name = vav_cv_f1t value = 0 }
+	set_variable = { name = vav_cv_f2 value = 0 }
+	set_variable = { name = vav_cv_f2t value = 0 }
+}
+
+# Root = country. Ends the turn (also used to discard the hand card):
+# the opponent moves, then the next card is drawn or the game ends after 9 turns.
+fallout_vav_cv_end_turn_effect = {
+	fallout_vav_cv_opponent_move_effect = yes
+	change_variable = { name = vav_cv_turn add = 1 }
+	if = {
+		limit = { var:vav_cv_turn > 9 }
+		# Game over, but the table stays open: the last moves are still played back,
+		# then the player opens the result with "See result" (vav_cv_finish).
+		set_variable = vav_cv_over
+	}
+	else = {
+		fallout_vav_cv_draw_effect = { VAR = vav_cv_card }
+	}
+}
+
+# Root = country. Opponent move:
+#   number card: on the first caravan that is not sold yet and would not bust
+#   Jack / Joker: against the player's strongest caravan
+#   Queen: rescues its own first busted caravan (> 26)
+#   King:  doubles the top card of its first caravan that stays <= 26
+#   otherwise the card is discarded.
+fallout_vav_cv_opponent_move_effect = {
+	fallout_vav_cv_draw_effect = { VAR = vav_cv_ocard }
+	set_variable = { name = vav_cv_done value = 0 }
+	if = {
+		limit = { var:vav_cv_ocard <= 10 }
+		fallout_vav_cv_opponent_try_lane_effect = { LANE = 1 }
+		fallout_vav_cv_opponent_try_lane_effect = { LANE = 2 }
+		fallout_vav_cv_opponent_try_lane_effect = { LANE = 3 }
+	}
+	else_if = {
+		limit = { var:vav_cv_ocard = 11 }
+		fallout_vav_cv_opponent_attack_effect = { MODE = pop }
+	}
+	else_if = {
+		limit = { var:vav_cv_ocard = 12 }
+		if = { limit = { var:vav_cv_o1 > 26 } fallout_vav_cv_pop_effect = { SIDE = o LANE = 1 } fallout_vav_cv_set_ofx_effect = { TARGET = 4 } }
+		else_if = { limit = { var:vav_cv_o2 > 26 } fallout_vav_cv_pop_effect = { SIDE = o LANE = 2 } fallout_vav_cv_set_ofx_effect = { TARGET = 5 } }
+		else_if = { limit = { var:vav_cv_o3 > 26 } fallout_vav_cv_pop_effect = { SIDE = o LANE = 3 } fallout_vav_cv_set_ofx_effect = { TARGET = 6 } }
+	}
+	else_if = {
+		limit = { var:vav_cv_ocard = 13 }
+		fallout_vav_cv_opponent_try_king_effect = { LANE = 1 }
+		fallout_vav_cv_opponent_try_king_effect = { LANE = 2 }
+		fallout_vav_cv_opponent_try_king_effect = { LANE = 3 }
+	}
+	else = {
+		fallout_vav_cv_opponent_attack_effect = { MODE = reset }
+	}
+	fallout_vav_cv_log_opponent_effect = yes	# move log
+}
+
+# Root = country. Opponent plays a Jack (MODE = pop) or Joker (MODE = reset_lane)
+# against the player's caravan with the highest total.
+fallout_vav_cv_opponent_attack_effect = {
+	if = {
+		limit = { var:vav_cv_p1 >= var:vav_cv_p2 var:vav_cv_p1 >= var:vav_cv_p3 }
+		fallout_vav_cv_opponent_attack_lane_effect = { MODE = $MODE$ LANE = 1 }
+	}
+	else_if = {
+		limit = { var:vav_cv_p2 >= var:vav_cv_p3 }
+		fallout_vav_cv_opponent_attack_lane_effect = { MODE = $MODE$ LANE = 2 }
+	}
+	else = {
+		fallout_vav_cv_opponent_attack_lane_effect = { MODE = $MODE$ LANE = 3 }
+	}
+}
+fallout_vav_cv_opponent_attack_lane_effect = {
+	fallout_vav_cv_$MODE$_effect = { SIDE = p LANE = $LANE$ }
+	fallout_vav_cv_set_ofx_effect = { TARGET = $LANE$ }
+}
+
+# Root = country. Remember the opponent's face card (vav_cv_ocard) and its target for the table.
+fallout_vav_cv_set_ofx_effect = {
+	set_variable = { name = vav_cv_f2 value = var:vav_cv_ocard }
+	set_variable = { name = vav_cv_f2t value = $TARGET$ }
+}
+
+# Root = country. Opponent King on caravan LANE if it is not sold yet and stays <= 26.
+fallout_vav_cv_opponent_try_king_effect = {
+	if = {
+		limit = { var:vav_cv_done = 0 var:vav_cv_o$LANE$ < 21 var:vav_cv_o$LANE$_n >= 1 }
+		fallout_vav_cv_top_value_effect = { SIDE = o LANE = $LANE$ }
+		set_variable = { name = vav_cv_tmp value = var:vav_cv_o$LANE$ }
+		change_variable = { name = vav_cv_tmp add = var:vav_cv_top }
+		if = {
+			limit = { var:vav_cv_tmp <= 26 }
+			fallout_vav_cv_king_effect = { SIDE = o LANE = $LANE$ }
+			set_variable = { name = vav_cv_done value = 1 }
+			fallout_vav_cv_set_ofx_effect = { TARGET = $LANE$ }
+			change_variable = { name = vav_cv_f2t add = 3 }	# opponent's own caravan
+		}
+	}
+}
+
+# Root = country. Value of the top card of caravan SIDE LANE -> variable vav_cv_top (0 if empty).
+fallout_vav_cv_top_value_effect = {
+	set_variable = { name = vav_cv_top value = 0 }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 1 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c1 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 2 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c2 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 3 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c3 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 4 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c4 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 5 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c5 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 6 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c6 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 7 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c7 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 8 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c8 } }
+	if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 9 } set_variable = { name = vav_cv_top value = var:vav_cv_$SIDE$$LANE$_c9 } }
+}
+
+# Root = country. Removes the top card of caravan SIDE LANE (Jack / Queen).
+fallout_vav_cv_pop_effect = {
+	if = {
+		limit = { var:vav_cv_$SIDE$$LANE$_n >= 1 }
+		fallout_vav_cv_top_value_effect = { SIDE = $SIDE$ LANE = $LANE$ }
+		change_variable = { name = vav_cv_$SIDE$$LANE$ subtract = var:vav_cv_top }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 1 } set_variable = { name = vav_cv_$SIDE$$LANE$_c1 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 2 } set_variable = { name = vav_cv_$SIDE$$LANE$_c2 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 3 } set_variable = { name = vav_cv_$SIDE$$LANE$_c3 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 4 } set_variable = { name = vav_cv_$SIDE$$LANE$_c4 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 5 } set_variable = { name = vav_cv_$SIDE$$LANE$_c5 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 6 } set_variable = { name = vav_cv_$SIDE$$LANE$_c6 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 7 } set_variable = { name = vav_cv_$SIDE$$LANE$_c7 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 8 } set_variable = { name = vav_cv_$SIDE$$LANE$_c8 value = 0 } }
+		if = { limit = { var:vav_cv_$SIDE$$LANE$_n = 9 } set_variable = { name = vav_cv_$SIDE$$LANE$_c9 value = 0 } }
+		change_variable = { name = vav_cv_$SIDE$$LANE$_n add = -1 }
+		if = {
+			limit = { var:vav_cv_$SIDE$$LANE$ < 0 }
+			set_variable = { name = vav_cv_$SIDE$$LANE$ value = 0 }
+		}
+	}
+}
+
+# Root = country. Joker for the opponent attack (same as fallout_vav_cv_reset_lane_effect).
+fallout_vav_cv_reset_effect = {
+	fallout_vav_cv_reset_lane_effect = { SIDE = $SIDE$ LANE = $LANE$ }
+}
+
+# Root = country. King: the top card of caravan SIDE LANE counts again (total += its value).
+fallout_vav_cv_king_effect = {
+	if = {
+		limit = { var:vav_cv_$SIDE$$LANE$_n >= 1 }
+		fallout_vav_cv_top_value_effect = { SIDE = $SIDE$ LANE = $LANE$ }
+		change_variable = { name = vav_cv_$SIDE$$LANE$ add = var:vav_cv_top }
+	}
+}
+
+# Root = country. Opponent tries caravan LANE.
+fallout_vav_cv_opponent_try_lane_effect = {
+	set_variable = { name = vav_cv_tmp value = var:vav_cv_o$LANE$ }
+	change_variable = { name = vav_cv_tmp add = var:vav_cv_ocard }
+	if = {
+		limit = { var:vav_cv_done = 0 var:vav_cv_o$LANE$ < 21 var:vav_cv_tmp <= 26 }
+		fallout_vav_cv_push_effect = { SIDE = o LANE = $LANE$ VAR = vav_cv_ocard }
+		set_variable = { name = vav_cv_done value = 1 }
+		set_variable = { name = vav_cv_olane value = $LANE$ }	# move log
+	}
+}
+
+# Root = country. Compares the three caravans and shows the result.
+fallout_vav_cv_end_game_effect = {
+	remove_variable = vav_cv_active
+	if = { limit = { has_variable = vav_cv_over } remove_variable = vav_cv_over }
+	set_variable = { name = vav_cv_pwins value = 0 }
+	set_variable = { name = vav_cv_owins value = 0 }
+	fallout_vav_cv_lane_result_effect = { LANE = 1 }
+	fallout_vav_cv_lane_result_effect = { LANE = 2 }
+	fallout_vav_cv_lane_result_effect = { LANE = 3 }
+	if = {
+		limit = { var:vav_cv_pwins >= 2 }
+		fallout_vav_bj_fortune_effect = { AMOUNT = 15 }
+		trigger_event_non_silently = vav_caravan.2	# win
+	}
+	else_if = {
+		limit = { var:vav_cv_owins >= 2 }
+		fallout_vav_bj_fortune_effect = { AMOUNT = -15 }
+		trigger_event_non_silently = vav_caravan.3	# lose
+	}
+	else = {
+		trigger_event_non_silently = vav_caravan.4	# draw
+	}
+}
+
+# Root = country. Forfeit: the game is lost at once.
+fallout_vav_cv_forfeit_effect = {
+	remove_variable = vav_cv_active
+	if = { limit = { has_variable = vav_cv_over } remove_variable = vav_cv_over }
+	set_variable = { name = vav_cv_pwins value = 0 }
+	set_variable = { name = vav_cv_owins value = 3 }
+	fallout_vav_bj_fortune_effect = { AMOUNT = -15 }
+	trigger_event_non_silently = vav_caravan.3
+}
+
+# Root = country. Who wins caravan LANE? Valid = 21-26. Valid beats invalid,
+# two valid caravans: the higher one wins, equal = nobody.
+fallout_vav_cv_lane_result_effect = {
+	if = {
+		limit = {
+			var:vav_cv_p$LANE$ >= 21 var:vav_cv_p$LANE$ <= 26
+			OR = {
+				var:vav_cv_o$LANE$ < 21
+				var:vav_cv_o$LANE$ > 26
+				var:vav_cv_p$LANE$ > var:vav_cv_o$LANE$
+			}
+		}
+		change_variable = { name = vav_cv_pwins add = 1 }
+	}
+	else_if = {
+		limit = {
+			var:vav_cv_o$LANE$ >= 21 var:vav_cv_o$LANE$ <= 26
+			OR = {
+				var:vav_cv_p$LANE$ < 21
+				var:vav_cv_p$LANE$ > 26
+				var:vav_cv_o$LANE$ > var:vav_cv_p$LANE$
+			}
+		}
+		change_variable = { name = vav_cv_owins add = 1 }
+	}
+}
+
+# Root = country. Switch to the next card back (wraps around after
+# fallout_vav_cv_deck_count, script_values/fallout_vav_caravan_values.txt).
+fallout_vav_cv_next_deck_effect = {
+	if = {
+		limit = { NOT = { has_variable = vav_cv_deck } }
+		set_variable = { name = vav_cv_deck value = 1 }
+	}
+	change_variable = { name = vav_cv_deck add = 1 }
+	if = {
+		limit = { var:vav_cv_deck > fallout_vav_cv_deck_count }
+		set_variable = { name = vav_cv_deck value = 1 }
+	}
+}

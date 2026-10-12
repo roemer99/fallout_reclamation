@@ -1,0 +1,256 @@
+﻿# =============================================================================
+# FALLOUT RECLAMATION - Radiation system
+# =============================================================================
+# Radiation is stored on LOCATIONS as variables, independent of the disease.
+# It decays on its own every month, whether pops are sick or not.
+#
+# Three components, each with a real half-life:
+#   fallout_rad_short  : short-lived fission products, modelled on I-131 (T1/2 = 8.02 days)
+#   fallout_rad_medium : medium-lived, modelled on Cs-134               (T1/2 = 2.065 years)
+#   fallout_rad_long   : long-lived, modelled on Cs-137 / Sr-90         (T1/2 = 30.08 / 28.79 years)
+#   fallout_rad_total  : sum of all three (0-100 scale, 100 = ground zero at game start)
+#
+# Monthly decay factor = 0.5 ^ (30.44 days / half-life):
+#   I-131  : 0.072033
+#   Cs-134 : 0.972416
+#   Cs-137 : 0.998082
+#
+# Ground zero (ring 0) = every location of the struck province.
+# Rings 1-4 = locations 1-4 steps away; each ring gets half of the previous one.
+# Ground zero keeps "leaking" contaminated dust outwards every month
+# (fallout_rad_transport_rate), so the rings flatten out over time.
+#
+# All radiated locations are tracked in the global list fallout_radiated_locations.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Where the bombs fell. Called once from fallout_on_game_start.
+# Add more strikes here: location:<any location in the province> = { fallout_nuclear_strike_effect = yes }
+# -----------------------------------------------------------------------------
+fallout_setup_nuclear_strikes_effect = {
+	# Background radiation everywhere (see script_values/fallout_radiation_values.txt)
+	set_global_variable = {
+		name = fallout_rad_background
+		value = 3	# keep in sync with fallout_rad_background_start
+	}
+
+	location:anacostia = { fallout_nuclear_strike_effect = yes }	# Washington D.C. (potomac_province)
+
+	# Hotspot modifier on ground zero
+	fallout_radiation_apply_hotspots_effect = yes
+
+	# Radiation sickness from the start (after the radiation is in place)
+	fallout_setup_radiation_sickness_effect = yes
+}
+
+# -----------------------------------------------------------------------------
+# Global scope: starting outbreaks of radiation sickness.
+#   - one small outbreak in every inhabited area of the world (background)
+#   - a strong outbreak at every ground zero
+# -----------------------------------------------------------------------------
+fallout_setup_radiation_sickness_effect = {
+	every_location_in_the_world = {
+		limit = {
+			population > 0
+			NOT = { owner ?= { is_sealed_vault = yes } }
+		}
+		spawn_disease = {
+			disease = disease:radiation_sickness
+			value = 0.05
+		}
+	}
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		limit = {
+			fallout_location_radiation >= 5
+			population > 0
+			NOT = { owner ?= { is_sealed_vault = yes } }
+		}
+		# Disease presence follows the radiation tiers of the map mode:
+		# red (>= 75) 100%, orange (>= 40) 75%, (>= 15) 50%, (>= 5) 25%
+		if = {
+			limit = { fallout_location_radiation >= 75 }
+			spawn_disease = { disease = disease:radiation_sickness value = 1 }
+		}
+		else_if = {
+			limit = { fallout_location_radiation >= 40 }
+			spawn_disease = { disease = disease:radiation_sickness value = 0.75 }
+		}
+		else_if = {
+			limit = { fallout_location_radiation >= 15 }
+			spawn_disease = { disease = disease:radiation_sickness value = 0.5 }
+		}
+		else = {
+			spawn_disease = { disease = disease:radiation_sickness value = 0.25 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------------
+# Location scope: adds radiation to this location and tracks it.
+# Usage: fallout_radiation_add_effect = { SHORT = 5 MEDIUM = 35 LONG = 60 }
+# -----------------------------------------------------------------------------
+fallout_radiation_add_effect = {
+	if = {
+		limit = { NOT = { has_variable = fallout_rad_tracked } }
+		set_variable = fallout_rad_tracked
+		set_variable = { name = fallout_rad_short value = 0 }
+		set_variable = { name = fallout_rad_medium value = 0 }
+		set_variable = { name = fallout_rad_long value = 0 }
+		set_variable = { name = fallout_rad_total value = 0 }
+		add_to_global_variable_list = { name = fallout_radiated_locations target = this }
+	}
+	change_variable = { name = fallout_rad_short add = $SHORT$ }
+	change_variable = { name = fallout_rad_medium add = $MEDIUM$ }
+	change_variable = { name = fallout_rad_long add = $LONG$ }
+	fallout_radiation_update_total_effect = yes
+}
+
+# Location scope
+fallout_radiation_update_total_effect = {
+	set_variable = {
+		name = fallout_rad_total
+		value = {
+			value = var:fallout_rad_short
+			add = var:fallout_rad_medium
+			add = var:fallout_rad_long
+		}
+	}
+}
+
+# -----------------------------------------------------------------------------
+# Location scope: a nuclear strike on the province of this location.
+# Values are the state at game start (2078.1.1, 70 days after the bombs of 2077.10.23),
+# so most of the short-lived activity is already gone.
+# -----------------------------------------------------------------------------
+fallout_nuclear_strike_effect = {
+	save_scope_as = fallout_strike_origin
+
+	# Ring 0: the whole province
+	province_definition = {
+		every_location_in_province_definition = {
+			limit = { NOT = { has_variable = fallout_rad_ring } }
+			set_variable = { name = fallout_rad_ring value = 0 }
+			set_variable = fallout_rad_source
+			set_variable = fallout_rad_new
+			fallout_radiation_add_effect = { SHORT = 5 MEDIUM = 35 LONG = 60 }
+		}
+	}
+
+	# Rings 1-4
+	fallout_radiation_expand_ring_effect = { FROM = 0 TO = 1 SHORT = 2.5 MEDIUM = 17.5 LONG = 30 FALLOFF = 0.5 }
+	fallout_radiation_expand_ring_effect = { FROM = 1 TO = 2 SHORT = 1.25 MEDIUM = 8.75 LONG = 15 FALLOFF = 0.25 }
+	fallout_radiation_expand_ring_effect = { FROM = 2 TO = 3 SHORT = 0.625 MEDIUM = 4.375 LONG = 7.5 FALLOFF = 0.125 }
+	fallout_radiation_expand_ring_effect = { FROM = 3 TO = 4 SHORT = 0.3125 MEDIUM = 2.1875 LONG = 3.75 FALLOFF = 0.0625 }
+
+	# Clean up the temporary marker
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		limit = { has_variable = fallout_rad_new }
+		remove_variable = fallout_rad_new
+	}
+}
+
+# Global scope (used inside fallout_nuclear_strike_effect)
+fallout_radiation_expand_ring_effect = {
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		limit = {
+			has_variable = fallout_rad_new
+			var:fallout_rad_ring = $FROM$
+		}
+		every_neighbor_location = {
+			limit = {
+				is_land = yes
+				NOT = { has_variable = fallout_rad_ring }
+			}
+			set_variable = { name = fallout_rad_ring value = $TO$ }
+			set_variable = { name = fallout_rad_falloff value = $FALLOFF$ }
+			set_variable = { name = fallout_rad_origin value = scope:fallout_strike_origin }
+			set_variable = fallout_rad_new
+			fallout_radiation_add_effect = { SHORT = $SHORT$ MEDIUM = $MEDIUM$ LONG = $LONG$ }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------------
+# Global scope, monthly (fallout_radiation_monthly_pulse)
+# -----------------------------------------------------------------------------
+fallout_radiation_monthly_effect = {
+	# 1. Transport: ground zero leaks contaminated dust into the rings.
+	#    Each ring receives (ground zero level * transport rate * falloff).
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		limit = {
+			has_variable = fallout_rad_origin
+			has_variable = fallout_rad_falloff
+		}
+		change_variable = {
+			name = fallout_rad_medium
+			add = {
+				value = var:fallout_rad_origin.var:fallout_rad_medium
+				multiply = fallout_rad_transport_rate
+				multiply = var:fallout_rad_falloff
+			}
+		}
+		change_variable = {
+			name = fallout_rad_long
+			add = {
+				value = var:fallout_rad_origin.var:fallout_rad_long
+				multiply = fallout_rad_transport_rate
+				multiply = var:fallout_rad_falloff
+			}
+		}
+	}
+	# Ground zero loses what it leaks
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		limit = { has_variable = fallout_rad_source }
+		change_variable = {
+			name = fallout_rad_medium
+			multiply = 0.995	# 1 - transport rate (0.005)
+		}
+		change_variable = {
+			name = fallout_rad_long
+			multiply = 0.995	# 1 - transport rate (0.005)
+		}
+	}
+
+	# 2. Radioactive decay (real half-lives, see header)
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		change_variable = { name = fallout_rad_short multiply = 0.07203 }	# I-131,  T1/2 = 8.02 days
+		change_variable = { name = fallout_rad_medium multiply = 0.97242 }	# Cs-134, T1/2 = 2.065 years
+		change_variable = { name = fallout_rad_long multiply = 0.99808 }	# Cs-137, T1/2 = 30.08 years
+		fallout_radiation_update_total_effect = yes
+	}
+
+	# 3. Hotspot modifier follows the decaying radiation
+	fallout_radiation_apply_hotspots_effect = yes
+}
+
+# -----------------------------------------------------------------------------
+# Global scope: ground zero locations (fallout_rad_source) keep the location
+# modifier radiation_hotspot while their radiation is >= 25.
+# (main_menu/common/static_modifiers/Fallout_radiation_modifiers.txt)
+# -----------------------------------------------------------------------------
+fallout_radiation_apply_hotspots_effect = {
+	every_in_global_list = {
+		variable = fallout_radiated_locations
+		limit = { has_variable = fallout_rad_source }
+		if = {
+			limit = {
+				fallout_location_radiation >= 25
+				NOT = { has_location_modifier = radiation_hotspot }
+			}
+			add_location_modifier = { modifier = radiation_hotspot }
+		}
+		else_if = {
+			limit = {
+				fallout_location_radiation < 25
+				has_location_modifier = radiation_hotspot
+			}
+			remove_location_modifier = radiation_hotspot
+		}
+	}
+}

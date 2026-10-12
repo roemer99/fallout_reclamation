@@ -1,0 +1,9 @@
+﻿l_english:
+ energy: "Energy"
+ energy_desc: "The fundamental measure of electrical power and grid capacity within a settlement or facility. It is required to operate advanced infrastructure, automated machinery, and essential utilities. A stable supply is necessary to maintain production efficiency and basic living standards, while shortages lead to degraded output and the failure of vital operational systems."
+ fusion_core: "Fusion Cores"
+ fusion_core_desc: "A compact, high-yield nuclear battery designed to power advanced machinery and heavy infantry systems. Due to its complex engineering, it is a rare and highly prized strategic resource. A steady supply is essential for deploying mechanized units and operating high-tier technological infrastructure."
+ fusion_core_requirements: "Fusion Core Powered"
+ water_chip: "Water Chips"
+ water_chip_desc: "The control chip of a Vault's water purification plant. Without a working chip the purifiers cannot run, and clean water becomes the most precious commodity in the wasteland. Each plant needs exactly one chip, which is not used up but rarely survives long once it starts to fail."
+ coal_requirements: "Coal Powered"

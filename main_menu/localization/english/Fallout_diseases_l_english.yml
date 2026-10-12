@@ -1,0 +1,22 @@
+﻿l_english:
+ radiation_sickness: "Radiation Sickness"
+ radiation_sickness_desc: "Exposure to fallout, contaminated water and irradiated food slowly poisons the body. Its strength follows the radiation left behind by the bombs, which decays over the years. Sealed Vaults are protected from it."
+ radiation_sickness_location_modifier: "Radiation Sickness location modifier"
+
+ # Radiation hotspot (main_menu/common/static_modifiers/Fallout_radiation_modifiers.txt)
+ STATIC_MODIFIER_NAME_radiation_hotspot: "Radiation Hotspot"
+ STATIC_MODIFIER_DESC_radiation_hotspot: "A bomb struck here. The ruins still glow at night, and the land around ground zero remains deadly for years to come."
+ MODIFIER_TYPE_NAME_local_radiation_hotspot: "Ground Zero"
+ MODIFIER_TYPE_DESC_local_radiation_hotspot: "A nuclear bomb struck this [location|e]."
+ MODIFIER_TYPE_NAME_local_vault_food_storage: "Vault Food Storage"
+ MODIFIER_TYPE_DESC_local_vault_food_storage: "How much food the Vault can store."
+ MODIFIER_TYPE_NAME_local_radiation_sickness_impact_modifier: "Radiation Sickness Impact"
+ MODIFIER_TYPE_DESC_local_radiation_sickness_impact_modifier: "How much the radiation sickness outbreak affects [locations|e]."
+ MODIFIER_TYPE_NAME_national_radiation_sickness_resistance_modifier: "Radiation Sickness Resistance"
+ MODIFIER_TYPE_DESC_national_radiation_sickness_resistance_modifier: "Resistance to radiation sickness throughout the [country|e]."
+ MODIFIER_TYPE_NAME_local_radiation_sickness_resistance_modifier: "Radiation Sickness Resistance"
+ MODIFIER_TYPE_DESC_local_radiation_sickness_resistance_modifier: "Resistance to radiation sickness in a [location|e]."
+ MODIFIER_TYPE_NAME_national_radiation_sickness_growth_modifier: "Radiation Sickness Growth"
+ MODIFIER_TYPE_DESC_national_radiation_sickness_growth_modifier: "Growth of radiation sickness throughout the [country|e]."
+ MODIFIER_TYPE_NAME_local_radiation_sickness_growth_modifier: "Radiation Sickness Growth"
+ MODIFIER_TYPE_DESC_local_radiation_sickness_growth_modifier: "Growth of radiation sickness in a [location|e]."
